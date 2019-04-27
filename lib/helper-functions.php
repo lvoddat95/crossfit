@@ -82,3 +82,51 @@ function func_crossfit_color_brightness( $color, $change ) {
 	return '#' . dechex( $red ) . dechex( $green ) . dechex( $blue );
 
 }
+
+
+function func_crossfit_custom_header() {
+
+	$id = '';
+
+	// Get the current page ID.
+	if ( class_exists( 'WooCommerce' ) && is_shop() ) {
+
+		$id = wc_get_page_id( 'shop' );
+
+	} elseif ( is_post_type_archive() ) {
+
+		$id = get_page_by_path( get_query_var( 'post_type' ) );
+
+	} elseif ( is_front_page() ) {
+
+		$id = get_option( 'page_on_front' );
+
+	} elseif ( is_home() ) {
+
+		$id = get_option( 'page_for_posts' );
+
+	} elseif ( is_search() ) {
+
+		$id = get_page_by_path( 'search' );
+
+	} elseif ( is_404() ) {
+
+		$id = get_page_by_path( 'error-404' );
+
+	} elseif ( is_singular() ) {
+
+		$id = get_the_id();
+
+	}
+
+	$url = get_the_post_thumbnail_url( $id, 'slider' );
+
+	if ( ! $url ) {
+
+		$url = get_header_image();
+
+	}
+
+	return printf( '<style type="text/css">.breadcrumb-section{background-image: url(%s);}</style>' . "\n", esc_url( $url ) );
+
+}
