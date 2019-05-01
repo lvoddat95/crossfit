@@ -78,12 +78,20 @@ function func_crossfit_enqueue_scripts_styles() {
 
 	wp_enqueue_style(
 		'crossfit-fonts',
-		'//fonts.googleapis.com/css?family=Montserrat:400,400i,500,700|Oswald:400,500,700',
+		'//fonts.googleapis.com/css?family=Montserrat:400,400i,500,600,700|Oswald:400,500,600,700',
 		array(),
 		CHILD_THEME_VERSION
 	);
 
 	wp_enqueue_style( 'dashicons' );
+
+
+	//bootstrap css
+
+    wp_enqueue_style('cf-bootstrap',get_stylesheet_directory_uri().'/assets/css/bootstrap/bootstrap.min.css');
+    wp_enqueue_style('cf-bootstrap',get_stylesheet_directory_uri().'/assets/css/bootstrap/bootstrap-theme.min.css');
+    // load main style
+    wp_enqueue_style('crossfit-theme',get_stylesheet_directory_uri().'/assets/css/theme.css');
 
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 	wp_enqueue_script(
@@ -107,6 +115,9 @@ function func_crossfit_enqueue_scripts_styles() {
 		CHILD_THEME_VERSION,
 		true
 	);
+
+    //bootstrap js
+    wp_enqueue_script('boostrap-js',get_stylesheet_directory_uri().'/assets/js/bootstrap/bootstrap.min.js');
 
 }
 
@@ -248,3 +259,12 @@ add_action( 'genesis_footer', 'genesis_do_subnav', 10 );
 // Reposition the breadcrumbs.
 remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
 add_action( 'func_crossfit_breadcrumb_section', 'genesis_do_breadcrumbs', 30 );
+
+
+/* Start Function ToanNgo92 */
+
+
+require_once CHILD_THEME_DIR . '/function-toan.php';
+
+
+/* End Function ToanNgo92 */

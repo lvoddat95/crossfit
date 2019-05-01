@@ -20,7 +20,7 @@ function refined_category_genesis_meta() {
 
 	if ( is_active_sidebar( 'category-index' ) ) {
 
-		remove_action( 'genesis_loop', 'genesis_do_loop' );
+		//remove_action( 'genesis_loop', 'genesis_do_loop' );
 		add_action( 'genesis_loop', 'refined_category_sections' );
 		add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_content_sidebar' );
 
