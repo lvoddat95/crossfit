@@ -371,7 +371,7 @@ a:hover {
   padding-bottom: 300px; }
   .hm-section-5 .testimonials-title {
     position: relative;
-    margin-bottom: 30px; }
+    margin-bottom: 73px; }
     .hm-section-5 .testimonials-title:after {
       width: 90px;
       height: 7px;
@@ -448,10 +448,12 @@ a:hover {
       border-bottom: 2px solid #dedede; }
       .hm-section-6 .contact-us-form .input-wrap span input[type="text"]::placeholder, .hm-section-6 .contact-us-form .input-wrap span input[type="tel"]::placeholder, .hm-section-6 .contact-us-form .input-wrap span input[type="email"]::placeholder, .hm-section-6 .contact-us-form .input-wrap span textarea::placeholder {
         font-size: 23px;
-        line-height: 44px; }
+        line-height: 44px;
+        color: #a4a4a4; }
       .hm-section-6 .contact-us-form .input-wrap span input[type="text"]::-webkit-input-placeholder, .hm-section-6 .contact-us-form .input-wrap span input[type="tel"]::-webkit-input-placeholder, .hm-section-6 .contact-us-form .input-wrap span input[type="email"]::-webkit-input-placeholder, .hm-section-6 .contact-us-form .input-wrap span textarea::-webkit-input-placeholder {
         font-size: 23px;
-        line-height: 44px; }
+        line-height: 44px;
+        color: #a4a4a4; }
     .hm-section-6 .contact-us-form .input-wrap span textarea {
       height: 173px;
       padding: 7px 35px; }
