@@ -107,7 +107,7 @@
     margin-bottom: 50px;
     &:after {
       @extend .after-df;
-      @extend .bg-color;
+      @extend .bg-color2;
       width: 90px;
       height: 7px;
       left: calc(50% - 45px);
@@ -257,6 +257,9 @@
               margin-bottom: 50px;
             }
             .gts-company {
+              display: none;
+            }
+            &:before{
               display: none;
             }
           }

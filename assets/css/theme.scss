@@ -11,7 +11,7 @@ $color2:  #00ca00;
   color: #00ca00;
 }
 .bg-color2 {
-  background-color: #00ff00;
+  background-color: #00ca00;
 }
 .bg-color {
   background-color: #00ff00;
@@ -263,7 +263,7 @@ $color2:  #00ca00;
   display: inline-block;
   text-align: center;
   padding-top: 25px;
-  @extend .bg-color;
+  @extend .bg-color2;
   @extend .title30;
   @extend .font-600;
   &:hover {
@@ -273,6 +273,7 @@ $color2:  #00ca00;
 
 body {
   font-family: 'Montserrat', sans-serif !important;
+  color: #17191b;
 }
 
 a {

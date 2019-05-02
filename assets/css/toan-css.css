@@ -9,10 +9,10 @@
 .color2, .hm-section-3 .col-section3-content .hm-section-3-content .content-wrap .third-paragraph > a > strong {
   color: #00ca00; }
 
-.bg-color2, .hm-section-5 .testimonials-title:after {
-  background-color: #00ff00; }
+.bg-color2, .btn-crossfit, .hm-section-6 .contact-us-form input[type="submit"], .section-title > h3:after, .hm-section-5 .testimonials-title:after {
+  background-color: #00ca00; }
 
-.bg-color, .btn-crossfit, .hm-section-6 .contact-us-form input[type="submit"], .section-title > h3:after {
+.bg-color {
   background-color: #00ff00; }
 
 .white, .hm-section-5 #gts-testimonials .wrap .lSSlideWrapper ul.testimonials-list li h5, .hm-section-5 #gts-testimonials .wrap .lSSlideWrapper ul.testimonials-list li blockquote {
@@ -215,7 +215,8 @@
     color: #fff; }
 
 body {
-  font-family: 'Montserrat', sans-serif !important; }
+  font-family: 'Montserrat', sans-serif !important;
+  color: #17191b; }
 
 a:hover {
   text-decoration: none; }
@@ -394,6 +395,8 @@ a:hover {
         padding: 0px;
         margin-bottom: 50px; }
       .hm-section-5 #gts-testimonials .wrap .lSSlideWrapper ul.testimonials-list li .gts-company {
+        display: none; }
+      .hm-section-5 #gts-testimonials .wrap .lSSlideWrapper ul.testimonials-list li:before {
         display: none; }
     .hm-section-5 #gts-testimonials .wrap .lSPager {
       display: none; }
