@@ -96,6 +96,8 @@ function func_crossfit_genesis_title_toggle() {
 add_action( 'func_crossfit_breadcrumb_section', 'func_crossfit_page_title', 10 );
 function func_crossfit_page_title() {
 
+	echo '<div class="page-title" style="background-image: url('.get_stylesheet_directory_uri(). '/assets/images/texture.png);">';
+
 	// Add post titles back inside posts loop.
 	if ( is_home() || is_archive() || is_category() || is_tag() || is_tax() || is_search() || is_page_template( 'page_blog.php' ) ) {
 
@@ -148,6 +150,7 @@ function func_crossfit_page_title() {
 		genesis_do_post_title();
 
 	}
+	echo '</div>';
 
 }
 

@@ -58,16 +58,26 @@ var genesisSample = ( function( $ ) {
 
 jQuery( window ).on( 'load', genesisSample.load );
 
-	jQuery(document).ready(function(){
+jQuery(document).ready(function(){
 
-		// Click scroll down
-		jQuery('.icon-down').on('click',function(e){
-			e.preventDefault();
-		    jQuery('html, body').animate({
-		      	scrollTop: jQuery(".signup-email-form").offset().top
-		    }, 500, 'swing')
-		});
-
-
-
+	// Click scroll down
+	jQuery('.icon-down').on('click',function(e){
+		e.preventDefault();
+	    jQuery('html, body').animate({
+	      	scrollTop: jQuery(".signup-email-form").offset().top
+	    }, 500, 'swing')
 	});
+
+
+
+});
+
+
+jQuery(window).scroll(function(){
+    if (jQuery(window).scrollTop() >= 300) {
+        jQuery('.site-header').addClass('fixed-header');
+    }
+    else {
+        jQuery('.site-header').removeClass('fixed-header');
+    }
+});

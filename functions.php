@@ -260,13 +260,3 @@ add_action( 'func_crossfit_breadcrumb_section', 'genesis_do_breadcrumbs', 30 );
 
 
 require_once CHILD_THEME_DIR . '/function-toan.php';
-// function remove_some_widgets(){
-
-// 	// Unregister some of the TwentyTen sidebars
-// 	unregister_sidebar( 'footer-1' );
-// 	unregister_sidebar( 'footer-2' );
-// 	;unregister_sidebar( 'footer-3' );
-// }
-// add_action( 'widgets_init', 'remove_some_widgets', 11 )
-/* End Function ToanNgo92 */
-
