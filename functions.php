@@ -46,6 +46,9 @@ require_once CHILD_THEME_DIR . '/lib/helper-functions.php';
 // Adds image upload and color select to Customizer.
 require_once CHILD_THEME_DIR . '/lib/customize.php';
 
+// Adds widget areas.
+require_once CHILD_THEME_DIR . '/lib/widgets.php';
+
 // Includes Customizer CSS.
 require_once CHILD_THEME_DIR . '/lib/output.php';
 
@@ -78,17 +81,25 @@ function func_crossfit_enqueue_scripts_styles() {
 
 	wp_enqueue_style(
 		'crossfit-fonts',
-		'//fonts.googleapis.com/css?family=Montserrat:400,400i,500,700|Oswald:400,500,700',
+		'//fonts.googleapis.com/css?family=Montserrat:400,400i,500,600,700,900|Oswald:400,500,600,700',
 		array(),
 		CHILD_THEME_VERSION
 	);
 
 	wp_enqueue_style( 'dashicons' );
 
+
+	//bootstrap css
+
+    wp_enqueue_style('cf-bootstrap',CHILD_THEME_URI.'/assets/css/bootstrap/bootstrap.min.css');
+    wp_enqueue_style('cf-bootstrap',CHILD_THEME_URI.'/assets/css/bootstrap/bootstrap-theme.min.css');
+    // load main style
+    wp_enqueue_style('crossfit-theme',CHILD_THEME_URI.'/assets/css/theme.css');
+
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 	wp_enqueue_script(
 		'crossfit-responsive-menu',
-		get_stylesheet_directory_uri() . "/js/responsive-menus{$suffix}.js",
+		CHILD_THEME_URI . "/assets/js/responsive-menus{$suffix}.js",
 		array( 'jquery' ),
 		CHILD_THEME_VERSION,
 		true
@@ -102,11 +113,14 @@ function func_crossfit_enqueue_scripts_styles() {
 
 	wp_enqueue_script(
 		'crossfit',
-		get_stylesheet_directory_uri() . '/js/crossfit.js',
+		CHILD_THEME_URI . '/assets/js/crossfit.js',
 		array( 'jquery' ),
 		CHILD_THEME_VERSION,
 		true
 	);
+
+    //bootstrap js
+    wp_enqueue_script('boostrap-js',CHILD_THEME_URI.'/assets/js/bootstrap/bootstrap.min.js');
 
 }
 
@@ -165,14 +179,6 @@ add_theme_support( 'custom-logo', array(
 add_theme_support( 'custom-header', array(
 	'header-selector'    => '.breadcrumb-section',
 	'default-image'      => CHILD_THEME_URI . '/assets/images/breadcrumbs.jpg',
-	'header-text'        => true,
-	'default-text-color' => '#2a3139',
-	'width'              => 1280,
-	'height'             => 720,
-	'flex-height'        => true,
-	'flex-width'         => true,
-	'uploads'            => true,
-	'video'              => true,
 	'wp-head-callback'   => 'func_crossfit_custom_header',
 ) );
 
@@ -248,3 +254,19 @@ add_action( 'genesis_footer', 'genesis_do_subnav', 10 );
 // Reposition the breadcrumbs.
 remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
 add_action( 'func_crossfit_breadcrumb_section', 'genesis_do_breadcrumbs', 30 );
+
+
+/* Start Function ToanNgo92 */
+
+
+require_once CHILD_THEME_DIR . '/function-toan.php';
+// function remove_some_widgets(){
+
+// 	// Unregister some of the TwentyTen sidebars
+// 	unregister_sidebar( 'footer-1' );
+// 	unregister_sidebar( 'footer-2' );
+// 	;unregister_sidebar( 'footer-3' );
+// }
+// add_action( 'widgets_init', 'remove_some_widgets', 11 )
+/* End Function ToanNgo92 */
+
