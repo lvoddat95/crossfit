@@ -1,6 +1,106 @@
 /* home page 1 */
 @import "theme";
 
+
+/* default button */
+:focus {
+  outline: 2px solid #eceef1;
+}
+
+::-moz-placeholder {
+  color: #a4a4a4;
+  opacity: 1;
+}
+
+::-webkit-input-placeholder {
+  color: #a4a4a4;
+}
+
+input,
+select,
+textarea {
+  color: #2a3139;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+  border: none;
+  border-radius: 0px;
+  padding: 0 1.5em;
+  width: 100%;
+  font-size: 16px;
+  font-size: 23px;
+  line-height: 50px;
+  height: 50px;
+  font-weight: normal;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border: none;
+}
+
+textarea {
+  border-radius: 0px;
+  padding: 7px 35px;
+  height: auto;
+  line-height: normal;
+}
+
+input[type='checkbox'],
+input[type='image'],
+input[type='radio'] {
+  width: auto;
+}
+
+input[type='search'] {
+  -webkit-appearance: none;
+}
+
+.button,
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'],
+.wp-block-button a {
+  border: 0;
+  border-radius: 0px;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  text-decoration: none;
+  white-space: nowrap;
+  display: inline-block;
+  width: auto;
+  line-height: normal;
+  height: 77px;
+  padding: 0px;
+  box-shadow: none;
+  @extend .transition;
+  background: $color;
+  filter: none;
+}
+
+.button:hover,
+.button:focus,
+button:hover,
+button:focus,
+input[type='button']:hover,
+input[type='button']:focus,
+input[type='reset']:hover,
+input[type='reset']:focus,
+input[type='submit']:hover,
+input[type='submit']:focus,
+.wp-block-button a:hover,
+.wp-block-button a:focus {
+  color: #ffffff;
+  box-shadow: none;
+}
+
+
+
 .entry-content{
   p{
     color: #17191b;
