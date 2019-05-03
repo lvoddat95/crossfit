@@ -1,0 +1,302 @@
+/* define variable, class */
+$color: #00ff00;
+$color2:  #00ca00;
+.dark-black{
+  color: #17191b;
+}
+.color {
+  color: #00ff00;
+}
+.color2 {
+  color: #00ca00;
+}
+.bg-color2 {
+  background-color: #00ca00;
+}
+.bg-color {
+  background-color: #00ff00;
+}
+
+.white {
+  color: #fff;
+}
+
+.hvr-color:hover {
+  color: #00ff00;
+}
+
+.font-900 {
+  font-weight: 900;
+}
+
+.font-300 {
+  font-weight: 300;
+}
+
+.font-100 {
+  font-weight: 100;
+}
+
+.font-500 {
+  font-weight: 500;
+}
+
+.font-600 {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-normal {
+  font-weight: normal;
+}
+
+.title8 {
+  font-size: 8px;
+  line-height: normal;
+}
+
+.title9 {
+  font-size: 9px;
+  line-height: normal;
+}
+
+.title11 {
+  font-size: 11px;
+  line-height: normal;
+}
+
+.title12 {
+  font-size: 12px;
+  line-height: normal;
+}
+
+.title13 {
+  font-size: 13px;
+  line-height: normal;
+}
+
+.title15 {
+  font-size: 15px;
+  line-height: normal;
+}
+
+.title16 {
+  font-size: 16px;
+}
+
+.title17 {
+  font-size: 17px;
+  line-height: normal;
+}
+
+.title18 {
+  font-size: 18px;
+  line-height: normal;
+}
+
+.title20 {
+  font-size: 20px;
+  line-height: 33px;
+}
+
+.title22 {
+  font-size: 22px;
+  line-height: normal;
+}
+
+.title24 {
+  font-size: 24px;
+  line-height: normal;
+}
+
+.title25 {
+  font-size: 25px;
+  line-height: 37px;
+}
+
+.title28 {
+  font-size: 28px;
+  line-height: normal;
+}
+
+.title30 {
+  font-size: 30px;
+  line-height: normal;
+}
+
+.title35 {
+  font-size: 35px;
+  line-height: normal;
+}
+
+.title36 {
+  font-size: 36px;
+  line-height: normal;
+}
+
+.title40 {
+  font-size: 40px;
+  line-height: normal;
+}
+
+.title45 {
+  font-size: 45px;
+  line-height: normal;
+}
+
+.title50{
+  font-size: 50px;
+  line-height: normal;
+}
+
+.title48 {
+  font-size: 48px;
+  line-height: normal;
+}
+
+.title51 {
+  font-size: 51px;
+  line-height: normal;
+}
+
+.title60 {
+  font-size: 60px;
+  line-height: normal;
+}
+
+.title90 {
+  font-size: 90px;
+  line-height: normal;
+}
+
+.title120 {
+  font-size: 120px;
+  line-height: normal;
+}
+
+.title150 {
+  font-size: 150px;
+  line-height: normal;
+}
+
+.title160 {
+  font-size: 160px;
+  line-height: normal;
+}
+
+.title100 {
+  font-size: 100px;
+  line-height: normal;
+}
+
+.transition {
+  transition: all 0.3s ease-out 0s;
+  -webkit-transition: all 0.3s ease-out 0s;
+}
+
+.flex-wrap {
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+}
+
+.inline-flex-wrap {
+  display: inline-flex;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+}
+
+.flex-wrap {
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -o-flex;
+}
+
+.flex-wrap-wrap {
+  flex-wrap: wrap;
+}
+
+.align-items-center {
+  align-items: center;
+  -ms-align-items: center;
+  -webkit-align-items: center;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.no-margin {
+  margin: 0px;
+}
+
+.after-df {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+.font-montse {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.btn-crossfit {
+  color: #fff;
+  height: 77px;
+  min-width: 480px;
+  display: inline-block;
+  text-align: center;
+  padding-top: 25px;
+  @extend .bg-color2;
+  @extend .title30;
+  @extend .font-600;
+  &:hover {
+    color: #fff;
+  }
+}
+
+body {
+  font-family: 'Montserrat', sans-serif !important;
+  color: #17191b;
+}
+
+a {
+  @extend .transition;
+  @extend .hvr-color;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+/* main css */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px !important;
+  }
+}
+
+@media (min-width: 1460px) {
+  .container {
+    width: 1450px !important;
+  }
+}
+
+
+
