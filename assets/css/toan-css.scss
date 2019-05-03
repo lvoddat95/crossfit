@@ -107,7 +107,7 @@
     margin-bottom: 50px;
     &:after {
       @extend .after-df;
-      @extend .bg-color2;
+      @extend .bg-color;
       width: 90px;
       height: 7px;
       left: calc(50% - 45px);
@@ -220,7 +220,7 @@
   padding-bottom: 300px;
   .testimonials-title {
     position: relative;
-    margin-bottom: 73px;
+    margin-bottom: 30px;
     &:after {
       @extend .after-df;
       @extend .bg-color2;
@@ -257,9 +257,6 @@
               margin-bottom: 50px;
             }
             .gts-company {
-              display: none;
-            }
-            &:before{
               display: none;
             }
           }
@@ -332,12 +329,10 @@
           &::placeholder{
             font-size: 23px;
             line-height: 44px;
-            color: #a4a4a4;
           }
           &::-webkit-input-placeholder{
             font-size: 23px;
             line-height: 44px;
-            color: #a4a4a4;
           }
         }
         textarea{
