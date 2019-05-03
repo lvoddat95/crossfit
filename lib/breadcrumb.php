@@ -13,22 +13,8 @@ if ( ! defined( 'WPINC' ) ) {
 
 }
 
+/* Add itemref attribute to link entry-title.*/
 add_filter( 'genesis_attr_entry', 'func_crossfit_entry_attr' );
-/**
- * Add itemref attribute to link entry-title.
- *
- * Since the entry-title is repositioned outside of the entry article, we need
- * to add some additional microdata so that it is still picked up as a part
- * of the entry. By adding the itemref attribute, we are telling search
- * engines to check the breadcrumb-section element for additional elements.
- *
- * @since  1.0.0
- *
- * @link   https://www.w3.org/TR/microdata/#dfn-itemref
- * @param  array $atts Entry attributes.
- *
- * @return array
- */
 function func_crossfit_entry_attr( $atts ) {
 
 	if ( is_singular() && did_action( 'genesis_before_entry' ) && ! did_action( 'genesis_after_entry' ) ) {
@@ -41,17 +27,8 @@ function func_crossfit_entry_attr( $atts ) {
 
 }
 
+/* Set up breadcrumb section.*/
 add_action( 'genesis_before', 'func_crossfit_breadcrumb_section_setup' );
-/**
- * Set up breadcrumb section.
- *
- * Removes and repositions the title on all possible types of pages. Wrapped
- * up into one function so it can easily be unhooked from genesis_before.
- *
- * @since 1.0.0
- *
- * @return void
- */
 function func_crossfit_breadcrumb_section_setup() {
 
 	// Remove default breadcrumb section.
@@ -83,14 +60,8 @@ function func_crossfit_breadcrumb_section_setup() {
 
 }
 
+/* Remove default title of 404 pages.*/
 add_action( 'genesis_before_content', 'func_crossfit_remove_404_title' );
-/**
- * Remove default title of 404 pages.
- *
- * @since  1.0.0
- *
- * @return void
- */
 function func_crossfit_remove_404_title() {
 
 	if ( is_404() ) {
@@ -103,7 +74,6 @@ function func_crossfit_remove_404_title() {
 
 }
 
-add_action( 'be_title_toggle_remove', 'func_crossfit_genesis_title_toggle' );
 /**
  * Integrate with Genesis Title Toggle plugin
  *
@@ -114,6 +84,7 @@ add_action( 'be_title_toggle_remove', 'func_crossfit_genesis_title_toggle' );
  *
  * @return void
  */
+add_action( 'be_title_toggle_remove', 'func_crossfit_genesis_title_toggle' );
 function func_crossfit_genesis_title_toggle() {
 
 	remove_action( 'func_crossfit_breadcrumb_section', 'func_crossfit_page_title', 10 );
@@ -121,17 +92,8 @@ function func_crossfit_genesis_title_toggle() {
 
 }
 
+/* Display title in breadcrumb section.*/
 add_action( 'func_crossfit_breadcrumb_section', 'func_crossfit_page_title', 10 );
-/**
- * Display title in breadcrumb section.
- *
- * Works out the correct title to display in the breadcrumb section on a per page
- * basis. Also adds the entry title back in to the entry inside the loop.
- *
- * @since  1.0.0
- *
- * @return void
- */
 function func_crossfit_page_title() {
 
 	// Add post titles back inside posts loop.
@@ -189,70 +151,24 @@ function func_crossfit_page_title() {
 
 }
 
+/* Display page excerpt.*/
 add_action( 'func_crossfit_breadcrumb_section', 'func_crossfit_page_excerpt', 20 );
-/**
- * Display page excerpt.
- *
- * Prints the correct excerpt on a per page basis. If on the WooCommerce shop
- * page then the products result count is be displayed instead of the page
- * excerpt. Also, if on a single product then no excerpt will be output.
- *
- * @since  1.0.0
- *
- * @return void
- */
 function func_crossfit_page_excerpt() {
 
-	if ( class_exists( 'WooCommerce' ) && is_shop() ) {
+	if( class_exists('ACF') )  {
 
-		woocommerce_result_count();
+		$brc_subtitle = get_field('brc_subtitle');
+		$brc_desc = get_field('brc_desc');
+		$icon_down = get_field('icon_down');
 
-	} elseif ( is_home() ) {
-
-		$id = get_option( 'page_for_posts' );
-
-		if ( has_excerpt( $id ) ) {
-
-			printf( '<p itemprop="description">%s</p>', do_shortcode( get_the_excerpt( $id ) ) );
-
-		}
-	} elseif ( is_search() ) {
-
-		$id = get_page_by_path( 'search' );
-
-		if ( has_excerpt( $id ) ) {
-
-			printf( '<p itemprop="description">%s</p>', do_shortcode( get_the_excerpt( $id ) ) );
-
-		}
-	} elseif ( is_404() ) {
-
-		$id = get_page_by_path( 'error-404' );
-
-		if ( has_excerpt( $id ) ) {
-
-			printf( '<p itemprop="description">%s</p>', do_shortcode( get_the_excerpt( $id ) ) );
-
-		}
-	} elseif ( ( is_single() || is_singular() ) && ! is_singular( 'product' ) && has_excerpt() ) {
-
-		printf( '<p itemprop="description">%s</p>', do_shortcode( get_the_excerpt() ) );
-
+		if ($brc_subtitle) printf( '<span class="subtitle">%s</span>', $brc_subtitle);
+		if ($brc_subtitle) printf( '<p itemprop="description">%s</p>', $brc_desc);
+	 	if ($icon_down) echo '<a href="javascript:;"><img class="icon-down" src="' . wp_get_attachment_url( $icon_down ) . '"/></a>';
 	}
 }
 
+/* Callback for dynamic Genesis 'genesis_attr_$context' filter. Add custom attributes for the custom filter.*/
 add_filter( 'genesis_attr_breadcrumb-section', 'func_crossfit_breadcrumb_section_attr' );
-/**
- * Callback for dynamic Genesis 'genesis_attr_$context' filter.
- *
- * Add custom attributes for the custom filter.
- *
- * @since  1.0.0
- *
- * @param  array $attr The element attributes.
- *
- * @return array
- */
 function func_crossfit_breadcrumb_section_attr( $attr ) {
 
 	$attr['id']   = 'breadcrumb-section';
@@ -262,22 +178,13 @@ function func_crossfit_breadcrumb_section_attr( $attr ) {
 
 }
 
+/* Display the breadcrumb section.*/
 add_action( 'genesis_before_content_sidebar_wrap', 'func_crossfit_breadcrumb_section' );
-/**
- * Display the breadcrumb section.
- *
- * Conditionally outputs the opening and closing breadcrumb section markup and runs
- * func_crossfit_breadcrumb_section which all of our header functions are hooked to.
- *
- * @since  1.0.0
- *
- * @return void
- */
 function func_crossfit_breadcrumb_section() {
 
 	// Output breadcrumb section markup.
 	genesis_markup( array(
-		'open'    => '<section %s><div class="wrap">',
+		'open'    => '<section %s><div class="container">',
 		'context' => 'breadcrumb-section',
 	) );
 

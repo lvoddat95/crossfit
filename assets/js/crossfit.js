@@ -57,3 +57,17 @@ var genesisSample = ( function( $ ) {
 }( jQuery ) );
 
 jQuery( window ).on( 'load', genesisSample.load );
+
+	jQuery(document).ready(function(){
+
+		// Click scroll down
+		jQuery('.icon-down').on('click',function(e){
+			e.preventDefault();
+		    jQuery('html, body').animate({
+		      	scrollTop: jQuery(".signup-email-form").offset().top
+		    }, 500, 'swing')
+		});
+
+
+
+	});
