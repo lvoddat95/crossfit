@@ -227,6 +227,9 @@ a:hover {
 @media (min-width: 1460px) {
   .container {
     width: 1450px !important; } }
+.entry-content p {
+  color: #17191b; }
+
 .hm-section-1 {
   background: #17191b; }
   .hm-section-1 .signup-email-wrap .signup-email-form {
@@ -323,13 +326,16 @@ a:hover {
           width: 90px;
           height: 7px;
           background: #00ca00; }
-    .hm-section-3 .col-section3-content .hm-section-3-content .content-wrap p {
-      margin-bottom: 43px; }
-    .hm-section-3 .col-section3-content .hm-section-3-content .content-wrap .third-paragraph {
-      margin-bottom: 33px; }
-      .hm-section-3 .col-section3-content .hm-section-3-content .content-wrap .third-paragraph > a > strong {
-        text-decoration: solid;
-        text-decoration-line: underline; }
+    .hm-section-3 .col-section3-content .hm-section-3-content .content-wrap {
+      color: #fff; }
+      .hm-section-3 .col-section3-content .hm-section-3-content .content-wrap p {
+        color: #fff;
+        margin-bottom: 43px; }
+      .hm-section-3 .col-section3-content .hm-section-3-content .content-wrap .third-paragraph {
+        margin-bottom: 33px; }
+        .hm-section-3 .col-section3-content .hm-section-3-content .content-wrap .third-paragraph > a > strong {
+          text-decoration: solid;
+          text-decoration-line: underline; }
   .hm-section-3 .col-section3-img .img-wrap {
     position: relative; }
     .hm-section-3 .col-section3-img .img-wrap img {
@@ -370,7 +376,7 @@ a:hover {
   padding-bottom: 300px; }
   .hm-section-5 .testimonials-title {
     position: relative;
-    margin-bottom: 30px; }
+    margin-bottom: 92px; }
     .hm-section-5 .testimonials-title:after {
       width: 90px;
       height: 7px;
@@ -383,6 +389,7 @@ a:hover {
       width: 100%;
       margin: 0px; }
       .hm-section-5 #gts-testimonials .wrap .lSSlideWrapper ul.testimonials-list li img {
+        margin: auto;
         width: 210px;
         height: 210px;
         margin-bottom: 36px; }
@@ -391,6 +398,7 @@ a:hover {
         font-weight: 600;
         margin-bottom: 40px; }
       .hm-section-5 #gts-testimonials .wrap .lSSlideWrapper ul.testimonials-list li blockquote {
+        border: none;
         padding: 0px;
         margin-bottom: 50px; }
       .hm-section-5 #gts-testimonials .wrap .lSSlideWrapper ul.testimonials-list li .gts-company {
@@ -460,5 +468,25 @@ a:hover {
     background: #00ca00;
     padding: 0px;
     border-radius: 0px; }
+
+/* responsive */
+@media (max-width: 1440px) {
+  .signup-email-wrap .signup-email-form h4.title45 {
+    font-size: 42px; }
+
+  .hm-section-2 .hm-section-2-content .col-content .content-wrap {
+    font-size: 20px; }
+
+  .hm-section-3 .col-section3-img .img-wrap img {
+    position: relative;
+    margin-left: -150px;
+    margin-top: -69px; }
+  .hm-section-3 .col-section3-content .hm-section-3-content .content-wrap {
+    font-size: 20px; }
+    .hm-section-3 .col-section3-content .hm-section-3-content .content-wrap p {
+      margin-bottom: 20px; }
+
+  .hm-section-4 .content-wrap .wcc-wrap .wcc-desc {
+    font-size: 17px; } }
 
 /*# sourceMappingURL=toan-css.css.map */

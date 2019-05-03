@@ -1,6 +1,12 @@
 /* home page 1 */
 @import "theme";
 
+.entry-content{
+  p{
+    color: #17191b;
+  }
+}
+
 .hm-section-1 {
   background: #17191b;
   .signup-email-wrap {
@@ -141,7 +147,9 @@
         }
       }
       .content-wrap {
+        color: #fff;
         p {
+          color: #fff;
           margin-bottom: 43px;
         }
         .third-paragraph {
@@ -220,7 +228,7 @@
   padding-bottom: 300px;
   .testimonials-title {
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 92px;
     &:after {
       @extend .after-df;
       @extend .bg-color2;
@@ -240,6 +248,7 @@
         ul.testimonials-list {
           li {
             img {
+              margin: auto;
               width: 210px;
               height: 210px;
               margin-bottom: 36px;
@@ -253,6 +262,7 @@
             blockquote {
               @extend .white;
               @extend .title25;
+              border: none;
               padding: 0px;
               margin-bottom: 50px;
             }
@@ -353,4 +363,79 @@
       border-radius: 0px;
     }
   }
+}
+
+/* responsive */
+
+@media (max-width: 1440px) {
+  .signup-email-wrap{
+    .signup-email-form{
+      h4.title45{
+        font-size: 42px;
+      }
+    }
+  }
+  .hm-section-2{
+    .hm-section-2-content{
+      .col-content{
+        .content-wrap{
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .hm-section-3{
+    .col-section3-img{
+      .img-wrap{
+        img{
+          position: relative;
+          margin-left: -150px;
+          margin-top: -69px;
+        }
+      }
+    }
+    .col-section3-content{
+      .hm-section-3-content{
+        .content-wrap{
+          font-size: 20px;
+          p{
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+  .hm-section-4{
+    .content-wrap{
+      .wcc-wrap{
+        .wcc-desc{
+          font-size: 17px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 480px) {
+
+}
+
+@media (max-width: 375px) {
+
+}
+
+@media (max-width: 320px) {
+
 }
