@@ -206,10 +206,10 @@
 .btn-crossfit {
   color: #fff;
   height: 77px;
+  line-height: 77px;
   min-width: 480px;
   display: inline-block;
-  text-align: center;
-  padding-top: 25px; }
+  text-align: center; }
   .btn-crossfit:hover {
     color: #fff; }
 

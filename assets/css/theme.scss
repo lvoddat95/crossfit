@@ -259,10 +259,10 @@ $color2:  #00ca00;
 .btn-crossfit {
   color: #fff;
   height: 77px;
+  line-height: 77px;
   min-width: 480px;
   display: inline-block;
   text-align: center;
-  padding-top: 25px;
   @extend .bg-color;
   @extend .title30;
   @extend .font-600;

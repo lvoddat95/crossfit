@@ -212,10 +212,10 @@ input[type='submit'],
 .btn-crossfit, .hm-section-6 .contact-us-form input[type="submit"] {
   color: #fff;
   height: 77px;
+  line-height: 77px;
   min-width: 480px;
   display: inline-block;
-  text-align: center;
-  padding-top: 25px; }
+  text-align: center; }
   .btn-crossfit:hover, .hm-section-6 .contact-us-form input[type="submit"]:hover {
     color: #fff; }
 
