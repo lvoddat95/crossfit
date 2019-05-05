@@ -198,6 +198,9 @@ input[type='submit'],
 .justify-content-center {
   justify-content: center; }
 
+.display-inline-block {
+  display: inline-block; }
+
 .no-margin {
   margin: 0px; }
 

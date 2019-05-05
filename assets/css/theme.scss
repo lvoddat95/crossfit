@@ -241,6 +241,13 @@ $color2:  #00ca00;
   justify-content: center;
 }
 
+.display-inline-block{
+  display: inline-block;
+}
+.round{
+  border-radius: 50%;
+}
+
 .no-margin {
   margin: 0px;
 }
@@ -254,6 +261,8 @@ $color2:  #00ca00;
 .font-montse {
   font-family: 'Montserrat', sans-serif;
 }
+
+
 
 
 .btn-crossfit {

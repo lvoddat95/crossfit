@@ -70,6 +70,73 @@ function crf_entry_content_about_us()
             </div>
         </div>
     </div>
+    <div class="_about-section-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="group-tabs">
+                        <!-- Nav tabs -->
+                        <div class="tab-nav-wrap col-md-4 col-sm-4 col-xs-4">
+                            <h3 class="_ab-sec-2-title-wrap">
+                                <span class="white font-600 text-uppercase"><?php if(!empty($coaches_title1)) echo esc_html($coaches_title1) ?></span>
+                                <span class="white font-600 text-uppercase"><?php if(!empty($coaches_title2)) echo esc_html($coaches_title2) ?></span>
+                            </h3>
+                        <ul class="nav nav-tabs nav-pills nav-stacked" role="tablist">
+                            <?php if(!empty($our_couches_tab) && is_array($our_couches_tab)) foreach ($our_couches_tab as $key => $value){
+                                extract($value);
+                                $class_active = '';
+                                if($key == 0){
+                                    $class_active = 'active';
+                                }
+                                else{
+                                    $class_active = '';
+                                }
+                                ?>
+                                <li role="presentation" class="<?php echo esc_attr($class_active) ?>">
+                                    <a href="#<?php echo esc_attr('our_coach_tab_'.$key); ?>" aria-controls="<?php echo esc_attr('our_coach_tab_'.$key); ?>" role="tab" data-toggle="tab">
+                                        <i class="img-wrap"><img src="<?php echo wp_get_attachment_image_src($our_coach_image, array(124,124))[0]; ?>"/></i>
+                                        <span class="coach-info-wrap">
+                                        <span class="coach-name"><?php echo esc_html($our_coach_name) ?></span>
+                                        <span class="coach-office"><?php echo esc_html($our_coach_office) ?></span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <?php
+                            }?>
+                        </ul>
+                        </div>
+                        <!-- Tab panes -->
+                        <div class="tab-content col-md-8 col-sm-8 col-xs-8">
+                            <?php if(!empty($our_couches_tab) && is_array($our_couches_tab)) foreach ($our_couches_tab as $key => $value){
+                                //var_dump($value);
+                                extract($value);
+                                $class_active = '';
+                                if($key == 0){
+                                    $class_active = 'active';
+                                }
+                                else{
+                                    $class_active = '';
+                                }
+                                ?>
+                                <div role="tabpanel" class="tab-pane our-coach-content <?php  echo esc_attr($class_active) ?>" id="<?php echo esc_attr('our_coach_tab_'.$key); ?>">
+                                    <div class="text-center img-title-coach-wrap">
+                                        <div class="img-wrap round display-inline-block">
+                                        <img src="<?php echo wp_get_attachment_image_src($our_coach_image, array(230,230))[0]; ?>"/>
+                                        </div>
+                                        <h4><?php echo esc_html($our_coach_full_name); ?></h4>
+                                    </div>
+                                    <div class="coach-content">
+                                        <?php echo apply_filters('crossfit_output_content',$our_coach_content) ?>
+                                    </div>
+                                </div>
+                                <?php
+                            }?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="hm-section-4">
         <div class="container">
             <div class="row">

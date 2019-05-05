@@ -192,6 +192,12 @@
 .justify-content-center {
   justify-content: center; }
 
+.display-inline-block {
+  display: inline-block; }
+
+.round {
+  border-radius: 50%; }
+
 .no-margin {
   margin: 0px; }
 
