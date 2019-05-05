@@ -29,7 +29,7 @@ function crf_template_before_footer() {
                             $gg_address = $google_map['ggm_marker_title'];
                             $lat = $google_map['ggm_location']['lat'];
                             $lng = $google_map['ggm_location']['lng'];
-                            $ggm_loc .= $lat.','.$lng;
+                            $ggm_loc = $lat.','.$lng;
                         ?>
                         <div id="<?php echo $id; ?>" class="sv-ggmaps "
                             data-location="|<?php echo esc_html($ggm_loc); ?>,,<?php if (!empty($gg_address)) echo esc_html($gg_address) ?>," 
@@ -73,7 +73,8 @@ function crf_template_before_footer() {
                     </div>
                     <div class="phone-ft text-center">
                         <h3 class="title-sc title-pn"><?php if ($phone_tilte) echo esc_html($phone_tilte); ?></h3>
-                        <a class="phone-num" href="<?php echo esc_html($phone_number); ?>"><?php if ($phone_number) echo esc_html($phone_number); ?></a>
+                        <?php $nbp = preg_replace("/[^0-9]/", "", $phone_number); ?>
+                        <a class="phone-num" href="tel:<?php echo esc_url($nbp); ?>"><?php if ($phone_number) echo esc_html($phone_number); ?></a>
                     </div>
                 </div>
             </div>
@@ -98,10 +99,8 @@ function crf_template_before_footer() {
                         <p class="add-info"><?php if ($address['ft_add_info']) echo esc_html($address['ft_add_info']); ?></p>
                     </div>
                     <div class="ft-part">
-                        <h3 class="title-sc"><?php if ($ft_pn['ft_pn_title']) echo esc_html($ft_pn_title['ft_pn_title']); ?></h3>
+                        <h3 class="title-sc"><?php if ($ft_pn['ft_pn_title']) echo esc_html($ft_pn['ft_pn_title']); ?></h3>
                         <div class="list-img">
-                            <?php if ($ft_pn_list) echo apply_filters('crossfit_output_content', $ft_pn_list)  ?>
-
                             <?php 
                             if( $ft_pn['ft_pn_list'] ): ?>
                                 <ul class="list-inline">

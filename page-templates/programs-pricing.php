@@ -22,28 +22,49 @@ function crf_entry_content_program_pricing() {
     ?>
 	
 		<div class="crf-pp-section-1">
-			
-		</div>
+			<div class="container">
+				<div class="section-title text-center text-uppercase inline">
+                    <span class="title51 font-montse no-margin">WHAT IS</span>
+                    <span class="title51 font-montse no-margin font-bold"> CROSSFIT?</span>
+                </div>
+			</div>
+		</div><!-- #crf-pp-section-1 -->
+
 		<div class="crf-pp-section-2">
-			
-		</div>
+			<div class="container">
+				
+			</div>
+		</div><!-- #crf-pp-section-2 -->
+
 		<div class="crf-pp-section-3">
-			
-		</div>
+			<div class="container">
+				
+			</div>
+		</div><!-- #crf-pp-section-3 -->
+
 		<div class="crf-pp-section-4">
-			
-		</div>
+			<div class="container">
+				
+			</div>
+		</div><!-- #crf-pp-section-4 -->
+
 		<div class="crf-pp-section-5">
-			
-		</div>
+			<div class="container">
+				
+			</div>
+		</div><!-- #crf-pp-section-5 -->
+
 		<div class="crf-pp-section-6">
-			
-		</div>
+			<div class="container">
+				
+			</div>
+		</div><!-- #crf-pp-section-16 -->
+
 		<div class="crf-pp-section-7">
-			
-		</div>
-
-
+			<div class="container">
+				
+			</div>
+		</div><!-- #crf-pp-section-7 -->
 
 
 	<?php
