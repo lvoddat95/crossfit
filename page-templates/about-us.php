@@ -14,82 +14,63 @@
 // Forces full width content layout.
 add_filter('genesis_site_layout', '__genesis_return_full_width_content');
 
-add_action( 'genesis_entry_content', 'crf_entry_content_about_us', 12 );
-function crf_entry_content_about_us() { 
+add_action('genesis_entry_content', 'crf_entry_content_about_us', 12);
+function crf_entry_content_about_us()
+{
     $section_about_us = get_field('section_about_us');
     extract($section_about_us);
 
     $section_our_coarcher = get_field('section_our_coarcher');
     extract($section_our_coarcher);
-    
 
     $section_why_choose = get_field('section_why_choose');
     extract($section_why_choose);
 
     $section_testimonials = get_field('section_testimonials');
     extract($section_testimonials);
-
-
-        
     ?>
-<div class="section-about-us">
- <div class="container">
-    <div class="row">
-        <div class="col-md-12 col-xs-12 col-sm-12">
-                 <div class="title-wrap text-center">
-                     <h2 class="title50">
-                         <span class="font-500 text-uppercase sec-about-title-1"><?php if(!empty($about_us_title1)) echo esc_html($about_us_title1); ?></span>
-                         <span class="font-bold text-uppercase sec-about-title-2"><?php if(!empty($about_us_title2)) echo esc_html($about_us_title2); ?></span>
-                     </h2>
-                     <h2 class="title2"></h2>
-                 </div>
-        </div>
-
-
-
-     <div class="row content-row1">
-         <div class="col1-img col-md-6 col-lg-6">
-             <div class="img-wrap">
+    <div class="section-about-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-xs-12 col-sm-12">
+                    <div class="_ab-sec-about-title-wrap text-center">
+                        <h2 class="title50">
+                            <span class="font-500 text-uppercase sec-about-title-1"><?php if (!empty($about_us_title1)) echo esc_html($about_us_title1); ?></span>
+                            <span class="font-bold text-uppercase sec-about-title-2"><?php if (!empty($about_us_title2)) echo esc_html($about_us_title2); ?></span>
+                        </h2>
+                    </div>
+                </div>
+                <div class="row content-row1">
+                    <div class="col1-img col-md-6 col-lg-6">
+                        <div class="img-wrap">
                             <?php if ($about_us_img) echo '<img src="' . wp_get_attachment_url($about_us_img) . '"/>'; ?>
                         </div>
-         </div>
-         <div class="col2-content col-md-6 col-lg-6">
-              <div class="content-wrap content1">
-                         <?php if ($about_us_content1) echo apply_filters('crossfit_output_content',
-                         $about_us_content1); ?>
-
+                    </div>
+                    <div class="col2-content col-md-6 col-lg-6">
+                        <div class="content-wrap content1 font-600 title30">
+                            <?php if ($about_us_content1) echo apply_filters('crossfit_output_content',
+                                $about_us_content1); ?>
+                        </div>
+                    </div>
                 </div>
-
-
-         </div>
-
-
-     </div>
-     <div class="content-row2 row">
-
-         <div class="content-wrap content2">
-                         <?php if ($about_us_content2) echo apply_filters('crossfit_output_content',
-                         $about_us_content2); ?>
+                <div class="content-row2 row">
+                    <div class="content-wrap content2 title25">
+                        <?php if ($about_us_content2) echo apply_filters('crossfit_output_content',
+                            $about_us_content2); ?>
+                    </div>
                 </div>
-         
-     </div>
-     <div class="button-about row">
-         <?php if ($about_us_button_text): ?>
-                            <a class="btn-about"
-                               href="<?php echo esc_html($about_us_button_url); ?>"><?php echo esc_html($about_us_button_text); ?></a>
-                        <?php endif; ?>
-
-     </div>
-
-
-
-    
+                <div class="button-about row text-center">
+                    <?php if ($about_us_button_text): ?>
+                        <a class="btn-crossfit"
+                           href="<?php echo esc_html($about_us_button_url); ?>"><?php echo esc_html($about_us_button_text); ?></a>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
     </div>
- </div>
-</div>
 
 
-<div class="hm-section-4">
+    <div class="hm-section-4">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-xs-12 col-sm-12">
@@ -165,10 +146,11 @@ function crf_entry_content_about_us() {
                 </div>
             </div>
         </div>
-</div>
+    </div>
 
 
-<div class="hm-section-5" style="background-image: url(<?php echo wp_get_attachment_image_src( $testimonials_background,'full')[0];?>);">
+    <div class="hm-section-5"
+         style="background-image: url(<?php echo wp_get_attachment_image_src($testimonials_background, 'full')[0]; ?>);">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-xs-12 col-sm-12">
@@ -183,9 +165,8 @@ function crf_entry_content_about_us() {
         </div>
     </div>
 
-   
 
-<?php
+    <?php
 }
 
 
