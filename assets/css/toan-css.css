@@ -560,6 +560,19 @@ input[type='submit']:focus,
     padding: 0px;
     border-radius: 0px; }
 
+/* about page */
+._about-section-1 {
+  padding-top: 56px;
+  padding-bottom: 120px; }
+  ._about-section-1 ._ab-sec-1-title-wrap > h3 {
+    margin-bottom: 76px; }
+    ._about-section-1 ._ab-sec-1-title-wrap > h3:after {
+      bottom: -34px; }
+  ._about-section-1 .content-row1 .col2-content .content-wrap {
+    margin-left: -20px;
+    line-height: 46px;
+    padding-top: 20px; }
+
 /* responsive */
 @media (max-width: 1440px) {
   .signup-email-wrap .signup-email-form h4.title45 {
@@ -578,6 +591,20 @@ input[type='submit']:focus,
       margin-bottom: 20px; }
 
   .hm-section-4 .content-wrap .wcc-wrap .wcc-desc {
-    font-size: 17px; } }
+    font-size: 17px; }
+
+  ._about-section-1 .content-row1 {
+    margin-bottom: 59px; }
+    ._about-section-1 .content-row1 .col2-content .content-wrap {
+      margin-left: 0px;
+      font-size: 23px;
+      line-height: 43px;
+      padding-top: 10px; }
+  ._about-section-1 .content-row2 .content-wrap {
+    margin-bottom: 110px; }
+    ._about-section-1 .content-row2 .content-wrap p {
+      margin-bottom: 39px; }
+      ._about-section-1 .content-row2 .content-wrap p:last-child {
+        margin-bottom: 0px; } }
 
 /*# sourceMappingURL=toan-css.css.map */

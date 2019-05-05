@@ -29,15 +29,15 @@ function crf_entry_content_about_us()
     $section_testimonials = get_field('section_testimonials');
     extract($section_testimonials);
     ?>
-    <div class="section-about-us">
+    <div class="_about-section-1">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-xs-12 col-sm-12">
-                    <div class="_ab-sec-about-title-wrap text-center">
-                        <h2 class="title50">
+                    <div class="_ab-sec-1-title-wrap section-title text-center">
+                        <h3 class="title50 no-margin">
                             <span class="font-500 text-uppercase sec-about-title-1"><?php if (!empty($about_us_title1)) echo esc_html($about_us_title1); ?></span>
                             <span class="font-bold text-uppercase sec-about-title-2"><?php if (!empty($about_us_title2)) echo esc_html($about_us_title2); ?></span>
-                        </h2>
+                        </h3>
                     </div>
                 </div>
                 <div class="row content-row1">
@@ -54,9 +54,11 @@ function crf_entry_content_about_us()
                     </div>
                 </div>
                 <div class="content-row2 row">
-                    <div class="content-wrap content2 title25">
-                        <?php if ($about_us_content2) echo apply_filters('crossfit_output_content',
-                            $about_us_content2); ?>
+                    <div class="cold-md-12 col-sm-12 col-xs-12">
+                        <div class="content-wrap content2 title25">
+                            <?php if ($about_us_content2) echo apply_filters('crossfit_output_content',
+                                $about_us_content2); ?>
+                        </div>
                     </div>
                 </div>
                 <div class="button-about row text-center">
@@ -68,8 +70,6 @@ function crf_entry_content_about_us()
             </div>
         </div>
     </div>
-
-
     <div class="hm-section-4">
         <div class="container">
             <div class="row">
