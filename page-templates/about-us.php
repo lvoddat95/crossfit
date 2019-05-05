@@ -36,9 +36,12 @@ function crf_entry_content_about_us() {
  <div class="container">
     <div class="row">
         <div class="col-md-12 col-xs-12 col-sm-12">
-                 <div class="title">
-                     <h2 class="title1"><?php if(!empty($about_us_title1)) echo esc_html($about_us_title1); ?></h2> 
-                     <h2 class="title2"><?php if(!empty($about_us_title2)) echo esc_html($about_us_title2); ?></h2>               
+                 <div class="title-wrap text-center">
+                     <h2 class="title50">
+                         <span class="font-500 text-uppercase sec-about-title-1"><?php if(!empty($about_us_title1)) echo esc_html($about_us_title1); ?></span>
+                         <span class="font-bold text-uppercase sec-about-title-2"><?php if(!empty($about_us_title2)) echo esc_html($about_us_title2); ?></span>
+                     </h2>
+                     <h2 class="title2"></h2>
                  </div>
         </div>
 
