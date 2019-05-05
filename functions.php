@@ -37,6 +37,9 @@ function func_crossfit_localization_setup() {
 
 }
 
+// Adds footer template.
+require_once CHILD_THEME_DIR . '/lib/footer.php';
+
 // Adds breadcurmb section.
 require_once CHILD_THEME_DIR . '/lib/breadcrumb.php';
 
@@ -121,6 +124,12 @@ function func_crossfit_enqueue_scripts_styles() {
 
     //bootstrap js
     wp_enqueue_script('boostrap-js',CHILD_THEME_URI.'/assets/js/bootstrap/bootstrap.min.js');
+
+    // Map script
+	$api_key ='AIzaSyAHslBiwa0b2uLygm62Jv_foXPqdraI6t4';
+    wp_enqueue_script( 'google-map', "//maps.google.com/maps/api/js?key=".$api_key, array('jquery'), null, true );
+    wp_enqueue_script( 'crf-script-map', CHILD_THEME_URI . '/assets/js/map.js',array('jquery'),null,true);
+
 
 }
 
@@ -219,11 +228,8 @@ add_theme_support( 'genesis-responsive-viewport' );
 // Adds image sizes.
 add_image_size( 'sidebar-featured', 75, 75, true );
 
-// Adds support for after entry widget.
-add_theme_support( 'genesis-after-entry-widget-area' );
-
-// Adds support for 3-column footer widgets.
-add_theme_support( 'genesis-footer-widgets', 3 );
+// Adds image sizes.
+add_image_size( 'admin-thumb', 50, 50, true );
 
 // Removes header right widget area.
 unregister_sidebar( 'header-right' );
@@ -235,6 +241,9 @@ unregister_sidebar( 'sidebar-alt' );
 genesis_unregister_layout( 'content-sidebar-sidebar' );
 genesis_unregister_layout( 'sidebar-content-sidebar' );
 genesis_unregister_layout( 'sidebar-sidebar-content' );
+genesis_unregister_layout( 'sidebar-content' );
+genesis_unregister_layout( 'content-sidebar' );
+
 
 // Removes output of primary navigation right extras.
 remove_filter( 'genesis_nav_items', 'genesis_nav_right', 10, 2 );
@@ -254,6 +263,49 @@ add_action( 'genesis_footer', 'genesis_do_subnav', 10 );
 // Reposition the breadcrumbs.
 remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
 add_action( 'func_crossfit_breadcrumb_section', 'genesis_do_breadcrumbs', 30 );
+
+// Remove Footer
+ remove_action('genesis_footer', 'genesis_do_footer');
+
+
+if ( is_plugin_active( 'wpstudio-testimonial-slider/genesis-testimonials.php' ) ) {
+	add_action( 'gts', 'crf_gts_title', 7 );
+	function crf_gts_title() {
+		echo '<h5 class="author" itemprop="author">' . get_the_title() . '</h5>';
+	}
+}
+
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page(array(
+		'page_title' 	=> 'Theme General Settings',
+		'menu_title'	=> 'Theme Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'position'      => 30,
+		'redirect'		=> false
+	));
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Theme Footer Settings',
+		'menu_title'	=> 'Footer Settings',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+	
+}
+
+if( class_exists('ACF') )  {
+	add_filter('acf/fields/google_map/api', 'crf_acf_google_map_api');
+	function crf_acf_google_map_api( $api ){
+
+		$key ='AIzaSyAHslBiwa0b2uLygm62Jv_foXPqdraI6t4';
+		$api['key'] = $key;
+		
+		return $api;
+		
+	}
+}
+
+
+
 
 
 /* Start Function ToanNgo92 */

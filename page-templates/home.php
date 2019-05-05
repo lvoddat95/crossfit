@@ -2,7 +2,7 @@
 /**
  * Crossfit.
  *
- * A template to force full-width layout, remove breadcrumbs, and remove the page title.
+ * Display to home page. A template to force full-width layout, remove breadcrumbs, and remove the page title.
  *
  * Template Name: Home
  *
@@ -24,10 +24,7 @@ function crf_entry_content_home() {
         extract($s_wcc);
         $s_testi = get_field('section_testimonials');
         extract($s_testi);
-        $s_contactus = get_field('section_contact_us_form');
-        extract($s_contactus);
     ?>
-
     <div class="hm-section-1">
         <div class="container">
             <div class="row">
@@ -191,22 +188,7 @@ function crf_entry_content_home() {
         </div>
     </div><!-- end-hm-section-5 -->
 
-    <div class="hm-section-6">
-        <div class="container">
-            <div class="row contact-us-wrap">
-                <div class="col-map col-md-6 col-sm-6 col-xs-12">
-                    <div class="google-maps">
-                        <?php if (!empty($hm_sec_6_google_iframe)) echo apply_filters('crossfit_output_content', $hm_sec_6_google_iframe) ?>
-                    </div>
-                </div>
-                <div class="col-contact col-md-6 col-sm-6 col-xs-12">
-                    <?php if (!empty($hm_sec_6_shortcode)) echo do_shortcode($hm_sec_6_shortcode) ?>
-                </div>
-            </div>
-        </div>
-    </div><!-- end-hm-section-6 -->
-
-<?php
+    <?php
 }
 
 

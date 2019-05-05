@@ -345,7 +345,7 @@ html {
 
 body {
 	background-color: #ffffff;
-	color: #17191b;
+	color: #17191b ;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 25px;
 	font-weight: 400;
@@ -1233,6 +1233,55 @@ img.alignright,
 	vertical-align: middle;
 	margin: 0 15px;
 }
+.post-edit-link{
+	display: none !important;
+}
+.hm-section-5 #gts-testimonials .wrap .lSSlideWrapper ul.testimonials-list li h5{
+	display: none;
+}
+.hm-section-5 #gts-testimonials .wrap .lSSlideWrapper ul.testimonials-list li h5.author{
+	display: block;
+}
+
+.sv-ggmaps {
+	height: 620px;
+}
+
+
+
+
+/*============================================
+=            Program/Pricing Page            =
+============================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=====  End of Program/Pricing Page  ======*/
+
+
+
+
+
+
+
+
 
 
 
