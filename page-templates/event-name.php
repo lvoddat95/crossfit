@@ -25,12 +25,11 @@ function crf_entry_content_event_name()
         $size = array(689, 498);
 
     ?>
-    <div class="section-event">
+    <div class="_ev-section-event">
         <div class="container">
-
             <div class="row">
                 <div class="col-sm-12 col-xs-12 col-md-12">
-                    <div class="wrap1">
+                    <div class="sec1-row1-wrap">
                         <div class="img-wrap event-img1 flex-wrap justify-content-center">
                             <?php if (!empty($event_img1)) echo wp_get_attachment_image($event_img1, array(522,522), false); ?>
                         </div>
@@ -39,23 +38,20 @@ function crf_entry_content_event_name()
 
                         </div>
                     </div>
-                    <div class="event-title"><h2><?php if (!empty($event_title)) echo esc_html($event_title); ?></h2>
-                    </div>
-                    <div class="row wrap1">
+                    <h2 class="font-600 event-title color title45"><?php if (!empty($event_title)) echo esc_html($event_title); ?></h2>
+                    <div class="row sec1-row2-wrap">
                         <div class="col-lg-6 col-md-6 col1-content">
-                            <div class="event-title1">
-                                <h2><?php if (!empty($event_row_1_title)) echo esc_html($event_row_1_title); ?></h2>
-                            </div>
-                            <div class="wrap-content-col-1">
+                            <h2 class="event-sec1-row2-title color text-uppercase font-600 title45 no-margin"><?php if (!empty($event_row_1_title)) echo esc_html($event_row_1_title); ?></h2>
+                            <div class="event-sec1-row2-desc">
                                 <?php
                                 if (!empty($event_row_1_group) && is_array($event_row_1_group)) {
                                     foreach ($event_row_1_group as $key => $value) {
                                         extract($value);
                                         ?>
-                                        <h3 class="event-row-1-title">
+                                        <h3 class="event-row-2-desc-title font-600 title30">
                                             <?php if (!empty($event_row_1_title)) echo esc_html($event_row_1_title); ?>
                                         </h3>
-                                        <div class="event-row-1-content">
+                                        <div class="event-row-2-desc-content">
                                             <?php if (!empty($event_row_1_desciption)) echo apply_filters('crossfit-output-content', $event_row_1_desciption); ?>
                                         </div>
                                         <?php
@@ -69,58 +65,57 @@ function crf_entry_content_event_name()
                                 <?php if (!empty($event_row_1_image)) echo wp_get_attachment_image($event_row_1_image, $size, false); ?>
                             </div>
                         </div>
-                        <div class="col-lg-12 col-md-12 col-xs-12 last-row1">
-                            <h3><?php if (!empty($event_last_row_1_text)) echo esc_html($event_last_row_1_text); ?></h3>
+                        <div class="col-lg-12 col-md-12 col-xs-12 last-row2">
+                            <h3 class="font-600 color title30"><?php if (!empty($event_last_row_1_text)) echo esc_html($event_last_row_1_text); ?></h3>
                         </div>
                     </div>
-                    <div class="row wrap2">
-                        <div class="event-title-row-2">
-                            <h2><?php if (!empty($event_title_row_2)) echo esc_html($event_title_row_2); ?></h2>
-                        </div>
-                        <?php
-                        if (!empty($event_row_2_group) && is_array($event_row_2_group)) {
-                            foreach ($event_row_2_group as $key => $value) {
-                                extract($value);
-                                ?>
-                                <div class="event-row-2-desc">
-                                    <h3 class="event-row-2-desc-title"><?php if (!empty($event_row_2_title)) echo esc_html($event_row_2_title); ?></h3>
-                                    <div class="event-row-2-desc-content">
-                                        <?php if (!empty($event_row_2_desciption)) echo apply_filters('crossfit-output-content', $event_row_2_desciption); ?>
+                    <div class="row sec1-row3-wrap">
+                        <div class="col-lg-12 col-md-12">
+                            <h2 class="no-margin event-title-row-3 color text-uppercase font-600 title45"><?php if (!empty($event_title_row_2)) echo esc_html($event_title_row_2); ?></h2>
+                            <?php
+                            if (!empty($event_row_2_group) && is_array($event_row_2_group)) {
+                                foreach ($event_row_2_group as $key => $value) {
+                                    extract($value);
+                                    ?>
+                                    <div class="event-row-3-desc">
+                                        <h3 class="event-row-3-desc-title no-margin font-600 title30"><?php if (!empty($event_row_2_title)) echo esc_html($event_row_2_title); ?></h3>
+                                        <div class="event-row-3-desc-content">
+                                            <?php if (!empty($event_row_2_desciption)) echo apply_filters('crossfit-output-content', $event_row_2_desciption); ?>
+                                        </div>
                                     </div>
-                                </div>
-                                <?php
+                                    <?php
+                                }
                             }
-                        }
-                        ?>
+                            ?>
+                        </div>
                     </div>
-                    <div class="row wrap3">
+                    <div class="row sec1-row4-wrap">
                         <div class="col-md-6 col-lg-6 col-xs-6">
-                            <div class="img-wrap event-img3">
+                            <div class="img-wrap event-img-row-4">
                                 <?php if (!empty($event_img_row_3)) echo wp_get_attachment_image($event_img_row_3, $size, false); ?>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-6 col-xs-6">
-                            <div class="event-title3">
-                                <h2>
+                                <h2 class="event-row-4-title  color text-uppercase font-600 title45 no-margin">
                                     <?php if (!empty($event_title_row_3)) echo esc_html($event_title_row_3) ?>
                                 </h2>
-                                <div class="event-content3a">
+                                <div class="event-row-4-content">
                                     <?php if (!empty($event_content_right_row3)) echo apply_filters('crossfit-output-content',$event_content_right_row3); ?>
                                 </div>
-                            </div>
                         </div>
-
-
                     </div>
-                    <div class=" row event-content3b">
-                        <?php if (!empty($event_content_last_row_3)) echo apply_filters('crossfit-output-content',$event_content_last_row_3); ?>
-
+                    <div class="row sec1-row-last">
+                        <div class="col-md-12 col-lg-12 col-sm-12">
+                            <?php if (!empty($event_content_last_row_3)) echo apply_filters('crossfit-output-content',$event_content_last_row_3); ?>
+                        </div>
                     </div>
-                    <div class="row event-button">
-                        <?php if (!empty($event_button_text)): ?>
-                            <a class="btn-event"
-                               href="<?php if(!empty($event_button_url)) echo esc_html($event_button_url); ?>"><?php echo esc_html($event_button_text); ?></a>
-                        <?php endif; ?>
+                    <div class="row">
+                        <div class="col-md-12 text-center event-button">
+                            <?php if (!empty($event_button_text)): ?>
+                                <a class="btn-crossfit"
+                                   href="<?php if(!empty($event_button_url)) echo esc_html($event_button_url); ?>"><?php echo esc_html($event_button_text); ?></a>
+                            <?php endif; ?>
+                        </div>
                     </div>
 
 
