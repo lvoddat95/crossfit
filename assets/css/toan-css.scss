@@ -652,6 +652,76 @@ input[type='submit']:focus,
   }
 }
 
+
+/* Event name page */
+._ev-section-event{
+  .sec1-row1-wrap{
+    .event-img1{
+      margin-bottom: 38px;
+    }
+    .event-content1{
+
+    }
+    .event-title{
+
+    }
+  }
+  .sec1-row2-wrap{
+    .col1-content{
+      .event-sec1-row2-title{
+
+      }
+      .event-sec1-row2-desc{
+        .event-row-2-desc-title{
+
+        }
+        .event-row-2-desc-content{
+
+        }
+      }
+    }
+    .col2-img{
+      .event-img2{
+
+      }
+    }
+    .last-row2{
+
+    }
+  }
+  .sec1-row3-wrap{
+    .event-title-row-3{
+
+    }
+    .event-row-3-desc{
+      .event-row-3-desc-title{
+
+      }
+      .event-row-3-desc-content{
+
+      }
+    }
+
+  }
+  .sec1-row4-wrap{
+    .event-img-row-4{
+
+    }
+    .event-row-4-title{
+
+    }
+    .event-row-4-content{
+
+    }
+  }
+  .sec1-row-last{
+
+  }
+  .event-button{
+
+  }
+}
+
 /* responsive */
 
 @media (max-width: 1440px) {

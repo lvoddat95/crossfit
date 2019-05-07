@@ -4,7 +4,7 @@
   color: #17191b; }
 
 .color {
-  color: #00ff00; }
+  color: #00ca00; }
 
 .color2, .hm-section-3 .col-section3-content .hm-section-3-content .content-wrap .third-paragraph > a > strong {
   color: #00ca00; }
@@ -679,6 +679,10 @@ input[type='submit']:focus,
     line-height: 30px; }
   ._ct-section-contact .contact-info {
     border-bottom: 2px solid #dedede; }
+
+/* Event name page */
+._ev-section-event .sec1-row1-wrap .event-img1 {
+  margin-bottom: 38px; }
 
 /* responsive */
 @media (max-width: 1440px) {
