@@ -80,7 +80,7 @@ function crf_entry_content_home() {
                             <?php if (!empty($hm_sec_3_content)) echo apply_filters('crossfit_output_content', $hm_sec_3_content) ?>
                         </div>
                         <a class="btn-crossfit"
-                           href="<?php echo esc_html($hm_sec_3_btn_url) ?>"><?php echo esc_html($hm_sec_3_btn_text) ?></a>
+                           href="<?php echo esc_url($hm_sec_3_btn_url) ?>"><?php echo esc_html($hm_sec_3_btn_text) ?></a>
                     </div>
                 </div>
                 <div class="col-section3-img col-md-4 col-xs-4 col-sm-4">
@@ -132,7 +132,7 @@ function crf_entry_content_home() {
                         </div>
                         <div class="col-md-4 col-sm-4 col-sx-4">
                             <div class="img-wrap">
-                                <?php if (!empty($hm_sec_3_image) && is_array($hm_sec_4_image)) {
+                                <?php if (!empty($hm_sec_4_image) && is_array($hm_sec_4_image)) {
                                     echo '<img src="' . wp_get_attachment_url($hm_sec_4_image["ID"]) . '"/>';
                                 } ?>
                             </div>
@@ -165,7 +165,7 @@ function crf_entry_content_home() {
                         </div>
                         <div class="text-center col-md-12 col-xs-12 col-sm-12">
                             <a class="btn-crossfit"
-                               href="<?php echo esc_html($hm_sec_4_btn_url) ?>"><?php echo esc_html($hm_sec_4_btn_text) ?></a>
+                               href="<?php echo esc_url($hm_sec_4_btn_url) ?>"><?php echo esc_html($hm_sec_4_btn_text) ?></a>
                         </div>
                     </div>
                 </div>

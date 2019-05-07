@@ -58,26 +58,78 @@ var genesisSample = ( function( $ ) {
 
 jQuery( window ).on( 'load', genesisSample.load );
 
-jQuery(document).ready(function(){
+(function($){
+    "use strict"; // Start of use strict  
 
-	// Click scroll down
-	jQuery('.icon-down').on('click',function(e){
-		e.preventDefault();
-	    jQuery('html, body').animate({
-	      	scrollTop: jQuery(".signup-email-form").offset().top
-	    }, 500, 'swing')
+
+	function header_fixed(){
+		if($('.menu-sticky').length > 0 && $(window).width()>1024){   
+		    if ($(window).scrollTop() >= 300) {
+		        $('.site-header').addClass('fixed-header');
+		    }
+		    else {
+		        $('.site-header').removeClass('fixed-header');
+		    }
+		}
+	}
+
+	function gallery(){
+	  // Define App Namespace
+	    var popup = {
+	    	// Initializer
+	    	init: function() {
+	      		popup.popupImage();
+	    	},
+		    popupImage : function() {
+				/* Image Popup*/ 
+			 	$('#gal').magnificPopup({
+			    	delegate: 'a',
+			    	type: 'image',
+			    	mainClass: 'mfp-fade',
+			    	removalDelay: 160,
+			    	preloader: false,
+			    	fixedContentPos: false,
+			    	gallery: {
+			        	enabled:true
+			        }
+			   	});
+		    }
+	    };
+	  	popup.init($);
+	}
+
+	$(document).ready(function(){
+		gallery();
+
+		// Click scroll down
+		$('.icon-down').on('click',function(e){
+			e.preventDefault();
+		    $('html, body').animate({
+		      	scrollTop: $(".signup-email-form").offset().top
+		    }, 500, 'swing')
+		});
+
+
+
+	});
+
+	$(window).load(function(){
+	  $('#gal').masonry({
+	    //columnWidth: 200,
+	    itemSelector: '.gal-item'
+	  })
+
+	})
+
+
+	$(window).scroll(function(){
+		header_fixed();
 	});
 
 
+	$(window).resize(function(){
+	   
+	});
 
-});
 
-
-jQuery(window).scroll(function(){
-    if (jQuery(window).scrollTop() >= 300) {
-        jQuery('.site-header').addClass('fixed-header');
-    }
-    else {
-        jQuery('.site-header').removeClass('fixed-header');
-    }
-});
+})(jQuery);

@@ -98,6 +98,8 @@ function func_crossfit_enqueue_scripts_styles() {
     wp_enqueue_style('cf-bootstrap',CHILD_THEME_URI.'/assets/css/bootstrap/bootstrap-theme.min.css');
     // load main style
     wp_enqueue_style('crossfit-theme',CHILD_THEME_URI.'/assets/css/theme.css');
+    wp_enqueue_style('crossfit-gallery',CHILD_THEME_URI.'/assets/css/gallery.css');
+
 
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 	wp_enqueue_script(
@@ -122,8 +124,10 @@ function func_crossfit_enqueue_scripts_styles() {
 		true
 	);
 
-    //bootstrap js
     wp_enqueue_script('boostrap-js',CHILD_THEME_URI.'/assets/js/bootstrap/bootstrap.min.js');
+    wp_enqueue_script('isotope-js',CHILD_THEME_URI.'/assets/js/masonry.pkgd.min.js');
+    wp_enqueue_script('magnific-popup-js',CHILD_THEME_URI.'/assets/js/jquery.magnific-popup.js');
+
 
     // Map script
 	$api_key ='AIzaSyAHslBiwa0b2uLygm62Jv_foXPqdraI6t4';
@@ -229,7 +233,7 @@ add_theme_support( 'genesis-responsive-viewport' );
 add_image_size( 'sidebar-featured', 75, 75, true );
 
 // Adds image sizes.
-add_image_size( 'admin-thumb', 50, 50, true );
+add_image_size( 'admin-thumbnail', 50, 50, true );
 
 // Removes header right widget area.
 unregister_sidebar( 'header-right' );
