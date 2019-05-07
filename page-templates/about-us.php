@@ -34,7 +34,7 @@ function crf_entry_content_about_us()
             <div class="row">
                 <div class="col-md-12 col-xs-12 col-sm-12">
                     <div class="_ab-sec-1-title-wrap section-title text-center">
-                        <h3 class="title50 no-margin">
+                        <h3 class="title51 no-margin">
                             <span class="font-500 text-uppercase sec-about-title-1"><?php if (!empty($about_us_title1)) echo esc_html($about_us_title1); ?></span>
                             <span class="font-bold text-uppercase sec-about-title-2"><?php if (!empty($about_us_title2)) echo esc_html($about_us_title2); ?></span>
                         </h3>
@@ -77,9 +77,9 @@ function crf_entry_content_about_us()
                     <div class="group-tabs">
                         <!-- Nav tabs -->
                         <div class="tab-nav-wrap col-md-4 col-sm-4 col-xs-4">
-                            <h3 class="_ab-sec-2-title-wrap">
+                            <h3 class="_ab-sec-2-title-wrap no-margin title51">
                                 <span class="white font-600 text-uppercase"><?php if (!empty($coaches_title1)) echo esc_html($coaches_title1) ?></span>
-                                <span class="white font-600 text-uppercase"><?php if (!empty($coaches_title2)) echo esc_html($coaches_title2) ?></span>
+                                <span class="white font-bold text-uppercase"><?php if (!empty($coaches_title2)) echo esc_html($coaches_title2) ?></span>
                             </h3>
                             <ul class="nav nav-tabs nav-pills nav-stacked" role="tablist">
                                 <?php if (!empty($our_couches_tab) && is_array($our_couches_tab)) foreach ($our_couches_tab as $key => $value) {
@@ -92,12 +92,12 @@ function crf_entry_content_about_us()
                                     }
                                     ?>
                                     <li role="presentation" class="<?php echo esc_attr($class_active) ?>">
-                                        <a href="#<?php echo esc_attr('our_coach_tab_' . $key); ?>"
+                                        <a class="flex-wrap" href="#<?php echo esc_attr('our_coach_tab_' . $key); ?>"
                                            aria-controls="<?php echo esc_attr('our_coach_tab_' . $key); ?>" role="tab"
                                            data-toggle="tab">
                                             <i class="img-wrap"><img
                                                         src="<?php echo wp_get_attachment_image_src($our_coach_image, array(124, 124))[0]; ?>"/></i>
-                                            <span class="coach-info-wrap">
+                                            <span class="coach-info-wrap white">
                                         <span class="coach-name"><?php echo esc_html($our_coach_name) ?></span>
                                         <span class="coach-office"><?php echo esc_html($our_coach_office) ?></span>
                                         </span>
@@ -127,7 +127,7 @@ function crf_entry_content_about_us()
                                         <div class="img-wrap round display-inline-block">
                                             <img src="<?php echo wp_get_attachment_image_src($our_coach_image, array(230, 230))[0]; ?>"/>
                                         </div>
-                                        <h4><?php echo esc_html($our_coach_full_name); ?></h4>
+                                        <h4 class="our-coach-content-title no-margin white title30 font-600"><?php echo esc_html($our_coach_full_name); ?></h4>
                                     </div>
                                     <div class="coach-content">
                                         <?php echo apply_filters('crossfit_output_content', $our_coach_content) ?>
