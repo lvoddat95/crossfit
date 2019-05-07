@@ -201,10 +201,13 @@ input[type='submit'],
 .display-inline-block {
   display: inline-block; }
 
+.round, ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a .img-wrap {
+  border-radius: 50%; }
+
 .no-margin {
   margin: 0px; }
 
-.after-df, .hm-section-1 .signup-email-wrap .signup-email-form .col-left:before, .section-title > h3:after, .hm-section-3 .col-section3-content .hm-section-3-content .section3-title strong:after, .hm-section-4 .content-wrap .wcc-wrap:after, .hm-section-5 .testimonials-title:after, .hm-section-6 .contact-us-form > h2 strong:after {
+.after-df, .hm-section-1 .signup-email-wrap .signup-email-form .col-left:before, .section-title > h3:after, .hm-section-3 .col-section3-content .hm-section-3-content .section3-title strong:after, .hm-section-4 .content-wrap .wcc-wrap:after, .hm-section-5 .testimonials-title:after, .hm-section-6 .contact-us-form > h2 strong:after, ._about-section-2:before, ._about-section-2:after, ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a:after {
   content: "";
   display: block;
   position: absolute; }
@@ -575,6 +578,107 @@ input[type='submit']:focus,
     margin-left: -20px;
     line-height: 46px;
     padding-top: 20px; }
+
+._about-section-2 {
+  position: relative; }
+  ._about-section-2:before, ._about-section-2:after {
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px; }
+  ._about-section-2:before {
+    right: 66.66666667%;
+    background: #17191b; }
+  ._about-section-2:after {
+    left: 33.33333333%;
+    background: #202225;
+    z-index: -1; }
+  ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs {
+    border-bottom: none; }
+    ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li {
+      margin: 0px; }
+      ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a {
+        border: none;
+        border-radius: 0px;
+        margin-right: -2px;
+        position: relative;
+        padding: 0px;
+        display: flex;
+        display: -webkit-flex;
+        display: -moz-flex; }
+        ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a:after {
+          right: -11px;
+          width: 7px;
+          top: 0px;
+          height: 100%;
+          background: #212427;
+          visibility: hidden;
+          opacity: 0; }
+        ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a .img-wrap {
+          display: block;
+          width: 125px;
+          overflow: hidden; }
+        ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a .coach-info-wrap {
+          display: block;
+          width: calc(100% - 124px); }
+          ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a .coach-info-wrap > span {
+            display: block; }
+        ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a:hover {
+          background: #212427; }
+          ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a:hover:after {
+            visibility: visible;
+            opacity: 1; }
+    ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li.active a {
+      background: #202225; }
+      ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li.active a:after {
+        visibility: visible;
+        opacity: 1; }
+  ._about-section-2 .group-tabs .tab-content .our-coach-content {
+    padding-top: 55px; }
+    ._about-section-2 .group-tabs .tab-content .our-coach-content .img-title-coach-wrap .img-wrap {
+      width: 230px;
+      overflow: hidden;
+      margin-bottom: 9px; }
+    ._about-section-2 .group-tabs .tab-content .our-coach-content .img-title-coach-wrap .our-coach-content-title {
+      margin-bottom: 14px; }
+    ._about-section-2 .group-tabs .tab-content .our-coach-content .coach-content p {
+      color: white; }
+
+/* Contact page */
+._ct-section-contact {
+  padding-top: 60px; }
+  ._ct-section-contact .free-trial-title {
+    margin-bottom: 28px; }
+  ._ct-section-contact .free-trial-description {
+    line-height: 30px; }
+  ._ct-section-contact .trial-free-week-contact-form input[type="text"], ._ct-section-contact .trial-free-week-contact-form input[type="tel"], ._ct-section-contact .trial-free-week-contact-form input[type="email"] {
+    border: none;
+    border-bottom: 2px solid #dedede;
+    margin-bottom: 20px; }
+  ._ct-section-contact .trial-free-week-contact-form input[type="email"] {
+    margin-bottom: 45px; }
+  ._ct-section-contact .trial-free-week-contact-form input[type="submit"] {
+    display: block;
+    width: 100%; }
+  ._ct-section-contact .col2-row1 {
+    margin-bottom: 33px; }
+    ._ct-section-contact .col2-row1 .title-phone {
+      margin-bottom: 28px; }
+    ._ct-section-contact .col2-row1 .contact-des-phone {
+      padding-bottom: 34px; }
+  ._ct-section-contact .col2-row2 {
+    padding-bottom: 44px;
+    margin-bottom: 33px; }
+    ._ct-section-contact .col2-row2 .title-social {
+      margin-bottom: 19px; }
+    ._ct-section-contact .col2-row2 .contact-social-wrap {
+      margin-left: -40px; }
+  ._ct-section-contact .col2-row3 .title-address {
+    margin-bottom: 20px; }
+  ._ct-section-contact .col2-row3 .desc-address {
+    line-height: 30px; }
+  ._ct-section-contact .contact-info {
+    border-bottom: 2px solid #dedede; }
 
 /* responsive */
 @media (max-width: 1440px) {
