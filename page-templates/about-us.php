@@ -78,59 +78,68 @@ function crf_entry_content_about_us()
                         <!-- Nav tabs -->
                         <div class="tab-nav-wrap col-md-4 col-sm-4 col-xs-4">
                             <h3 class="_ab-sec-2-title-wrap">
-                                <span class="white font-600 text-uppercase"><?php if(!empty($coaches_title1)) echo esc_html($coaches_title1) ?></span>
-                                <span class="white font-600 text-uppercase"><?php if(!empty($coaches_title2)) echo esc_html($coaches_title2) ?></span>
+                                <span class="white font-600 text-uppercase"><?php if (!empty($coaches_title1)) echo esc_html($coaches_title1) ?></span>
+                                <span class="white font-600 text-uppercase"><?php if (!empty($coaches_title2)) echo esc_html($coaches_title2) ?></span>
                             </h3>
-                        <ul class="nav nav-tabs nav-pills nav-stacked" role="tablist">
-                            <?php if(!empty($our_couches_tab) && is_array($our_couches_tab)) foreach ($our_couches_tab as $key => $value){
-                                extract($value);
-                                $class_active = '';
-                                if($key == 0){
-                                    $class_active = 'active';
-                                }
-                                else{
+                            <ul class="nav nav-tabs nav-pills nav-stacked" role="tablist">
+                                <?php if (!empty($our_couches_tab) && is_array($our_couches_tab)) foreach ($our_couches_tab as $key => $value) {
+                                    extract($value);
                                     $class_active = '';
-                                }
-                                ?>
-                                <li role="presentation" class="<?php echo esc_attr($class_active) ?>">
-                                    <a href="#<?php echo esc_attr('our_coach_tab_'.$key); ?>" aria-controls="<?php echo esc_attr('our_coach_tab_'.$key); ?>" role="tab" data-toggle="tab">
-                                        <i class="img-wrap"><img src="<?php echo wp_get_attachment_image_src($our_coach_image, array(124,124))[0]; ?>"/></i>
-                                        <span class="coach-info-wrap">
+                                    if ($key == 0) {
+                                        $class_active = 'active';
+                                    } else {
+                                        $class_active = '';
+                                    }
+                                    ?>
+                                    <li role="presentation" class="<?php echo esc_attr($class_active) ?>">
+                                        <a href="#<?php echo esc_attr('our_coach_tab_' . $key); ?>"
+                                           aria-controls="<?php echo esc_attr('our_coach_tab_' . $key); ?>" role="tab"
+                                           data-toggle="tab">
+                                            <i class="img-wrap"><img
+                                                        src="<?php echo wp_get_attachment_image_src($our_coach_image, array(124, 124))[0]; ?>"/></i>
+                                            <span class="coach-info-wrap">
                                         <span class="coach-name"><?php echo esc_html($our_coach_name) ?></span>
                                         <span class="coach-office"><?php echo esc_html($our_coach_office) ?></span>
                                         </span>
-                                    </a>
-                                </li>
-                                <?php
-                            }?>
-                        </ul>
+                                        </a>
+                                    </li>
+                                    <?php
+                                } ?>
+                            </ul>
+                            <h5 class="biography"><?php if (!empty($coaches_biography_text)) echo esc_html($coaches_biography_text); ?></h5>
                         </div>
                         <!-- Tab panes -->
                         <div class="tab-content col-md-8 col-sm-8 col-xs-8">
-                            <?php if(!empty($our_couches_tab) && is_array($our_couches_tab)) foreach ($our_couches_tab as $key => $value){
+                            <?php if (!empty($our_couches_tab) && is_array($our_couches_tab)) foreach ($our_couches_tab as $key => $value) {
                                 //var_dump($value);
                                 extract($value);
                                 $class_active = '';
-                                if($key == 0){
+                                if ($key == 0) {
                                     $class_active = 'active';
-                                }
-                                else{
+                                } else {
                                     $class_active = '';
                                 }
                                 ?>
-                                <div role="tabpanel" class="tab-pane our-coach-content <?php  echo esc_attr($class_active) ?>" id="<?php echo esc_attr('our_coach_tab_'.$key); ?>">
+                                <div role="tabpanel"
+                                     class="tab-pane our-coach-content <?php echo esc_attr($class_active) ?>"
+                                     id="<?php echo esc_attr('our_coach_tab_' . $key); ?>">
                                     <div class="text-center img-title-coach-wrap">
                                         <div class="img-wrap round display-inline-block">
-                                        <img src="<?php echo wp_get_attachment_image_src($our_coach_image, array(230,230))[0]; ?>"/>
+                                            <img src="<?php echo wp_get_attachment_image_src($our_coach_image, array(230, 230))[0]; ?>"/>
                                         </div>
                                         <h4><?php echo esc_html($our_coach_full_name); ?></h4>
                                     </div>
                                     <div class="coach-content">
-                                        <?php echo apply_filters('crossfit_output_content',$our_coach_content) ?>
+                                        <?php echo apply_filters('crossfit_output_content', $our_coach_content) ?>
                                     </div>
+                                    <?php if(!empty($coaches_read_more_text))
+                                        ?>
+                                        <a href="<?php echo $our_coach_read_more_url ?  esc_url($our_coach_read_more_url)  :  "#"  ?>"><?php echo esc_html($coaches_read_more_text) ?></a>
+                                        <?php
+                                     ?>
                                 </div>
                                 <?php
-                            }?>
+                            } ?>
                         </div>
                     </div>
                 </div>
