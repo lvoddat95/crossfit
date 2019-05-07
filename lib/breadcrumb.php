@@ -187,7 +187,7 @@ function func_crossfit_breadcrumb_section() {
 
 	// Output breadcrumb section markup.
 	genesis_markup( array(
-		'open'    => '<section %s><div class="container">',
+		'open'    => '<section %s><div class="container"><div class="brc-inner">',
 		'context' => 'breadcrumb-section',
 	) );
 
@@ -207,7 +207,7 @@ function func_crossfit_breadcrumb_section() {
 
 	// Output breadcrumb section markup.
 	genesis_markup( array(
-		'close'   => '</div></section>',
+		'close'   => '</div></div></section>',
 		'context' => 'breadcrumb-section',
 	) );
 

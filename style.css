@@ -696,7 +696,7 @@ img.alignright,
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
-.site-header > .wrap .genesis-responsive-menu{
+.genesis-responsive-menu{
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
@@ -865,7 +865,7 @@ img.alignright,
 
 .menu-item {
     display: inline-block;
-    padding: 0 40px;
+    margin: 0 40px;
 }
 .menu-item.menu-item-has-children{
 	position: relative;
@@ -907,9 +907,6 @@ img.alignright,
 
 /* ## Sub Menus
 --------------------------------------------- */
-.menu-item.menu-item-has-children:hover > .sub-menu{
-	display: block !important;
-}
 .menu-item.menu-item-has-children .menu-item.menu-item-has-children > .sub-menu{
     left: 100%;
     top: 0;
@@ -927,6 +924,15 @@ img.alignright,
     left: 0;
     z-index: 10;
     box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.nav-header-right .sub-menu{
+    left: auto;
+    right: 0;
+}
+.nav-header-right  .menu-item.menu-item-has-children .menu-item.menu-item-has-children > .sub-menu {
+	left: auto;
+    right: 100%;
 }
 
 .sub-menu:before,
@@ -960,7 +966,8 @@ img.alignright,
 .sub-menu .menu-item {
 	width: 100%;
 	height: auto;
-	padding: 0.5em 0;
+	padding: 0 0;
+	margin: 0;
 }
 .sub-menu a {
     padding: 0;
@@ -1551,5 +1558,181 @@ img.alignright,
 }
 
 @media (max-width: 1440px){
+
+}
+
+@media (max-width: 1366px){
+	.site-header > .wrap .title-area {
+	    max-width: 170px;
+	}
+	.site-header{
+		height: auto;
+	}
+	.site-inner {
+	    margin-top: -200px !important;
+	}
+	.breadcrumb-section{
+		height: 800px;
+	}
+	.breadcrumb-section h1{
+		margin: 0;
+	}
+}
+@media (max-width: 1199px){
+	.site-header > .wrap .title-area {
+	    max-width: 130px;
+	    margin: 0 20px;
+	}
+	.menu {
+	    margin: 0;
+	}
+	.menu-item {
+	    margin: 0 25px;
+	}
+	.menu-item a{
+	    font-size: 20px;
+	}
+	.breadcrumb-section {
+	    height: 720px;
+	}
+	.breadcrumb-section h1{
+		font-size: 130px;
+		line-height: 140px;
+		margin-bottom: 20px;
+	}
+	.breadcrumb-section .subtitle{
+		font-size: 33px;
+		letter-spacing: 5px;
+	}
+	.breadcrumb-section p {
+	    font-size: 26px;
+        padding: 5px 0;
+	}
+	.icon-down {
+	    padding: 50px 0 0;
+	}
+
+
+}
+@media (max-width: 1024px){
+	.breadcrumb-section h1{
+		font-size: 120px;
+		line-height: 130px;
+	    margin-bottom: 20px;
+	}
+	.menu-item {
+	    margin: 0 15px;
+	}
+	.icon-down {
+	    padding: 8vw 0 0;
+	}
+}
+@media (max-width: 991px){
+	.site-header > .wrap{
+		display: block;
+	}
+	.site-header > .wrap .title-area{
+		margin: 0 auto;
+	}
+	.genesis-responsive-menu{
+		display: none;
+	}
+	.menu-toggle{
+        display: block;
+        font-size: 20px;
+	    position: absolute;
+	    left: 15px;
+	    top: 38px;
+	    text-transform: uppercase;
+	    padding: 0;
+	    background: transparent;
+	    border: none;
+	    color: #fff !important;
+        height: 50px;
+	    padding: 0 15px;
+	    border: 2px solid;
+	    outline: none !important;
+	}
+	.menu-toggle.activated{
+		color: #00ff00 !important;
+	}
+	.dashicons-menu:before{
+		font-size: 25px !important;
+	    width: auto !important;
+	}
+	.genesis-responsive-menu{
+	    position: absolute;
+	    left: 15px;
+	    top: 100%;
+	    margin: 0;
+	    width: 290px;
+	    z-index: 999;
+	    background: #fff;
+	    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
+	    transition: all 0.5s ease-out 0s;
+	    -webkit-transition: all 0.5s ease-out 0s;
+	}
+	.menu{}
+	.menu-item {
+        display: block;
+	    margin: 0 15px;
+	    padding: 0;
+	}
+	.menu-item a {
+	    display: block;
+	    font-size: 18px;
+	    text-transform: capitalize;
+	    border-top: 1px solid #e5e5e5;
+	    color: #17191b;
+	    font-weight: 700;
+        padding: 5px 0;
+	    text-align: left;
+	}
+	.sub-menu{
+	    position: static;
+	    box-shadow: none;
+	    padding: 0;
+	    margin-left: 15px;
+	    width: auto;
+	}
+	.sub-menu-toggle{
+	    display: block;
+	    color: #17191b !important;
+	    width: 20px;
+	    height: 20px;
+	    margin-top: -35px;
+	    float: right;
+	}
+	.menu-item.menu-item-has-children .menu-item.menu-item-has-children > .sub-menu{
+		padding: 0
+	}
+
+
+
+
+
+
+
+
+}
+@media (max-width: 768px){
+
+}
+@media (max-width: 767px){
+	.menu-toggle{
+		font-size: 0px;
+	}
+
+}
+@media (max-width: 667px){
+
+}
+@media (max-width: 568px){
+
+}
+@media (max-width: 480px){
+
+}
+@media (max-width: 320px){
 
 }
