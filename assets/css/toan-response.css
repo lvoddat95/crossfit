@@ -1,0 +1,28 @@
+@media (max-width: 1024px) {
+    .hm-section-1 .signup-email-wrap .signup-email-form .col-right p input[type="submit"]{
+        font-size: 20px;
+    }
+    .section-title > h3:after{
+        bottom: -26px;
+    }
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 480px) {
+
+}
+
+@media (max-width: 375px) {
+
+}
+
+@media (max-width: 320px) {
+
+}
