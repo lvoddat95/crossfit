@@ -766,5 +766,8 @@ input[type='submit']:focus,
   .title25, .hm-section-4 .content-wrap .wcc-wrap .wcc-title, .hm-section-5 #gts-testimonials .wrap .lSSlideWrapper ul.testimonials-list li blockquote {
     font-size: calc(18px + (25 - 18) * ((100vw - 320px) / (1500 - 320)));
     line-height: calc(24px + (37 - 24) * ((100vw - 320px) / (1500 - 320))); } }
+@media (max-width: 1024px) {
+  .container {
+    width: 100%; } }
 
 /*# sourceMappingURL=toan-css.css.map */

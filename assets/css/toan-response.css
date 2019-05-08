@@ -2,10 +2,81 @@
     .hm-section-1 .signup-email-wrap .signup-email-form .col-right p input[type="submit"]{
         font-size: 20px;
     }
+    .hm-section-1 .signup-email-wrap .signup-email-form .col-left:before{
+        display: none;
+    }
+    .hm-section-1 .signup-email-wrap .signup-email-form .col-right .input-name-phone{
+        margin: 0px -7.5px;
+        margin-bottom: 15px;
+    }
+    .hm-section-1 .signup-email-wrap .signup-email-form .col-right .input-name-phone > span{
+        padding: 0px 7.5px;
+    }
+    .hm-section-1 .signup-email-wrap .signup-email-form .col-right .input-name-phone > span input{
+        padding: 0px 15px;
+    }
     .section-title > h3:after{
         bottom: -26px;
     }
+    .hm-section-2{
+        padding-bottom: 50px;
+        padding-top: 40px;
+    }
+
+    .hm-section-3{
+        padding-bottom: 7px;
+    }
+    .hm-section-3 .col-section3-content{
+        z-index: 1;
+    }
+    .hm-section-3 .col-section3-img{
+        z-index: 0;
+    }
+    .hm-section-3 .col-section3-img .img-wrap{
+        opacity: 0.8;
+    }
+    .hm-section-3 .col-section3-img .img-wrap img{
+        top: 30px;
+    }
+    .hm-section-4{
+        padding-top: 39px;
+        padding-bottom: 50px;
+    }
+    .hm-section-4 .content-wrap .wcc-wrap .wcc-desc {
+        margin-bottom: 40px;
+    }
+    .hm-section-5 {
+        padding-top: 39px;
+        padding-bottom: 50px;
+    }
+    .hm-section-5 .testimonials-title:after{
+        bottom: -26px;
+    }
+    .hm-section-5 .testimonials-title{
+        margin-bottom: 60px;
+    }
+    .hm-section-5 #gts-testimonials .wrap .lSSlideWrapper ul.testimonials-list li img{
+        margin-bottom: 20px;
+    }
+    .hm-section-5 #gts-testimonials .wrap .lSSlideWrapper ul.testimonials-list li h5{
+        margin-bottom: 35px;
+    }
+    .hm-section-5 #gts-testimonials .wrap .lSSlideWrapper ul.testimonials-list li blockquote{
+        margin-bottom: 43px;
+    }
+    .hm-section-4 .content-wrap .wcc-wrap:after{
+        bottom: -20px;
+    }
 }
+@media (max-width: 991px){
+    .hm-section-2 .hm-section-2-content .col-content .content-wrap{
+        padding: 0px 15px;
+    }
+}
+@media (max-width: 860px){
+
+}
+
 
 @media (max-width: 768px) {
 
