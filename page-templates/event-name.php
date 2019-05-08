@@ -33,12 +33,11 @@ function crf_entry_content_event_name()
                         <div class="img-wrap event-img1 flex-wrap justify-content-center">
                             <?php if (!empty($event_img1)) echo wp_get_attachment_image($event_img1, array(522,522), false); ?>
                         </div>
-                        <div class="content-wrap event-content1">
+                        <div class="content-wrap title30 event-content1">
                             <?php if (!empty($event_content1)) echo apply_filters('crossfit-output-content', $event_content1); ?>
-
                         </div>
+                        <h2 class="font-600 event-title no-margin color title45"><?php if (!empty($event_title)) echo esc_html($event_title); ?></h2>
                     </div>
-                    <h2 class="font-600 event-title color title45"><?php if (!empty($event_title)) echo esc_html($event_title); ?></h2>
                     <div class="row sec1-row2-wrap">
                         <div class="col-lg-6 col-md-6 col1-content">
                             <h2 class="event-sec1-row2-title color text-uppercase font-600 title45 no-margin"><?php if (!empty($event_row_1_title)) echo esc_html($event_row_1_title); ?></h2>
@@ -48,10 +47,10 @@ function crf_entry_content_event_name()
                                     foreach ($event_row_1_group as $key => $value) {
                                         extract($value);
                                         ?>
-                                        <h3 class="event-row-2-desc-title font-600 title30">
+                                        <h3 class="event-row-2-desc-title font-600 title30 no-margin">
                                             <?php if (!empty($event_row_1_title)) echo esc_html($event_row_1_title); ?>
                                         </h3>
-                                        <div class="event-row-2-desc-content">
+                                        <div class="event-row-2-desc-content title25">
                                             <?php if (!empty($event_row_1_desciption)) echo apply_filters('crossfit-output-content', $event_row_1_desciption); ?>
                                         </div>
                                         <?php
@@ -66,7 +65,7 @@ function crf_entry_content_event_name()
                             </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-xs-12 last-row2">
-                            <h3 class="font-600 color title30"><?php if (!empty($event_last_row_1_text)) echo esc_html($event_last_row_1_text); ?></h3>
+                            <h3 class="font-600 color title30 no-margin"><?php if (!empty($event_last_row_1_text)) echo esc_html($event_last_row_1_text); ?></h3>
                         </div>
                     </div>
                     <div class="row sec1-row3-wrap">
@@ -77,7 +76,7 @@ function crf_entry_content_event_name()
                                 foreach ($event_row_2_group as $key => $value) {
                                     extract($value);
                                     ?>
-                                    <div class="event-row-3-desc">
+                                    <div class="event-row-3-desc title25">
                                         <h3 class="event-row-3-desc-title no-margin font-600 title30"><?php if (!empty($event_row_2_title)) echo esc_html($event_row_2_title); ?></h3>
                                         <div class="event-row-3-desc-content">
                                             <?php if (!empty($event_row_2_desciption)) echo apply_filters('crossfit-output-content', $event_row_2_desciption); ?>
@@ -99,13 +98,13 @@ function crf_entry_content_event_name()
                                 <h2 class="event-row-4-title  color text-uppercase font-600 title45 no-margin">
                                     <?php if (!empty($event_title_row_3)) echo esc_html($event_title_row_3) ?>
                                 </h2>
-                                <div class="event-row-4-content">
+                                <div class="event-row-4-content title30">
                                     <?php if (!empty($event_content_right_row3)) echo apply_filters('crossfit-output-content',$event_content_right_row3); ?>
                                 </div>
                         </div>
                     </div>
-                    <div class="row sec1-row-last">
-                        <div class="col-md-12 col-lg-12 col-sm-12">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12 col-sm-12 sec1-row-last title25">
                             <?php if (!empty($event_content_last_row_3)) echo apply_filters('crossfit-output-content',$event_content_last_row_3); ?>
                         </div>
                     </div>

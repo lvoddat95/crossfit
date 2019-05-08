@@ -220,7 +220,8 @@
     color: #fff; }
 
 body {
-  font-family: 'Montserrat', sans-serif !important; }
+  font-family: 'Montserrat', sans-serif !important;
+  color: #17191b; }
 
 a:hover {
   text-decoration: none; }
