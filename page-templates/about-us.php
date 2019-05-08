@@ -40,7 +40,7 @@ function crf_entry_content_about_us()
                         </h3>
                     </div>
                 </div>
-                <div class="row content-row1">
+                <div class="content-row1 row">
                     <div class="col1-img col-md-6 col-lg-6">
                         <div class="img-wrap">
                             <?php if ($about_us_img) echo '<img src="' . wp_get_attachment_url($about_us_img) . '"/>'; ?>
@@ -54,14 +54,14 @@ function crf_entry_content_about_us()
                     </div>
                 </div>
                 <div class="content-row2 row">
-                    <div class="cold-md-12 col-sm-12 col-xs-12">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="content-wrap content2 title25">
                             <?php if ($about_us_content2) echo apply_filters('crossfit_output_content',
                                 $about_us_content2); ?>
                         </div>
                     </div>
                 </div>
-                <div class="button-about row text-center">
+                <div class="button-about col-md-12 col-sm-12 col-xs-12 text-center">
                     <?php if ($about_us_button_text): ?>
                         <a class="btn-crossfit"
                            href="<?php echo esc_html($about_us_button_url); ?>"><?php echo esc_html($about_us_button_text); ?></a>
@@ -132,11 +132,11 @@ function crf_entry_content_about_us()
                                     <div class="coach-content">
                                         <?php echo apply_filters('crossfit_output_content', $our_coach_content) ?>
                                     </div>
-                                    <?php if(!empty($coaches_read_more_text))
-                                        ?>
-                                        <a href="<?php echo $our_coach_read_more_url ?  esc_url($our_coach_read_more_url)  :  "#"  ?>"><?php echo esc_html($coaches_read_more_text) ?></a>
-                                        <?php
-                                     ?>
+                                    <?php if (!empty($coaches_read_more_text))
+                                    ?>
+                                    <a href="<?php echo $our_coach_read_more_url ? esc_url($our_coach_read_more_url) : "#" ?>"><?php echo esc_html($coaches_read_more_text) ?></a>
+                                    <?php
+                                    ?>
                                 </div>
                                 <?php
                             } ?>
@@ -155,61 +155,61 @@ function crf_entry_content_about_us()
                         <h3 class="title51 font-bold font-montse no-margin"><?php if (!empty($why_choose_title2)) echo esc_html($why_choose_title2) ?></h3>
                     </div>
                     <div class="content-wrap row">
-                        <div class="col-md-4 col-sm-4 col-sx-4">
+                        <div class="col-md-4 col-sm-4 col-sx-4 col-wcc-1">
                             <div class="wcc-wrap">
-                                <div class="wcc-title font-600">
+                                <div class="wcc-title title25 font-600">
                                     <?php if (!empty($content_title1)) echo esc_html($content_title1); ?>
                                 </div>
-                                <div class="wcc-desc">
+                                <div class="wcc-desc title25">
                                     <?php if (!empty($content_des1)) echo esc_html($content_des1); ?>
                                 </div>
                             </div>
                             <div class="wcc-wrap">
-                                <div class="wcc-title font-600">
+                                <div class="wcc-title title25 font-600">
                                     <?php if (!empty($content_title2)) echo esc_html($content_title2); ?>
                                 </div>
-                                <div class="wcc-desc">
+                                <div class="wcc-desc title25">
                                     <?php if (!empty($content_des2)) echo esc_html($content_des2); ?>
                                 </div>
                             </div>
                             <div class="wcc-wrap">
-                                <div class="wcc-title font-600">
+                                <div class="wcc-title title25 font-600">
                                     <?php if (!empty($content_title3)) echo esc_html($content_title3); ?>
                                 </div>
-                                <div class="wcc-desc">
+                                <div class="wcc-desc title25">
                                     <?php if (!empty($content_des3)) echo esc_html($content_des3); ?>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-4 col-sx-4">
+                        <div class="col-md-4 col-sm-4 col-sx-4 col-wcc-2">
                             <div class="img-wrap">
                                 <?php if (!empty($why_choose_img) && is_array($why_choose_img)) {
                                     echo '<img src="' . wp_get_attachment_url($why_choose_img["ID"]) . '"/>';
                                 } ?>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-4 col-sx-4 text-right">
+                        <div class="col-md-4 col-sm-4 col-sx-4 col-wcc-3 text-right">
                             <div class="wcc-wrap">
-                                <div class="wcc-title font-600">
+                                <div class="wcc-title title25 font-600">
                                     <?php if (!empty($content_title4)) echo esc_html($content_title4); ?>
                                 </div>
-                                <div class="wcc-desc">
+                                <div class="wcc-desc title25">
                                     <?php if (!empty($content_des4)) echo esc_html($content_des4); ?>
                                 </div>
                             </div>
                             <div class="wcc-wrap">
-                                <div class="wcc-title font-600">
+                                <div class="wcc-title title25 font-600">
                                     <?php if (!empty($content_title5)) echo esc_html($content_title5); ?>
                                 </div>
-                                <div class="wcc-desc">
+                                <div class="wcc-desc title25">
                                     <?php if (!empty($content_des5)) echo esc_html($content_des5); ?>
                                 </div>
                             </div>
                             <div class="wcc-wrap">
-                                <div class="wcc-title font-600">
+                                <div class="wcc-title title25 font-600">
                                     <?php if (!empty($content_title6)) echo esc_html($content_title6); ?>
                                 </div>
-                                <div class="wcc-desc">
+                                <div class="wcc-desc title25">
                                     <?php if (!empty($content_des6)) echo esc_html($content_des6); ?>
                                 </div>
                             </div>

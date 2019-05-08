@@ -41,7 +41,7 @@ function crf_entry_content_home() {
     <div class="hm-section-2">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 col-xs-12 col-sm-12">
+                <div class="col-md-12 col-xs-12 col-sm-12 hm-sec-2-title-wrap">
                     <div class="section-title hm-section-2-title text-center text-uppercase">
                         <h2 class="title51 font-montse no-margin"><?php if ($hm_section2_title1) echo esc_html($hm_section2_title1); ?></h2>
                         <h3 class="title51 font-bold font-montse no-margin"><?php if ($hm_section2_title2) echo esc_html($hm_section2_title2); ?></h3>
@@ -104,61 +104,61 @@ function crf_entry_content_home() {
                         <h3 class="title51 font-bold font-montse no-margin"><?php if (!empty($hm_sec_4_title2)) echo esc_html($hm_sec_4_title2) ?></h3>
                     </div>
                     <div class="content-wrap row">
-                        <div class="col-md-4 col-sm-4 col-sx-4">
+                        <div class="col-md-4 col-sm-4 col-sx-4 col-wcc-1">
                             <div class="wcc-wrap">
-                                <div class="wcc-title font-600">
+                                <div class="wcc-title title25 font-600">
                                     <?php if (!empty($hm_sec_4_content_title_1)) echo esc_html($hm_sec_4_content_title_1); ?>
                                 </div>
-                                <div class="wcc-desc">
+                                <div class="wcc-desc title25">
                                     <?php if (!empty($hm_sec_4_content_desc_1)) echo esc_html($hm_sec_4_content_desc_1); ?>
                                 </div>
                             </div>
                             <div class="wcc-wrap">
-                                <div class="wcc-title font-600">
+                                <div class="wcc-title title25 font-600">
                                     <?php if (!empty($hm_sec_4_content_title_2)) echo esc_html($hm_sec_4_content_title_2); ?>
                                 </div>
-                                <div class="wcc-desc">
+                                <div class="wcc-desc title25">
                                     <?php if (!empty($hm_sec_4_content_desc_2)) echo esc_html($hm_sec_4_content_desc_2); ?>
                                 </div>
                             </div>
                             <div class="wcc-wrap">
-                                <div class="wcc-title font-600">
+                                <div class="wcc-title title25 font-600">
                                     <?php if (!empty($hm_sec_4_content_title_3)) echo esc_html($hm_sec_4_content_title_3); ?>
                                 </div>
-                                <div class="wcc-desc">
+                                <div class="wcc-desc title25">
                                     <?php if (!empty($hm_sec_4_content_desc_3)) echo esc_html($hm_sec_4_content_desc_3); ?>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-4 col-sx-4">
+                        <div class="col-md-4 col-sm-4 col-sx-4 col-wcc-2">
                             <div class="img-wrap">
                                 <?php if (!empty($hm_sec_4_image) && is_array($hm_sec_4_image)) {
                                     echo '<img src="' . wp_get_attachment_url($hm_sec_4_image["ID"]) . '"/>';
                                 } ?>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-4 col-sx-4 text-right">
+                        <div class="col-md-4 col-sm-4 col-sx-4 col-wcc-3 text-right">
                             <div class="wcc-wrap">
-                                <div class="wcc-title font-600">
+                                <div class="wcc-title title25 font-600">
                                     <?php if (!empty($hm_sec_4_content_title_4)) echo esc_html($hm_sec_4_content_title_4); ?>
                                 </div>
-                                <div class="wcc-desc">
+                                <div class="wcc-desc title25">
                                     <?php if (!empty($hm_sec_4_content_desc_4)) echo esc_html($hm_sec_4_content_desc_4); ?>
                                 </div>
                             </div>
                             <div class="wcc-wrap">
-                                <div class="wcc-title font-600">
+                                <div class="wcc-title title25 font-600">
                                     <?php if (!empty($hm_sec_4_content_title_5)) echo esc_html($hm_sec_4_content_title_5); ?>
                                 </div>
-                                <div class="wcc-desc">
+                                <div class="wcc-desc title25">
                                     <?php if (!empty($hm_sec_4_content_desc_5)) echo esc_html($hm_sec_4_content_desc_5); ?>
                                 </div>
                             </div>
                             <div class="wcc-wrap">
-                                <div class="wcc-title font-600">
+                                <div class="wcc-title title25 font-600">
                                     <?php if (!empty($hm_sec_4_content_title_6)) echo esc_html($hm_sec_4_content_title_6); ?>
                                 </div>
-                                <div class="wcc-desc">
+                                <div class="wcc-desc title25">
                                     <?php if (!empty($hm_sec_4_content_desc_6)) echo esc_html($hm_sec_4_content_desc_6); ?>
                                 </div>
                             </div>
