@@ -151,6 +151,9 @@
     .hm-section-2 .hm-sec-2-title-wrap {
         z-index: 1;
     }
+    ._about-section-1 .content-row2 .content-wrap p {
+        margin-bottom: 30px;
+    }
 }
 
 @media (max-width: 860px) {
@@ -188,13 +191,18 @@
         width: 50%;
         float: left;
     }
-
     .btn-crossfit, .hm-section-6 .contact-us-form input[type="submit"] {
         font-size: calc(16px + (30 - 16) * ((100vw - 320px) / (1500 - 320)));
         line-height: calc(40px + (77 - 40) * ((100vw - 320px) / (1500 - 320)));
         height: calc(40px + (77 - 40) * ((100vw - 320px) / (1500 - 320)));
         min-width: auto;
         padding: 0px 20px;
+    }
+    ._about-section-1 .content-row1 .col1-img{
+        margin-bottom: 47px;
+    }
+    ._about-section-1 .content-row1 .col1-img .img-wrap img{
+        width: 100%;
     }
 }
 

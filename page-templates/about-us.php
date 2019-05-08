@@ -41,12 +41,12 @@ function crf_entry_content_about_us()
                     </div>
                 </div>
                 <div class="content-row1 row">
-                    <div class="col1-img col-md-6 col-lg-6">
+                    <div class="col1-img col-sm-6 col-md-6 col-lg-6">
                         <div class="img-wrap">
                             <?php if ($about_us_img) echo '<img src="' . wp_get_attachment_url($about_us_img) . '"/>'; ?>
                         </div>
                     </div>
-                    <div class="col2-content col-md-6 col-lg-6">
+                    <div class="col2-content col-sm-6 col-md-6 col-lg-6">
                         <div class="content-wrap content1 font-600 title30">
                             <?php if ($about_us_content1) echo apply_filters('crossfit_output_content',
                                 $about_us_content1); ?>
