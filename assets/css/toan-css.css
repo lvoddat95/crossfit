@@ -439,6 +439,7 @@ input[type='submit']:focus,
     .hm-section-3 .col-section3-img .img-wrap img {
       position: absolute;
       max-width: unset;
+      min-width: max-content;
       right: 0px;
       top: 58px; }
 
@@ -731,7 +732,7 @@ input[type='submit']:focus,
   .hm-section-3 .col-section3-img .img-wrap img {
     position: relative;
     margin-left: -150px;
-    margin-top: -69px; }
+    margin-bottom: 23px; }
   .hm-section-3 .col-section3-content .hm-section-3-content .content-wrap {
     font-size: 20px; }
     .hm-section-3 .col-section3-content .hm-section-3-content .content-wrap p {
@@ -755,11 +756,15 @@ input[type='submit']:focus,
         margin-bottom: 0px; }
 
   .title45 {
-    font-size: calc(20px + (45 - 20) * ((100vw - 320px) / (1500 - 320)));
+    font-size: calc(20px + (45 - 20) * ((100vw - 320px) / (1920 - 320)));
     line-height: calc(30px + (52 - 30) * ((100vw - 320px) / (1500 - 320))); }
 
   .title51 {
     font-size: calc(18px + (51 - 18) * ((100vw - 320px) / (1500 - 320)));
-    line-height: calc(32px + (62 - 32) * ((100vw - 320px) / (1500 - 320))); } }
+    line-height: calc(32px + (62 - 32) * ((100vw - 320px) / (1500 - 320))); }
+
+  .title25, .hm-section-4 .content-wrap .wcc-wrap .wcc-title, .hm-section-5 #gts-testimonials .wrap .lSSlideWrapper ul.testimonials-list li blockquote {
+    font-size: calc(18px + (25 - 18) * ((100vw - 320px) / (1500 - 320)));
+    line-height: calc(24px + (37 - 24) * ((100vw - 320px) / (1500 - 320))); } }
 
 /*# sourceMappingURL=toan-css.css.map */

@@ -268,6 +268,7 @@ input[type='submit']:focus,
       img {
         position: absolute;
         max-width: unset;
+        min-width: max-content;
         right: 0px;
         top: 58px;
       }
@@ -761,7 +762,7 @@ input[type='submit']:focus,
         img {
           position: relative;
           margin-left: -150px;
-          margin-top: -69px;
+          margin-bottom: 23px;
         }
       }
     }
@@ -819,12 +820,16 @@ input[type='submit']:focus,
   }
 
   .title45{
-    font-size: calc(20px + (45 - 20) * ((100vw - 320px) / (1500 - 320)));
+    font-size: calc(20px + (45 - 20) * ((100vw - 320px) / (1920 - 320)));
     line-height: calc(30px + (52 - 30) * ((100vw - 320px) / (1500 - 320)));
   }
   .title51{
     font-size: calc(18px + (51 - 18) * ((100vw - 320px) / (1500 - 320)));
     line-height: calc(32px + (62 - 32) * ((100vw - 320px) / (1500 - 320)));
+  }
+  .title25{
+     font-size: calc(18px + (25 - 18) * ((100vw - 320px) / (1500 - 320)));
+     line-height: calc(24px + (37 - 24) * ((100vw - 320px) / (1500 - 320)));
   }
 }
 
