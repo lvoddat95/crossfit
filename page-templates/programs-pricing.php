@@ -199,6 +199,7 @@ function crf_entry_content_program_pricing() {
 								    		<?php if ($val['crf_pk_types']['crf_types_prc']): ?>
 									    		<?php foreach( $val['crf_pk_types']['crf_types_prc']  as $key => $t ): ?>
 											    	<div class="pricing-box">
+										    			<div class="pricing-inner-box">
 															<div class="price">
 																<div class="price-p price-p<?php echo esc_attr(count($t['crf_pk_prc_box'] )); ?>">
 																	<?php if ($t['crf_pk_prc_box']): $items = array(); ?>
@@ -219,13 +220,14 @@ function crf_entry_content_program_pricing() {
 																<?php if ($t['detail']): ?>
 																	<?php echo apply_filters('s7upf_output_content',$t['detail']);?>
 																<?php endif; ?>
-																<?php if ($crf_sign_up_btn['crf_sign_up_title_6']) :?>
-																	<div class="sigup-wrap">
-																		<a class="btn-crossfit btn-signup" href="<?php echo esc_url($crf_sign_up_btn['crf_sign_up_link_6']) ?>"><?php echo esc_html($crf_sign_up_btn['crf_sign_up_title_6']) ?></a>
-																	</div>
-																<?php endif; ?>
 															</div>
-															
+															<?php if ($crf_sign_up_btn['crf_sign_up_title_6']) :?>
+																<div class="signup-wrap">
+																	<a class="btn-crossfit btn-signup" href="<?php echo esc_url($crf_sign_up_btn['crf_sign_up_link_6']) ?>"><?php echo esc_html($crf_sign_up_btn['crf_sign_up_title_6']) ?></a>
+																</div>
+															<?php endif; ?>
+														</div>
+														
 											    	</div>
 						                        <?php endforeach; ?>
 								    		<?php endif; ?>

@@ -1612,13 +1612,15 @@ img.alignright,
     flex-wrap: wrap;
 	margin: 0 -12.5px;
 }
-.pricing-box-inner{
+.pricing-inner-box{
+    height: 100%;
+    background: #fff;
+    position: relative;
 }
 .pricing-box {
     float: left;
     width: 25%;
     padding: 0 12.5px;
-    background: #fff;
     position: relative;
 }
 .pricing-box .price{
@@ -1657,6 +1659,7 @@ img.alignright,
 }
 .pricing-box .price{
     margin-top: 16px;
+    border-bottom: 10px solid #f3f3f3;
 }
 .pricing-box .price h4{
 	font-weight: 600;
@@ -1667,13 +1670,22 @@ img.alignright,
 }
 .pricing-box .info{
 	background: #fff;
-	padding: 20px 25px;
+    padding: 15px 25px 20px;
+	margin-bottom: 55px;
 }
-.pricing-box .sigup-wrap{
-
+.pricing-box .signup-wrap{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+    border-top: 5px solid #f3f3f3;
 }
-.btn-sigup{
-	min-width: auto;
+.signup-wrap .btn-signup{
+    min-width: auto;
+    text-transform: uppercase;
+    display: block;
+    height: 65px;
+    line-height: 65px;
 }
 [class*="templatesprograms-pricing"] [class*="crf-pp-section"] .pricing-box .info p{
 	font-weight: 500;
