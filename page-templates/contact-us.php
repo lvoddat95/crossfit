@@ -25,7 +25,7 @@ function crf_entry_content_contact_us()
     <div class="_ct-section-contact">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-lg-6">
+                <div class="col-sm-6 col-md-6 col-lg-6">
                     <?php if(!empty($free_trial_title)) {
                         ?>
                         <h2 class="no-margin title45 free-trial-title font-600"><?php echo esc_html($free_trial_title) ?></h2>

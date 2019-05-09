@@ -39,7 +39,7 @@ function crf_entry_content_event_name()
                         <h2 class="font-600 event-title no-margin color title45"><?php if (!empty($event_title)) echo esc_html($event_title); ?></h2>
                     </div>
                     <div class="row sec1-row2-wrap">
-                        <div class="col-lg-6 col-md-6 col1-content">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col1-content">
                             <h2 class="event-sec1-row2-title color text-uppercase font-600 title45 no-margin"><?php if (!empty($event_row_1_title)) echo esc_html($event_row_1_title); ?></h2>
                             <div class="event-sec1-row2-desc">
                                 <?php
@@ -59,7 +59,7 @@ function crf_entry_content_event_name()
                                 ?>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 col2-img">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col2-img">
                             <div class="img-wrap event-img2">
                                 <?php if (!empty($event_row_1_image)) echo wp_get_attachment_image($event_row_1_image, $size, false); ?>
                             </div>
