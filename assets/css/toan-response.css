@@ -131,6 +131,16 @@
     ._ev-section-event .sec1-row-last{
         margin-bottom: 33px;
     }
+    ._ev-section-event  .sec1-row4-wrap .event-img-row-4 img{
+        width: 100%;
+    }
+    ._ev-section-event  .sec1-row2-wrap .col2-img .event-img2 img{
+        width: 100%;
+    }
+    ._ev-section-event  .sec1-row4-wrap .event-row-4-content{
+        font-size: 16px;
+    }
+
 }
 
 @media (max-width: 991px) {
@@ -264,6 +274,12 @@
     }
     ._about-section-1 .content-row1 .col1-img .img-wrap img{
         width: 100%;
+    }
+    ._ev-section-event  .sec1-row2-wrap .last-row2{
+        margin-top: 43px;
+    }
+    ._ev-section-event .sec1-row4-wrap .event-img-row-4{
+        margin-bottom: 45px;
     }
 }
 
