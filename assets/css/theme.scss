@@ -273,7 +273,7 @@ $color2:  #00ca00;
   display: inline-block;
   text-align: center;
   @extend .bg-color;
-  @extend .title30;
+  font-size: 30px;
   @extend .font-600;
   &:hover {
     color: #fff;

@@ -96,7 +96,7 @@
   font-size: 28px;
   line-height: normal; }
 
-.title30, .btn-crossfit {
+.title30 {
   font-size: 30px;
   line-height: normal; }
 
@@ -215,7 +215,8 @@
   line-height: 77px;
   min-width: 480px;
   display: inline-block;
-  text-align: center; }
+  text-align: center;
+  font-size: 30px; }
   .btn-crossfit:hover {
     color: #fff; }
 

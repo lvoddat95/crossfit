@@ -477,14 +477,29 @@ input[type='submit']:focus,
     }
   }
   .content-row1 {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 59px;
     .col1-img {
-
     }
     .col2-content {
       .content-wrap {
-        margin-left: -20px;
-        line-height: 46px;
-        padding-top: 20px;
+        margin-left: 0px;
+        line-height: 43px;
+        padding-top: 10px;
+      }
+    }
+  }
+  .content-row2 {
+    margin-left: 0px;
+    margin-right: 0px;
+    .content-wrap {
+      margin-bottom: 75px;
+      p {
+        margin-bottom: 39px;
+        &:last-child {
+          margin-bottom: 0px;
+        }
       }
     }
   }
@@ -751,7 +766,7 @@ input[type='submit']:focus,
     .hm-section-2-content {
       .col-content {
         .content-wrap {
-          font-size: 20px;
+
         }
       }
     }
@@ -769,7 +784,6 @@ input[type='submit']:focus,
     .col-section3-content {
       .hm-section-3-content {
         .content-wrap {
-          font-size: 20px;
           p {
             margin-bottom: 20px;
           }
@@ -786,38 +800,6 @@ input[type='submit']:focus,
       }
     }
   }
-  ._about-section-1 {
-    ._ab-sec-1-title-wrap {
-      > h3 {
-        &:after {
-        }
-      }
-    }
-    .content-row1 {
-      margin-bottom: 59px;
-      .col1-img {
-      }
-      .col2-content {
-        .content-wrap {
-          margin-left: 0px;
-          font-size: 23px;
-          line-height: 43px;
-          padding-top: 10px;
-        }
-      }
-    }
-    .content-row2 {
-      .content-wrap {
-        margin-bottom: 110px;
-        p {
-          margin-bottom: 39px;
-          &:last-child {
-            margin-bottom: 0px;
-          }
-        }
-      }
-    }
-  }
 
   .title45{
     font-size: calc(20px + (45 - 20) * ((100vw - 320px) / (1920 - 320)));
@@ -830,6 +812,13 @@ input[type='submit']:focus,
   .title25{
      font-size: calc(18px + (25 - 18) * ((100vw - 320px) / (1500 - 320)));
      line-height: calc(24px + (37 - 24) * ((100vw - 320px) / (1500 - 320)));
+  }
+  .title23{
+
+  }
+  .title30{
+    font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1500 - 320)));
+    line-height: calc(24px + (37 - 24) * ((100vw - 320px) / (1500 - 320)));
   }
 }
 
