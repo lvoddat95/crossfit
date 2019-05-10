@@ -89,12 +89,12 @@ function crf_entry_content_event_name()
                         </div>
                     </div>
                     <div class="row sec1-row4-wrap">
-                        <div class="col-md-6 col-lg-6 col-xs-6">
+                        <div class="col-md-6 col-lg-6 col-sm-6">
                             <div class="img-wrap event-img-row-4">
                                 <?php if (!empty($event_img_row_3)) echo wp_get_attachment_image($event_img_row_3, $size, false); ?>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-6 col-xs-6">
+                        <div class="col-md-6 col-lg-6 col-sm-6">
                                 <h2 class="event-row-4-title  color text-uppercase font-600 title45 no-margin">
                                     <?php if (!empty($event_title_row_3)) echo esc_html($event_title_row_3) ?>
                                 </h2>
