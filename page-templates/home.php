@@ -24,6 +24,7 @@ function crf_entry_content_home() {
         extract($s_wcc);
         $s_testi = get_field('section_testimonials');
         extract($s_testi);
+
     ?>
     <div class="hm-section-1">
         <div class="container">

@@ -274,8 +274,7 @@ add_action( 'func_crossfit_breadcrumb_section', 'genesis_do_breadcrumbs', 30 );
 genesis_set_default_layout( 'full-width-content' );
 
 
-if (genesis_site_layout() == 'content-sidebar' || !is_page_template() ) {
-
+if (genesis_site_layout() == 'content-sidebar' || is_page_template() == 'false' ) {
 	add_action( 'genesis_before_content_sidebar_wrap', 'crf_before_content_sidebar_wrap' );
 	function crf_before_content_sidebar_wrap() {
 	    echo '<div class="container">';
@@ -350,65 +349,3 @@ function crf_remove_genesis_page_template_default( $page_templates ) {
 
 require_once CHILD_THEME_DIR . '/function-toan.php';
 
-
-// add_action('genesis_before_loop', 'wpb_change_home_loop');
-// /*
-//  * Adding in our new home loop.
-//  */
-// function wpb_change_home_loop() {
-// if ( is_home() ) {
-// /** Replace the home loop with our custom **/
-// remove_action( 'genesis_loop', 'genesis_do_loop' );
-// add_action( 'genesis_loop', 'wpb_custom_loop' );
-// /** Custom  loop **/
-// function wpb_custom_loop() {
-// if ( have_posts() ) :
-// 		do_action( 'genesis_before_while' );
-// 		while ( have_posts() ) : the_post();
-// 			do_action( 'genesis_before_entry' );
-// 			printf( '<article %s>', genesis_attr( 'entry' ) );
-// 				do_action( 'genesis_entry_header' );
-// 				do_action( 'genesis_before_entry_content' );
-// 				printf( '<div %s>', genesis_attr( 'entry-content' ) );
-				
-// 				//do_action( 'genesis_entry_content' ); //Remove standard excerpt
-				
-// 				echo genesis_do_post_image(); //Add in featured image
-				
-// 				echo the_excerpt_max_charlength(110); //change amount of characters to display
-				
-// 				echo '</div>';
-// 				do_action( 'genesis_after_entry_content' );
-// 				do_action( 'genesis_entry_footer' );
-// 			echo '</article>';
-// 			do_action( 'genesis_after_entry' );
-// 		endwhile; //* end of one post
-// 		do_action( 'genesis_after_endwhile' );
-// 	else : //* if no posts exist
-// 		do_action( 'genesis_loop_else' );
-// 	endif; //* end loop
-// }
-// 	}
-// }
-// /*
-//  * Limit the excerpt by character.
-//  *
-//  * @link Reference - http://codex.wordpress.org/Function_Reference/get_the_excerpt
-//  */
-// function the_excerpt_max_charlength($charlength) {
-// 	$excerpt = get_the_excerpt();
-// 	$charlength++;
-// 	if ( mb_strlen( $excerpt ) > $charlength ) {
-// 		$subex = mb_substr( $excerpt, 0, $charlength - 5 );
-// 		$exwords = explode( ' ', $subex );
-// 		$excut = - ( mb_strlen( $exwords[ count( $exwords ) - 1 ] ) );
-// 		if ( $excut < 0 ) {
-// 			echo mb_substr( $subex, 0, $excut );
-// 		} else {
-// 			echo $subex;
-// 		}
-// 		echo ' <br><a href="' . get_permalink() . '" class="more-link" title="Read More">Read More</a>';
-// 	} else {
-// 		echo $excerpt;
-// 	}
-// }
