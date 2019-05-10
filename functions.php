@@ -274,27 +274,26 @@ add_action( 'func_crossfit_breadcrumb_section', 'genesis_do_breadcrumbs', 30 );
 genesis_set_default_layout( 'full-width-content' );
 
 
-if (genesis_site_layout() == 'content-sidebar' || is_page_template() == 'false' ) {
-	add_action( 'genesis_before_content_sidebar_wrap', 'crf_before_content_sidebar_wrap' );
-	function crf_before_content_sidebar_wrap() {
-	    echo '<div class="container">';
-	}
-	add_action( 'genesis_after_content_sidebar_wrap', 'crf_after_content_sidebar_wrap' );
-	function crf_after_content_sidebar_wrap() {
-	    echo '</div>';
-	}
-	add_action( 'genesis_before_loop', 'crf_genesis_before_content' );
-	if( !function_exists('crf_genesis_before_content') ) {
-		function crf_genesis_before_content() {
-		    echo '<div class="loop-wrap">';
-		}
-	}
 
-	add_action( 'genesis_after_loop', 'crf_genesis_after_content' );
-	if( !function_exists('crf_genesis_after_content') ) {
-		function crf_genesis_after_content() {
-		    echo '</div>';
-		}
+add_action( 'genesis_before_content_sidebar_wrap', 'crf_before_content_sidebar_wrap' );
+function crf_before_content_sidebar_wrap() {
+	if (genesis_site_layout() === 'content-sidebar' || is_page_template() === 'false' ) echo '<div class="container">';
+}
+add_action( 'genesis_after_content_sidebar_wrap', 'crf_after_content_sidebar_wrap' );
+function crf_after_content_sidebar_wrap() {
+    if (genesis_site_layout() === 'content-sidebar' || is_page_template() === 'false' ) echo '</div>';
+}
+add_action( 'genesis_before_loop', 'crf_genesis_before_content' );
+if( !function_exists('crf_genesis_before_content') ) {
+	function crf_genesis_before_content() {
+	    if (genesis_site_layout() === 'content-sidebar' || is_page_template() === 'false' ) echo '<div class="loop-wrap">';
+	}
+}
+
+add_action( 'genesis_after_loop', 'crf_genesis_after_content' );
+if( !function_exists('crf_genesis_after_content') ) {
+	function crf_genesis_after_content() {
+	   if (genesis_site_layout() === 'content-sidebar' || is_page_template() === 'false' ) echo '</div>';
 	}
 }
 
