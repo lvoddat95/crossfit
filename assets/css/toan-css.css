@@ -3,7 +3,7 @@
 .dark-black {
   color: #17191b; }
 
-.color {
+.color, ._about-section-2 .group-tabs .tab-content .our-coach-content .btn-readmore-coach {
   color: #00ca00; }
 
 .color2, .hm-section-3 .col-section3-content .hm-section-3-content .content-wrap .third-paragraph > a > strong {
@@ -92,6 +92,10 @@
 .title25, .hm-section-4 .content-wrap .wcc-wrap .wcc-title, .hm-section-5 #gts-testimonials .wrap .lSSlideWrapper ul.testimonials-list li blockquote {
   font-size: 25px;
   line-height: 37px; }
+
+.title26 {
+  font-size: 26px;
+  line-height: normal; }
 
 .title28 {
   font-size: 28px;
@@ -609,6 +613,9 @@ input[type='submit']:focus,
     left: 33.33333333%;
     background: #202225;
     z-index: -1; }
+  ._about-section-2 .group-tabs .tab-nav-wrap ._ab-sec-2-title-wrap {
+    padding-top: 50px;
+    padding-bottom: 66px; }
   ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs {
     border-bottom: none; }
     ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li {
@@ -621,7 +628,10 @@ input[type='submit']:focus,
         padding: 0px;
         display: flex;
         display: -webkit-flex;
-        display: -moz-flex; }
+        display: -moz-flex;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 12px; }
         ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a:after {
           right: -11px;
           width: 7px;
@@ -632,13 +642,17 @@ input[type='submit']:focus,
           opacity: 0; }
         ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a .img-wrap {
           display: block;
-          width: 125px;
+          width: 120px;
           overflow: hidden; }
         ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a .coach-info-wrap {
           display: block;
-          width: calc(100% - 124px); }
+          width: calc(100% - 125px);
+          padding-left: 18px;
+          padding-top: 27px; }
           ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a .coach-info-wrap > span {
             display: block; }
+          ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a .coach-info-wrap .coach-name {
+            margin-bottom: 9px; }
         ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a:hover {
           background: #212427; }
           ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a:hover:after {
