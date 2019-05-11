@@ -74,12 +74,8 @@ function genesis_child_gutenberg_support() { // phpcs:ignore WordPress.NamingCon
 	require_once CHILD_THEME_DIR . '/lib/gutenberg/init.php';
 }
 
+// Enqueues scripts and styles.
 add_action( 'wp_enqueue_scripts', 'func_crossfit_enqueue_scripts_styles' );
-/**
- * Enqueues scripts and styles.
- *
- * @since 1.0.0
- */
 function func_crossfit_enqueue_scripts_styles() {
 
 	wp_enqueue_style(
@@ -89,16 +85,32 @@ function func_crossfit_enqueue_scripts_styles() {
 		CHILD_THEME_VERSION
 	);
 
+	// https://developer.wordpress.org/resource/dashicons/
 	wp_enqueue_style( 'dashicons' );
 
-
-	//bootstrap css
-
+	//Bootstrap css
     wp_enqueue_style('cf-bootstrap',CHILD_THEME_URI.'/assets/css/bootstrap/bootstrap.min.css');
     wp_enqueue_style('cf-bootstrap',CHILD_THEME_URI.'/assets/css/bootstrap/bootstrap-theme.min.css');
+
     // load main style
     wp_enqueue_style('crossfit-theme',CHILD_THEME_URI.'/assets/css/theme.css');
     wp_enqueue_style('crossfit-gallery',CHILD_THEME_URI.'/assets/css/gallery.css');
+
+
+    // Inline Style
+    if( class_exists('ACF') )  {
+		$custom_css = "";
+
+		if (is_page_template( 'page-templates/programs-pricing.php' )) {
+			extract(get_field('crf_pp_sec_5'));
+			$custom_css = "	.crf_pp_table table { background-image: url('$crf_wtm_table'); }";
+		}
+
+		wp_add_inline_style( 'crossfit-theme', $custom_css );
+
+	}
+
+
 
 
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
@@ -130,7 +142,7 @@ function func_crossfit_enqueue_scripts_styles() {
 
 
     // Map script
-	$api_key ='AIzaSyAHslBiwa0b2uLygm62Jv_foXPqdraI6t4';
+	$api_key = get_field('google_api','option');
     wp_enqueue_script( 'google-map', "//maps.google.com/maps/api/js?key=".$api_key, array('jquery'), null, true );
     wp_enqueue_script( 'crf-script-map', CHILD_THEME_URI . '/assets/js/map.js',array('jquery'),null,true);
 
@@ -177,7 +189,6 @@ add_theme_support( 'genesis-accessibility', array(
 	'drop-down-menu',
 	'headings',
 	'search-form',
-	'skip-links',
 ));
 
 // Adds custom logo in Customizer > Site Identity.
@@ -187,22 +198,6 @@ add_theme_support( 'custom-logo', array(
 	'flex-height' => true,
 	'flex-width'  => true,
 ));
-
-// Enable support for custom header image or video.
-add_theme_support( 'custom-header', array(
-	'header-selector'    => '.breadcrumb-section',
-	'default-image'      => CHILD_THEME_URI . '/assets/images/breadcrumbs.jpg',
-	'wp-head-callback'   => 'func_crossfit_custom_header',
-) );
-
-// Register default header (just in case).
-register_default_headers( array(
-	'child' => array(
-		'url'           => '%2$s/assets/images/breadcrumbs.jpg',
-		'thumbnail_url' => '%2$s/assets/images/breadcrumbs.jpg',
-		'description'   => __( 'Breadcrumb Image', 'crossfit' ),
-	),
-) );
 
 // Renames primary and secondary navigation menus.
 add_theme_support( 'genesis-menus', array(
@@ -270,6 +265,9 @@ add_action( 'func_crossfit_breadcrumb_section', 'genesis_do_breadcrumbs', 30 );
 // Remove Footer
  remove_action('genesis_footer', 'genesis_do_footer');
 
+
+
+
 // Default layout full-width
 genesis_set_default_layout( 'full-width-content' );
 
@@ -277,32 +275,31 @@ genesis_set_default_layout( 'full-width-content' );
 
 add_action( 'genesis_before_content_sidebar_wrap', 'crf_before_content_sidebar_wrap' );
 function crf_before_content_sidebar_wrap() {
-	if (genesis_site_layout() === 'content-sidebar' || is_page_template() === 'false' ) echo '<div class="container">';
+	if (genesis_site_layout() === 'content-sidebar' || is_page_template() === 'false' || is_page() ) echo '<div class="container">';
 }
 add_action( 'genesis_after_content_sidebar_wrap', 'crf_after_content_sidebar_wrap' );
 function crf_after_content_sidebar_wrap() {
-    if (genesis_site_layout() === 'content-sidebar' || is_page_template() === 'false' ) echo '</div>';
+    if (genesis_site_layout() === 'content-sidebar' || is_page_template() === 'false' || is_page() ) echo '</div>';
 }
 add_action( 'genesis_before_loop', 'crf_genesis_before_content' );
 if( !function_exists('crf_genesis_before_content') ) {
 	function crf_genesis_before_content() {
-	    if (genesis_site_layout() === 'content-sidebar' || is_page_template() === 'false' ) echo '<div class="loop-wrap">';
+	    if (genesis_site_layout() === 'content-sidebar' || is_page_template() === 'false' || is_page() ) echo '<div class="loop-wrap">';
 	}
 }
 
 add_action( 'genesis_after_loop', 'crf_genesis_after_content' );
 if( !function_exists('crf_genesis_after_content') ) {
 	function crf_genesis_after_content() {
-	   if (genesis_site_layout() === 'content-sidebar' || is_page_template() === 'false' ) echo '</div>';
+	   if (genesis_site_layout() === 'content-sidebar' || is_page_template() === 'false' || is_page() ) echo '</div>';
 	}
 }
 
-	
 
 
 
 
-
+// Tesimonials title
 add_action( 'gts', 'crf_gts_title', 7 );
 function crf_gts_title() {
 	echo '<h5 class="author" itemprop="author">' . get_the_title() . '</h5>';
@@ -336,12 +333,16 @@ if( class_exists('ACF') )  {
 		
 	}
 }
+
 add_filter( 'theme_page_templates', 'crf_remove_genesis_page_template_default' );
 function crf_remove_genesis_page_template_default( $page_templates ) {
 	unset( $page_templates['page_archive.php'] );
 	unset( $page_templates['page_blog.php'] );
 	return $page_templates;
 }
+
+
+
 
 /* Start Function ToanNgo92 */
 

@@ -20,13 +20,9 @@ function crf_blog_body_class( $classes ) {
 	return $classes;
 }
 
-// Add div.wrap inside of div#inner
-
-
-
+remove_action( 'genesis_loop', 'genesis_do_loop' );
 
 add_action( 'genesis_loop', 'crf_custom_loop' );
-remove_action( 'genesis_loop', 'genesis_do_loop' );
 function crf_custom_loop() {
 	global $post,$wp_query;
 	// arguments, adjust as needed
@@ -43,7 +39,7 @@ function crf_custom_loop() {
 				<div class="list-col-item list-2-item">
 				    <div class="item-post">
 				    	<?php if(has_post_thumbnail()):?>
-					        <div class="post-thumb banner-advs">
+					        <div class="post-thumb banner-advs zoom-image">
 					            <a href="<?php echo esc_url(get_the_permalink())?>" class="adv-thumb-link">
 					                <?php echo get_the_post_thumbnail(get_the_ID(),array(370,245))?>
 					            </a>

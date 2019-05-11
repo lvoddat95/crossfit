@@ -1104,7 +1104,7 @@ img.alignright,
 	padding: 6vw 0;
 	width: 100%;
 	max-width: 768px;
-	border-radius: 3px;
+    outline: none !important;
 }
 
 .comment-respond .form-submit {
@@ -1121,10 +1121,17 @@ img.alignright,
 .comment-respond textarea {
 	width: 100%;
 	display: block;
+	border: 2px solid #dedede;
 }
 
 .comment-respond input[type='submit'] {
-	width: auto;
+    width: auto;
+    display: block;
+    background: #00ca00;
+    padding: 0 50px;
+    border-radius: 0px;
+    height: 50px;
+    line-height: 50px;
 }
 
 .comment-author span:first-of-type {
@@ -1490,11 +1497,14 @@ img.alignright,
 }
 .crf_pp_table table{
     border: none;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: 70% 40px;
+    background-size: contain;
 }
 .crf_pp_table td, 
 .crf_pp_table th{
     border: none;
-    background: #fff;
     border: 3px solid #17191b;
     border-bottom: 6px solid #17191b;
     min-width: 165px;
@@ -1513,11 +1523,13 @@ img.alignright,
 
 }
 .crf_pp_table tbody tr td:first-child{
-    background: transparent;
     font-size: 25px;
     text-align: right;
     color: #fff;
     padding: 0 30px;
+}
+.crf_pp_table tbody tr td:first-child{
+	background: #17191b;
 }
 .crf_pp_table thead tr th{
 	background: transparent;
@@ -1525,6 +1537,10 @@ img.alignright,
     font-size: 30px;
     font-weight: 500;
 }
+
+.crf_pp_table thead tr th{
+	background: #17191b;
+} 
 
 .crf_pp_table tbody tr{
 
@@ -1869,12 +1885,16 @@ img.alignright,
 	width: 33.333333%;
 }
 .content-sidebar .content-sidebar-wrap{
+	float: left;
+	width: 100%;
 	margin: 70px 0;
 }
 .blog-template .content-sidebar-wrap{
+	float: left;
+	width: 100%;
 	margin: 70px 0;
 }
-.loop-wrap{
+.blog-template .loop-wrap{
 	margin: 0 -15px;
 }
 
@@ -1994,11 +2014,56 @@ img.alignright,
 
 
 
+.single-page .entry-content p{
+    font-size: 21px;
+    margin-bottom: 21px;
+}
+.single-page .entry-content p:last-child{
+	margin-bottom: 0px;
+}
+.single-page .entry-content strong{
+	font-size: 25px
+}
+
+
 
 /*=====  End of BLOG  ======*/
 
 
-
+/*Begin Banner Adv*/
+.banner-advs {
+  position: relative;
+}
+.adv-thumb-link {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+.adv-thumb-link > img {
+  display: block;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.35s ease-out 0s;
+  -webkit-transition: all 0.35s ease-out 0s;
+}
+/*Zoom Rotate*/
+.zoom-rotate .adv-thumb-link > img {
+  transform: scale(1) rotate(0);
+  -webkit-transform: scale(1) rotate(0);
+}
+.zoom-rotate:hover .adv-thumb-link > img {
+  transform: scale(1.1) rotate(4deg);
+  -webkit-transform: scale(1.1) rotate(4deg);
+  -webkit-transition: all 0.5s ease-out 0s;
+  transition: all 0.5s ease-out 0s;
+}
+/*Zoom Image*/
+.zoom-image:hover .adv-thumb-link > img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transition: all 0.5s ease-out 0s;
+  transition: all 0.5s ease-out 0s;
+}
 
 
 
@@ -2069,6 +2134,7 @@ img.alignright,
 		padding-right: 20px;
 		font-size: 22px;
 		height: 66px;
+		line-height: 66px;
     }
 	.ft-part .list-img p, .ft-part .list-img{
 		display: -webkit-flex;

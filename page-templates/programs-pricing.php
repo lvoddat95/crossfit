@@ -23,6 +23,12 @@ function crf_entry_content_program_pricing() {
         $crf_pp_sec_5 = get_field('crf_pp_sec_5'); extract($crf_pp_sec_5);
         $crf_pp_sec_6 = get_field('crf_pp_sec_6'); extract($crf_pp_sec_6);
         $crf_pp_sec_7 = get_field('crf_pp_sec_7'); extract($crf_pp_sec_7);
+
+        $inline_css = "	.crf_pp_table table { 
+					    	background-image: url('$crf_wtm_table'); 
+					    }
+	    			";
+		wp_add_inline_style( 'crossfit-theme', $inline_css );
     ?>
 		<div class="crf-pp-section-1">
 			<div class="container">
