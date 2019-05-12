@@ -609,6 +609,9 @@ input[type='submit']:focus,
   ._about-section-2 .group-tabs .tab-nav-wrap ._ab-sec-2-title-wrap {
     padding-top: 50px;
     padding-bottom: 66px; }
+._about-section-2 .group-tabs .tab-nav-wrap .tab-nav-inner{
+  background: #17191b;
+}
   ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs {
     border-bottom: none; }
     ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li {

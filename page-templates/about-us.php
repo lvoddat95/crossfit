@@ -76,7 +76,8 @@ function crf_entry_content_about_us()
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="group-tabs">
                         <!-- Nav tabs -->
-                        <div class="tab-nav-wrap col-md-4 col-sm-4 col-xs-4">
+                        <div class="tab-nav-wrap col-md-4 col-sm-4 col-xs-12">
+                            <div class="tab-nav-inner">
                             <h3 class="_ab-sec-2-title-wrap no-margin title51">
                                 <span class="white font-600 text-uppercase"><?php if (!empty($coaches_title1)) echo esc_html($coaches_title1) ?></span>
                                 <span class="white font-bold text-uppercase"><?php if (!empty($coaches_title2)) echo esc_html($coaches_title2) ?></span>
@@ -109,9 +110,10 @@ function crf_entry_content_about_us()
                             <h5 class="biography title30 no-margin">
                                 <span class="color"><?php if (!empty($coaches_biography_text)) echo esc_html($coaches_biography_text); ?></span>
                             </h5>
+                            </div>
                         </div>
                         <!-- Tab panes -->
-                        <div class="tab-content col-md-8 col-sm-8 col-xs-8">
+                        <div class="tab-content col-md-8 col-sm-8 col-xs-12">
                             <?php if (!empty($our_couches_tab) && is_array($our_couches_tab)) foreach ($our_couches_tab as $key => $value) {
                                 //var_dump($value);
                                 extract($value);

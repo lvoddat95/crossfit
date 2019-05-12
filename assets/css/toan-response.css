@@ -10,6 +10,7 @@
 
     .hm-section-4 .content-wrap .wcc-wrap .wcc-desc {
         font-size: 17px;
+        line-height: 29px;
     }
 
     
@@ -75,6 +76,10 @@
 
     ._ev-section-event .sec1-row4-wrap .event-row-4-title {
         margin-bottom: 15px;
+    }
+    ._about-section-2 .group-tabs .tab-nav-wrap .tab-nav-inner ._ab-sec-2-title-wrap span{
+        font-size: 40px;
+        line-height: 68px;
     }
 
 }
