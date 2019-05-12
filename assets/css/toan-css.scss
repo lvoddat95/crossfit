@@ -535,6 +535,9 @@ input[type='submit']:focus,
             margin-right: -2px;
             position: relative;
             padding: 0px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 12px;
             display: flex;
             display: -webkit-flex;
             display: -moz-flex;
@@ -593,8 +596,10 @@ input[type='submit']:focus,
         width: 390px;
         border: 6px solid $color;
         margin-bottom: 48px;
+        height: 75px;
         span{
           padding-left: 109px;
+          line-height: 63px;
         }
       }
     }
@@ -605,13 +610,15 @@ input[type='submit']:focus,
           .img-wrap{
             width: 230px;
             overflow: hidden;
-            margin-bottom: 9px;
+            margin-bottom: 14px;
           }
           .our-coach-content-title{
             margin-bottom: 14px;
           }
         }
         .coach-content{
+          margin-bottom: 44px;
+          padding-right: 25px;
           p{
             color: white;
           }

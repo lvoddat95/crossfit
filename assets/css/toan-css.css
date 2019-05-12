@@ -620,6 +620,9 @@ input[type='submit']:focus,
         margin-right: -2px;
         position: relative;
         padding: 0px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 12px;
         display: flex;
         display: -webkit-flex;
         display: -moz-flex; }
@@ -658,19 +661,24 @@ input[type='submit']:focus,
     margin-top: 15px;
     width: 390px;
     border: 6px solid #00ca00;
-    margin-bottom: 48px; }
+    margin-bottom: 48px;
+    height: 75px; }
     ._about-section-2 .group-tabs .tab-nav-wrap .biography span {
-      padding-left: 109px; }
+      padding-left: 109px;
+      line-height: 63px; }
   ._about-section-2 .group-tabs .tab-content .our-coach-content {
     padding-top: 55px; }
     ._about-section-2 .group-tabs .tab-content .our-coach-content .img-title-coach-wrap .img-wrap {
       width: 230px;
       overflow: hidden;
-      margin-bottom: 9px; }
+      margin-bottom: 14px; }
     ._about-section-2 .group-tabs .tab-content .our-coach-content .img-title-coach-wrap .our-coach-content-title {
       margin-bottom: 14px; }
-    ._about-section-2 .group-tabs .tab-content .our-coach-content .coach-content p {
-      color: white; }
+    ._about-section-2 .group-tabs .tab-content .our-coach-content .coach-content {
+      margin-bottom: 44px;
+      padding-right: 25px; }
+      ._about-section-2 .group-tabs .tab-content .our-coach-content .coach-content p {
+        color: white; }
 
 /* Contact page */
 ._ct-section-contact {
