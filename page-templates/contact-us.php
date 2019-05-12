@@ -20,6 +20,7 @@ function crf_blog_body_class( $classes ) {
     $classes[] = 'contactus-template';
     return $classes;
 }
+remove_action( 'genesis_footer', 'crf_template_gg_ctf_footer', 10);
 
 
 add_action('genesis_entry_content', 'crf_entry_content_contact_us', 12);
@@ -27,13 +28,14 @@ function crf_entry_content_contact_us()
 {
     $section_contact = get_field('section_contact');
     extract($section_contact);
+
     if (empty($size))
         $size = array(120, 120);
     ?>
     <div class="_ct-section-contact">
         <div class="container">
             <div class="row row-contact">
-                <div class="col-sm-6 col-md-6 col-lg-6 col-contact col-contact-left">
+                <div class="col-sm-6 col-md-6 col-lg-7 col-contact col-contact-left">
                     <?php if(!empty($free_trial_title)) {
                         ?>
                         <h2 class="no-margin title45 free-trial-title font-600"><?php echo esc_html($free_trial_title) ?></h2>
@@ -46,7 +48,7 @@ function crf_entry_content_contact_us()
                     } ?>
                     <?php if ($free_trial_contact_form) echo do_shortcode($free_trial_contact_form); ?>
                 </div>
-                <div class="col-sm-6 col-lg-6 col-contact col-contact-right">
+                <div class="col-sm-6 col-lg-5 col-contact col-contact-right">
                     <div class="col2-row1 contact-info">
                         <h3 class="title-phone title45 no-margin"><?php if ($contact_title1) echo esc_html($contact_title1); ?></h3>
                         <div class="contact-des-phone title25"><?php if ($contact_des1) echo esc_html($contact_des1); ?>
@@ -77,16 +79,47 @@ function crf_entry_content_contact_us()
 
                         </div>
                     </div>
-
-
                 </div>
+
+
+
             </div>
 
-
         </div>
-
-
     </div>
+
+
+
+    <div class="hm-section-6 section-contact-box">
+        <div class="container">
+            <div class="row contact-us-wrap">
+                <div class="col-contact col-md-7 col-sm-12 col-xs-12">
+                    <?php if (!empty($ct_contact_from7)) echo do_shortcode($ct_contact_from7) ?>
+                </div>
+                <div class="col-map col-md-5 col-sm-12 col-xs-12">
+                    <div class="google-maps">
+                        <?php 
+                            $id = 'sv-map-'.uniqid(); 
+                            $ct_ggm_address = $ct_google_map['ct_ggm_marker_title'];
+                            $lat = $ct_google_map['ct_ggm_location']['lat'];
+                            $lng = $ct_google_map['ct_ggm_location']['lng'];
+                            $ct_ggm_loc = $lat.','.$lng;
+                        ?>
+                        <div id="<?php echo $id; ?>" class="sv-ggmaps "
+                            data-location="|<?php echo esc_html($ct_ggm_loc); ?>,,<?php if (!empty($ct_ggm_address)) echo esc_html($ct_ggm_address) ?>," 
+                            data-market="<?php echo wp_get_attachment_image_src( $ct_google_map['ct_ggm_marker'])[0];?>" 
+                            data-zoom="19" 
+                            data-style="light" 
+                            data-control="yes" 
+                            data-scrollwheel="no" 
+                            data-disable_ui="no" 
+                            data-draggable="yes" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- end-hm-section-6 -->
 
 
     <?php

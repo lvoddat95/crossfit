@@ -4,21 +4,12 @@ Name: Footer
 Description: Footer Template
 */
 
-add_action( 'genesis_footer', 'crf_template_before_footer');
-function crf_template_before_footer() { 
+add_action( 'genesis_footer', 'crf_template_gg_ctf_footer');
+function crf_template_gg_ctf_footer() { 
     $before_footer = get_field('before_footer','option');
     if ($before_footer) extract($before_footer);
-
-    $footer_left = get_field('footer_left','option');
-    if ($footer_left) extract($footer_left);
-
-
-    $footer_center = get_field('footer_center','option');
-    if ($footer_center) extract($footer_center);
-
-    $footer_right = get_field('footer_right','option');
-    if ($footer_right) extract($footer_right);
     ?>
+
     <div class="hm-section-6">
         <div class="container">
             <div class="row contact-us-wrap">
@@ -33,7 +24,7 @@ function crf_template_before_footer() {
                         ?>
                         <div id="<?php echo $id; ?>" class="sv-ggmaps "
                             data-location="|<?php echo esc_html($ggm_loc); ?>,,<?php if (!empty($gg_address)) echo esc_html($gg_address) ?>," 
-                            data-market="<?php echo get_stylesheet_directory_uri(). '/assets/images/market.png';?>" 
+                            data-market="<?php echo wp_get_attachment_image_src( $google_map['ggm_marker'])[0];?>" 
                             data-zoom="19" 
                             data-style="light" 
                             data-control="yes" 
@@ -51,6 +42,27 @@ function crf_template_before_footer() {
             </div>
         </div>
     </div><!-- end-hm-section-6 -->
+
+    <?php
+}
+
+
+
+add_action( 'genesis_footer', 'crf_template_before_footer');
+function crf_template_before_footer() { 
+    $before_footer = get_field('before_footer','option');
+    if ($before_footer) extract($before_footer);
+
+    $footer_left = get_field('footer_left','option');
+    if ($footer_left) extract($footer_left);
+
+
+    $footer_center = get_field('footer_center','option');
+    if ($footer_center) extract($footer_center);
+
+    $footer_right = get_field('footer_right','option');
+    if ($footer_right) extract($footer_right);
+    ?>
 
     <div class="footer-custom">
         <div class="container">

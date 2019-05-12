@@ -702,6 +702,7 @@ input[type='submit']:focus,
 .hm-section-6 {
     padding-top: 70px;
     padding-bottom: 70px;
+    background: #fafafa;
 }
 
 .hm-section-6 .contact-us-wrap {
@@ -1044,6 +1045,7 @@ input[type='submit']:focus,
 
 ._ct-section-contact .col2-row1 .title-phone {
     margin-bottom: 28px;
+    font-weight: 600;
 }
 
 ._ct-section-contact .col2-row1 .contact-des-phone {
@@ -1057,6 +1059,7 @@ input[type='submit']:focus,
 
 ._ct-section-contact .col2-row2 .title-social {
     margin-bottom: 19px;
+    font-weight: 600;
 }
 
 ._ct-section-contact .col2-row2 .contact-social-wrap {
@@ -1065,6 +1068,7 @@ input[type='submit']:focus,
 
 ._ct-section-contact .col2-row3 .title-address {
     margin-bottom: 20px;
+    font-weight: 600;
 }
 
 ._ct-section-contact .col2-row3 .desc-address {

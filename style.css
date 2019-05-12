@@ -1337,9 +1337,7 @@ img.alignright,
 .sv-ggmaps {
 	height: 620px;
 }
-.hm-section-6 .contact-us-form .input-wrap span.wpcf7-form-control-wrap{
-	margin-bottom: 21.5px;
-}
+
 
 
 
@@ -1927,6 +1925,7 @@ img.alignright,
 
 .item-post{
 	margin-bottom: 30px;
+    border: 1px solid #d6d6d6;
 }
 .post-thumb{
 }
@@ -1934,7 +1933,6 @@ img.alignright,
     position: relative;
     background: #fff;
     padding: 20px;
-    border: 1px solid #d6d6d6;
 }
 .post-info .desc{
 	margin-bottom: 12px;
@@ -2177,22 +2175,16 @@ body.error404 .search-form .search-form-submit{
     height: 50px;
     line-height: 50px;
 }
-
-
-.contactus-template .hm-section-6 .contact-us-wrap{
-	display: -webkit-box; 
-	display: -ms-flexbox; 
-	display: flex;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
+.title44 {
+	font-size: 44px;
+	margin: 0;
 }
-.contactus-template .hm-section-6 .contact-us-wrap .col-map{
-	order: 1;
-	-webkit-order: 1;
-	-ms-order: 1;
+.contact-us-form strong{
+	font-weight: 600;
 }
-
-
+.contact-us-form .title44{
+    margin: 3px 0 27px;
+}
 .contactus-template .row-contact{
 	margin: 0 -42px;
 }
@@ -2202,4 +2194,28 @@ body.error404 .search-form .search-form-submit{
 
 .contact-social-wrap .img-wrap{
 	width: 20%;
+}
+.section-contact-box .wrap-box{
+	margin: 0 -14px;
+}
+.section-contact-box .your-name,
+.section-contact-box .phone-number{
+	float: left;
+	width: 50% !important;
+	padding: 0 14px;
+}
+.hm-section-6 .contact-us-form .input-wrap span.wpcf7-form-control-wrap{
+	margin-bottom: 21.5px;
+	display: inline-block;
+    width: 100%;
+}
+.hm-section-6.section-contact-box .contact-us-form .input-wrap span textarea{
+	height: 160px;
+}
+.hm-section-6.section-contact-box{
+	background: transparent;
+    padding-top: 0;
+}
+._ct-section-contact{
+	margin-bottom: 10px;
 }
