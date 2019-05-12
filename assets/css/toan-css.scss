@@ -526,8 +526,6 @@ input[type='submit']:focus,
   .group-tabs {
     .tab-nav-wrap {
       ._ab-sec-2-title-wrap {
-        padding-top: 50px;
-        padding-bottom: 66px;
       }
       ul.nav-tabs {
         border-bottom: none;
@@ -542,9 +540,6 @@ input[type='submit']:focus,
             display: flex;
             display: -webkit-flex;
             display: -moz-flex;
-            padding-top: 15px;
-            padding-bottom: 15px;
-            padding-left: 12px;
             &:after {
               @extend .after-df;
               right: -11px;
@@ -557,20 +552,18 @@ input[type='submit']:focus,
             }
             .img-wrap {
               display: block;
-              width: 120px;
+              width: 125px;
               @extend .round;
               overflow: hidden;
             }
             .coach-info-wrap {
               display: block;
-              width: calc(100% - 125px);
-              padding-left: 18px;
-              padding-top: 27px;
+              width: calc(100% - 124px);
               > span{
                 display: block;
               }
               .coach-name{
-                margin-bottom: 9px;
+
               }
               .coach-office{
 
@@ -595,15 +588,6 @@ input[type='submit']:focus,
           }
         }
       }
-      .biography{
-        margin-top: 15px;
-        width: 390px;
-        border: 6px solid $color;
-        margin-bottom: 48px;
-        span{
-          padding-left: 109px;
-        }
-      }
     }
     .tab-content {
       .our-coach-content{
@@ -622,9 +606,6 @@ input[type='submit']:focus,
           p{
             color: white;
           }
-        }
-        .btn-readmore-coach{
-          @extend .color;
         }
       }
     }

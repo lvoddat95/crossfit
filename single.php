@@ -34,17 +34,49 @@ function crf_post_info_filter($post_info) {
 }
 
 
-add_action( 'genesis_entry_content', 'themeprefix_featured_image', 1 );
-function themeprefix_featured_image() {		
-	$data = '';
+add_action( 'genesis_entry_content', 'crf_single_featured_image', 1 );
+function crf_single_featured_image() {		
+	$html = '';
 	global $post;
 	if(empty($size)) $size = 'full';
 	if (has_post_thumbnail()) {
-        $data .= '<div class="single-post-thumb banner-advs">
+        $html .= '<div class="single-post-thumb banner-advs">
                     '.get_the_post_thumbnail(get_the_ID(),$size).'                
                 </div>';
     }
-    if(!empty($data)) echo apply_filters('crf_output_content',$data);
+    if(!empty($html)) echo apply_filters('crf_output_content',$html);
+}
+
+add_action( 'genesis_entry_content', 'crf_single_social_share', 2 );
+function crf_single_social_share() {		
+	$html = '';
+	$html .= 
+	'<div class="single-share">
+		<ul>
+			<li>
+				<a target="_blank" title="Share on Facebook" href="'.esc_url('http://www.facebook.com/sharer.php?u='.get_the_permalink()).'">
+					<img src="'.get_stylesheet_directory_uri() . '/assets/images/share/fb.png" alt="Facebook Icon">
+				</a>
+			</li>
+			<li>
+				<a target="_blank" title="Share on Twitter" href="'.esc_url('http://www.twitter.com/share?url='.get_the_permalink()).'">
+					<img src="'.get_stylesheet_directory_uri() . '/assets/images/share/tw.png" alt="Twitter Icon">
+				</a>
+			</li>
+			<li>
+				<a target="_blank" title="Share on Pinterest" href="'.esc_url('http://pinterest.com/pin/create/button/?url='.get_the_permalink().'&amp;media='.wp_get_attachment_url(get_post_thumbnail_id())).'">
+					<img src="'.get_stylesheet_directory_uri() . '/assets/images/share/pt.png" alt="Pinterest Icon">
+				</a>
+			</li>
+			<li>
+				<a target="_blank" title="Share on Mail" href="mailto:?subject='.esc_attr__("I wanted you to see this site&amp;body=Check out this site","crossfit").' '.get_the_permalink().'">
+					<img src="'.get_stylesheet_directory_uri() . '/assets/images/share/mail.png" alt="Mail Icon">
+				</a>
+			</li>
+		</ul>
+		<span>'.esc_html__( 'Share', 'crossfit' ).'</span>
+	</div>';
+	if(!empty($html)) echo apply_filters('crf_output_content',$html);
 }
 
 

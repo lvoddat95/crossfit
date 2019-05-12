@@ -55,10 +55,9 @@ add_action( 'func_crossfit_breadcrumb_section', 'func_crossfit_page_title', 10 )
 function func_crossfit_page_title() { ?>
 	<div class="page-title" style="background-image: url(<?php echo get_stylesheet_directory_uri(). '/assets/images/texture.png';?>);">
 		<?php 
-			if ( is_home() || is_archive() || is_category() || is_tag() || is_tax() || is_search() || is_page_template( 'page_blog.php' ) ) {
-
+			// Add post titles back inside posts loop.
+			if ( is_home() || is_archive() || is_category() || is_tag() || is_tax() || is_search() ) {
 				add_action( 'genesis_entry_header', 'genesis_do_post_title', 2 );
-
 			}
 
 			if ( class_exists( 'WooCommerce' ) && is_shop() ) {
@@ -70,21 +69,12 @@ function func_crossfit_page_title() { ?>
 					'context' => 'entry-title',
 				) );
 
-			} elseif ( 'posts' === get_option( 'show_on_front' ) && is_home() ) {
-
-				genesis_markup( array(
-					'open'    => '<h1 %s>',
-					'close'   => '</h1>',
-					'content' => apply_filters( 'func_crossfit_latest_posts_title', __( 'Latest Posts', 'crossfit' ) ),
-					'context' => 'entry-title',
-				) );
-
 			} elseif ( is_404() ) {
 
 				genesis_markup( array(
 					'open'    => '<h1 %s>',
 					'close'   => '</h1>',
-					'content' => apply_filters( 'genesis_404_entry_title', __( 'Not found, error 404', 'crossfit' ) ),
+					'content' => apply_filters( 'genesis_404_entry_title', __( '404', 'crossfit' ) ),
 					'context' => 'entry-title',
 				) );
 
@@ -93,15 +83,25 @@ function func_crossfit_page_title() { ?>
 				genesis_markup( array(
 					'open'    => '<h1 %s>',
 					'close'   => '</h1>',
-					'content' => apply_filters( 'genesis_search_title_text', __( 'Search results for: ', 'crossfit' ) ) . get_search_query(),
+					'content' => apply_filters( 'genesis_search_title_text', __( 'Search: ', 'crossfit' ) ) . get_search_query(),
 					'context' => 'entry-title',
 				) );
 
-			} elseif ( is_page_template( 'page_blog.php' ) ) {
+			} elseif ( is_single() ) {
 
-				do_action( 'genesis_archive_title_descriptions', get_the_title(), '', 'posts-page-description' );
+			} elseif ( is_author() ) {
+			    $author = get_queried_object();
+			    $author_title = $author->display_name;
+			    genesis_markup( array(
+					'open'    => '<h1 %s>',
+					'close'   => '</h1>',
+					'content' => apply_filters( 'genesis_author_entry_title', __( 'Author: ', 'crossfit' ) ). $author_title,
+					'context' => 'entry-title',
+				) );
 
-			} elseif ( is_single() || is_singular() ) {
+			} else { 
+
+				genesis_do_post_title();
 
 			}
 		?>
@@ -126,9 +126,12 @@ function func_crossfit_page_excerpt() {
 }
 
 function crf_breadcrumb_featured_image() {
-    if ( !is_singular() ) {
+	$breadcrumb_default = get_field('crf_theme_brc','option');
+    if ( !is_single() ) {
+
 	    $id = get_queried_object_id ();
-        if ( has_post_thumbnail( $id ) ) {
+
+        if ( has_post_thumbnail( $id ) && !is_search()) {
 
             $image = wp_get_attachment_image_src( get_post_thumbnail_id( $id ), 'full' );
 
@@ -136,11 +139,16 @@ function crf_breadcrumb_featured_image() {
 
         } else {
 
-            $url = get_stylesheet_directory_uri() . '/assets/images/breadcrumbs.jpg';
+		$url = get_stylesheet_directory_uri() . '/assets/images/breadcrumbs.jpg';
+		if ($breadcrumb_default) $url = $breadcrumb_default;
 
         }
+
     }else{
+
     	$url = get_stylesheet_directory_uri() . '/assets/images/breadcrumbs.jpg';
+		if ($breadcrumb_default) $url = $breadcrumb_default;
+
     }
 
     return $url;

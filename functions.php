@@ -227,9 +227,6 @@ add_theme_support( 'genesis-responsive-viewport' );
 // Adds image sizes.
 add_image_size( 'sidebar-featured', 75, 75, true );
 
-// Adds image sizes.
-add_image_size( 'admin-thumbnail', 50, 50, true );
-
 // Removes header right widget area.
 unregister_sidebar( 'header-right' );
 
@@ -275,23 +272,25 @@ genesis_set_default_layout( 'full-width-content' );
 
 add_action( 'genesis_before_content_sidebar_wrap', 'crf_before_content_sidebar_wrap' );
 function crf_before_content_sidebar_wrap() {
-	if (genesis_site_layout() === 'content-sidebar' || is_page_template() === 'false' || is_page() ) echo '<div class="container">';
+	if ( !is_page_template() || is_page_template('page-templates/blog.php') ) echo '<div class="content-container container">';
 }
+
 add_action( 'genesis_after_content_sidebar_wrap', 'crf_after_content_sidebar_wrap' );
 function crf_after_content_sidebar_wrap() {
-    if (genesis_site_layout() === 'content-sidebar' || is_page_template() === 'false' || is_page() ) echo '</div>';
+    if (!is_page_template() || is_page_template('page-templates/blog.php') ) echo '</div>';
 }
+
 add_action( 'genesis_before_loop', 'crf_genesis_before_content' );
 if( !function_exists('crf_genesis_before_content') ) {
 	function crf_genesis_before_content() {
-	    if (genesis_site_layout() === 'content-sidebar' || is_page_template() === 'false' || is_page() ) echo '<div class="loop-wrap">';
+	    if (!is_page_template() || is_page_template('page-templates/blog.php') ) echo '<div class="loop-wrap">';
 	}
 }
 
 add_action( 'genesis_after_loop', 'crf_genesis_after_content' );
 if( !function_exists('crf_genesis_after_content') ) {
 	function crf_genesis_after_content() {
-	   if (genesis_site_layout() === 'content-sidebar' || is_page_template() === 'false' || is_page() ) echo '</div>';
+	   if (!is_page_template() || is_page_template('page-templates/blog.php') ) echo '</div>';
 	}
 }
 
@@ -341,7 +340,45 @@ function crf_remove_genesis_page_template_default( $page_templates ) {
 	return $page_templates;
 }
 
+add_action('admin_init', function () {
+    // Redirect any user trying to access comments page
+    global $pagenow;
+    
+    if ($pagenow === 'edit-comments.php') {
+        wp_redirect(admin_url());
+        exit;
+    }
 
+    // Remove comments metabox from dashboard
+    remove_meta_box('dashboard_recent_comments', 'dashboard', 'normal');
+
+    // Disable support for comments and trackbacks in post types
+    foreach (get_post_types() as $post_type) {
+        if (post_type_supports($post_type, 'comments')) {
+            remove_post_type_support($post_type, 'comments');
+            remove_post_type_support($post_type, 'trackbacks');
+        }
+    }
+});
+
+// Close comments on the front-end
+add_filter('comments_open', '__return_false', 20, 2);
+add_filter('pings_open', '__return_false', 20, 2);
+
+// Hide existing comments
+add_filter('comments_array', '__return_empty_array', 10, 2);
+
+// Remove comments page in menu
+add_action('admin_menu', function () {
+    remove_menu_page('edit-comments.php');
+});
+
+// Remove comments links from admin bar
+add_action('init', function () {
+    if (is_admin_bar_showing()) {
+        remove_action('admin_bar_menu', 'wp_admin_bar_comments_menu', 60);
+    }
+});
 
 
 /* Start Function ToanNgo92 */

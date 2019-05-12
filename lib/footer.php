@@ -22,7 +22,7 @@ function crf_template_before_footer() {
     <div class="hm-section-6">
         <div class="container">
             <div class="row contact-us-wrap">
-                <div class="col-map col-md-6 col-sm-6 col-xs-12">
+                <div class="col-map col-md-6 col-sm-12 col-xs-12">
                     <div class="google-maps">
                         <?php 
                             $id = 'sv-map-'.uniqid(); 
@@ -45,7 +45,7 @@ function crf_template_before_footer() {
 
                     </div>
                 </div>
-                <div class="col-contact col-md-6 col-sm-6 col-xs-12">
+                <div class="col-contact col-md-6 col-sm-12 col-xs-12">
                     <?php if (!empty($ft_cf7)) echo do_shortcode($ft_cf7) ?>
                 </div>
             </div>

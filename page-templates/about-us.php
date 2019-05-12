@@ -98,17 +98,15 @@ function crf_entry_content_about_us()
                                             <i class="img-wrap"><img
                                                         src="<?php echo wp_get_attachment_image_src($our_coach_image, array(124, 124))[0]; ?>"/></i>
                                             <span class="coach-info-wrap white">
-                                        <span class="coach-name font-600 title30"><?php echo esc_html($our_coach_name) ?></span>
-                                        <span class="coach-office font-500 title26"><?php echo esc_html($our_coach_office) ?></span>
+                                        <span class="coach-name"><?php echo esc_html($our_coach_name) ?></span>
+                                        <span class="coach-office"><?php echo esc_html($our_coach_office) ?></span>
                                         </span>
                                         </a>
                                     </li>
                                     <?php
                                 } ?>
                             </ul>
-                            <h5 class="biography title30 no-margin">
-                                <span class="color"><?php if (!empty($coaches_biography_text)) echo esc_html($coaches_biography_text); ?></span>
-                            </h5>
+                            <h5 class="biography"><?php if (!empty($coaches_biography_text)) echo esc_html($coaches_biography_text); ?></h5>
                         </div>
                         <!-- Tab panes -->
                         <div class="tab-content col-md-8 col-sm-8 col-xs-8">
@@ -131,12 +129,12 @@ function crf_entry_content_about_us()
                                         </div>
                                         <h4 class="our-coach-content-title no-margin white title30 font-600"><?php echo esc_html($our_coach_full_name); ?></h4>
                                     </div>
-                                    <div class="coach-content title25">
+                                    <div class="coach-content">
                                         <?php echo apply_filters('crossfit_output_content', $our_coach_content) ?>
                                     </div>
                                     <?php if (!empty($coaches_read_more_text))
                                     ?>
-                                    <a class="title30 btn-readmore-coach" href="<?php echo $our_coach_read_more_url ? esc_url($our_coach_read_more_url) : "#" ?>"><?php echo esc_html($coaches_read_more_text) ?></a>
+                                    <a href="<?php echo $our_coach_read_more_url ? esc_url($our_coach_read_more_url) : "#" ?>"><?php echo esc_html($coaches_read_more_text) ?></a>
                                     <?php
                                     ?>
                                 </div>

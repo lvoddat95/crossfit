@@ -1,3 +1,43 @@
+@media (max-width:1440px) {
+  .hm-section-3 .col-section3-img .img-wrap img {
+    position: relative;
+    margin-left: -150px;
+    margin-bottom: 23px;
+  }
+
+  .hm-section-3 .col-section3-content .hm-section-3-content .content-wrap p {
+    margin-bottom: 20px;
+  }
+
+  .hm-section-4 .content-wrap .wcc-wrap .wcc-desc {
+    font-size: 17px;
+  }
+
+  .title45 {
+    font-size: calc(20px + (45 - 20) * ((100vw - 320px) / (1440 - 320)));
+    line-height: calc(30px + (52 - 30) * ((100vw - 320px) / (1440 - 320)));
+  }
+
+  .title51 {
+    font-size: calc(18px + (51 - 18) * ((100vw - 320px) / (1440 - 320)));
+    line-height: calc(32px + (62 - 32) * ((100vw - 320px) / (1440 - 320)));
+  }
+
+  .title25,
+  .hm-section-4 .content-wrap .wcc-wrap .wcc-title,
+  .hm-section-5 #gts-testimonials .wrap .lSSlideWrapper ul.testimonials-list li blockquote {
+    font-size: calc(18px + (25 - 18) * ((100vw - 320px) / (1440 - 320)));
+    line-height: calc(24px + (37 - 24) * ((100vw - 320px) / (1440 - 320)));
+  }
+
+  .title30,
+  .hm-section-1 .signup-email-wrap .signup-email-form .col-right p input[type="submit"] {
+    font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1440 - 320)));
+    line-height: calc(24px + (37 - 24) * ((100vw - 320px) / (1440 - 320)));
+  }
+
+}
+
 @media (max-width: 1440px) {
     ._about-section-1 .content-row1 .col2-content .content-wrap{
         line-height: 36px;
@@ -16,6 +56,18 @@
     }
 
 }
+
+@media (max-width: 1199px) {
+    .hm-section-6 .contact-us-wrap{
+        margin: 0 -15px;
+    }
+    .hm-section-6 .contact-us-wrap .col-map, 
+    .hm-section-6 .contact-us-wrap .col-contact{
+        padding: 0 15px;
+    }
+
+}
+
 @media (max-width: 1024px) {
     .hm-section-1 .signup-email-wrap .signup-email-form .col-right p input[type="submit"] {
         font-size: 20px;
@@ -140,10 +192,14 @@
     ._ev-section-event  .sec1-row4-wrap .event-row-4-content{
         font-size: 16px;
     }
+    ul.testimonials-list li{
+        padding: 0 15px;
+    }
 
 }
 
 @media (max-width: 991px) {
+
     .hm-section-2 .hm-section-2-content .col-content .content-wrap {
         padding: 0px 15px;
     }
@@ -215,6 +271,10 @@
         line-height: 50px;
         font-size: 18px;
     }
+    .hm-section-6 .google-maps{
+        margin-bottom: 50px;
+    }
+
 }
 
 @media (max-width: 860px) {
