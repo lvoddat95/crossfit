@@ -1236,6 +1236,7 @@ img.alignright,
 	font-weight: bold;
 	text-align: center;
 	margin: 0 0 40px;
+	text-transform: uppercase;
 }
 .title-pn{
 	margin-bottom: 15px;
@@ -1595,7 +1596,7 @@ img.alignright,
     font-size: 25px;
     padding: 0 100px;
     height: 50px;
-    line-height: 50px;
+    line-height: 48px;
     min-width: 360px;
     display: block;
     background: transparent;

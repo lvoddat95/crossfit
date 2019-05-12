@@ -114,6 +114,11 @@
         line-height: calc(32px + (62 - 32) * ((100vw - 320px) / (1459 - 320)));
 	}
 
+	.pricing-box .price h3{
+		font-size: calc(30px + (77 - 30) * ((100vw - 320px) / (1459 - 320)));
+        line-height: calc(49px + (49 - 115) * ((100vw - 320px) / (1459 - 320)));
+	}
+
 	.crf_pp_table td, 
 	.crf_pp_table th{
 		font-size: 18px;

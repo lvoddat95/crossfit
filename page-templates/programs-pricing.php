@@ -143,7 +143,7 @@ function crf_entry_content_program_pricing() {
 							                    foreach ( $crf_schedule_table['header'] as $th ) {
 
 							                        echo '<th>';
-							                            echo '<span>'.$td['c'].'</span>';
+							                            echo '<span>'.$th['c'].'</span>';
 							                        echo '</th>';
 							                    }
 
