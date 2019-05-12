@@ -435,12 +435,8 @@ input[type='submit']:focus,
           border-radius: 0px;
           border-bottom: 2px solid #dedede;
           &::placeholder {
-            font-size: 23px;
-            line-height: 44px;
           }
           &::-webkit-input-placeholder {
-            font-size: 23px;
-            line-height: 44px;
           }
         }
         textarea {

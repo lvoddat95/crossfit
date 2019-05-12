@@ -551,12 +551,6 @@ input[type='submit']:focus,
       border: none;
       border-radius: 0px;
       border-bottom: 2px solid #dedede; }
-      .hm-section-6 .contact-us-form .input-wrap span input[type="text"]::placeholder, .hm-section-6 .contact-us-form .input-wrap span input[type="tel"]::placeholder, .hm-section-6 .contact-us-form .input-wrap span input[type="email"]::placeholder, .hm-section-6 .contact-us-form .input-wrap span textarea::placeholder {
-        font-size: 23px;
-        line-height: 44px; }
-      .hm-section-6 .contact-us-form .input-wrap span input[type="text"]::-webkit-input-placeholder, .hm-section-6 .contact-us-form .input-wrap span input[type="tel"]::-webkit-input-placeholder, .hm-section-6 .contact-us-form .input-wrap span input[type="email"]::-webkit-input-placeholder, .hm-section-6 .contact-us-form .input-wrap span textarea::-webkit-input-placeholder {
-        font-size: 23px;
-        line-height: 44px; }
     .hm-section-6 .contact-us-form .input-wrap span textarea {
       height: 173px;
       padding: 7px 35px; }
