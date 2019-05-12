@@ -33,7 +33,7 @@
         line-height: calc(76px + (270 - 76) * ((100vw - 320px) / (1920 - 320))); 
     }
 	.breadcrumb-section .subtitle{
-        font-size: calc(18px + (53 - 18) * ((100vw - 320px) / (1920 - 320)));
+        font-size: calc(18px + (40 - 18) * ((100vw - 320px) / (1920 - 320)));
 	    letter-spacing: 1vw;
 	}
 	.breadcrumb-section p{
@@ -188,10 +188,6 @@
 		line-height: 140px;
 		margin-bottom: 20px;
 	}
-	.breadcrumb-section .subtitle{
-		font-size: 33px;
-		letter-spacing: 5px;
-	}
 	.breadcrumb-section p {
 	    font-size: 26px;
         padding: 5px 0;
@@ -324,10 +320,6 @@
 	    font-size: calc(50px + (120 - 50) * ((100vw - 320px) / (991 - 320)));
 	    line-height: calc(60px + (120 - 60) * ((100vw - 320px) / (991 - 320)));
 	    margin-bottom: 10px;
-	}
-	.breadcrumb-section .subtitle{
-		font-size: calc(18px + (33 - 18) * ((100vw - 320px) / (991 - 320)));
-	    letter-spacing: 1vw;
 	}
 	.breadcrumb-section p {
 	    font-size: calc(16px + (26 - 16) * ((100vw - 320px) / (991 - 320)));
