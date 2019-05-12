@@ -211,7 +211,7 @@ input[type='submit'],
 .no-margin {
   margin: 0px; }
 
-.after-df, .hm-section-1 .signup-email-wrap .signup-email-form .col-left:before, .section-title > h3:after, .hm-section-3 .col-section3-content .hm-section-3-content .section3-title strong:after, .hm-section-4 .content-wrap .wcc-wrap:after, .hm-section-5 .testimonials-title:after, .hm-section-6 .contact-us-form > h2 strong:after, ._about-section-2:before, ._about-section-2:after, ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a:after, ._about-section-2 .group-tabs .tab-nav-wrap .biography:before, ._about-section-2 .group-tabs .tab-nav-wrap .biography:after {
+.after-df, .hm-section-1 .signup-email-wrap .signup-email-form .col-left:before, .section-title > h3:after, .hm-section-3 .col-section3-content .hm-section-3-content .section3-title strong:after, .hm-section-4 .content-wrap .wcc-wrap:after, .hm-section-5 .testimonials-title:after, .hm-section-6 .contact-us-form > h2 strong:after, ._about-section-2:before, ._about-section-2:after, ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a:after, ._about-section-2 .group-tabs .tab-nav-wrap .biography:before, ._about-section-2 .group-tabs .tab-nav-wrap .biography:after, ._about-section-2 .group-tabs .tab-content .our-coach-content .btn-readmore-coach:after {
   content: "";
   display: block;
   position: absolute; }
@@ -511,7 +511,7 @@ input[type='submit']:focus,
       display: none; }
 
 .hm-section-6 {
-  background: #fafafa;
+  padding-top: 70px;
   padding-top: 70px;
   padding-bottom: 70px; }
   .hm-section-6 .contact-us-wrap {
@@ -678,7 +678,8 @@ input[type='submit']:focus,
       width: 56px;
       height: 39px;
       top: 12px;
-      right: -51px; }
+      right: -51px;
+      background-size: contain; }
   ._about-section-2 .group-tabs .tab-content {
     padding-left: 90px; }
     ._about-section-2 .group-tabs .tab-content .our-coach-content {
@@ -695,7 +696,14 @@ input[type='submit']:focus,
           color: white; }
       ._about-section-2 .group-tabs .tab-content .our-coach-content .btn-readmore-coach {
         font-style: italic;
-        display: inline-block; }
+        display: inline-block;
+        position: relative; }
+        ._about-section-2 .group-tabs .tab-content .our-coach-content .btn-readmore-coach:after {
+          background: url("../images/readmore-bg.png");
+          width: 19px;
+          height: 20px;
+          top: 0px;
+          right: -30px; }
 
 /* Contact page */
 ._ct-section-contact {

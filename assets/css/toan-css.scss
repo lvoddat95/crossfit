@@ -378,7 +378,6 @@ input[type='submit']:focus,
 }
 
 .hm-section-6 {
-  background: #fafafa;
   padding-top: 70px;
   padding-bottom: 70px;
   .contact-us-wrap {
@@ -617,6 +616,7 @@ input[type='submit']:focus,
           height: 39px;
           top: 12px;
           right: -51px;
+          background-size: contain;
         }
       }
     }
@@ -644,6 +644,15 @@ input[type='submit']:focus,
           @extend .color;
           font-style: italic;
           display: inline-block;
+          position: relative;
+          &:after{
+            @extend .after-df;
+            background: url('../images/readmore-bg.png');
+            width: 19px;
+            height: 20px;
+            top: 0px;
+            right: -30px;
+          }
         }
       }
     }
