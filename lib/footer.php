@@ -97,7 +97,9 @@ function crf_template_before_footer() {
                     <div class="footer-right">
                         <div class="ft-add">
                             <h3 class="title-sc"><?php if ($address['ft_add_title']) echo esc_html($address['ft_add_title']); ?></h3>
-                            <p class="add-info"><?php if ($address['ft_add_info']) echo esc_html($address['ft_add_info']); ?></p>
+                            <div class="add-info">
+                                <?php if(!empty($address['ft_add_info'])) echo apply_filters('crf_output_content',$address['ft_add_info']); ?>
+                            </div>
                         </div>
                         <div class="ft-part">
                             <h3 class="title-sc"><?php if ($ft_pn['ft_pn_title']) echo esc_html($ft_pn['ft_pn_title']); ?></h3>
