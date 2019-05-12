@@ -88,8 +88,6 @@ function crf_entry_content_contact_us()
         </div>
     </div>
 
-
-
     <div class="hm-section-6 section-contact-box">
         <div class="container">
             <div class="row contact-us-wrap">
@@ -120,6 +118,11 @@ function crf_entry_content_contact_us()
             </div>
         </div>
     </div><!-- end-hm-section-6 -->
+
+    <div id="test">
+        <h1>sadasdmmhsadjhab</h1>
+    </div>
+    
 
 
     <?php
