@@ -3,7 +3,7 @@
 .dark-black {
   color: #17191b; }
 
-.color {
+.color, ._about-section-2 .group-tabs .tab-content .our-coach-content .btn-readmore-coach {
   color: #00ca00; }
 
 .color2, .hm-section-3 .col-section3-content .hm-section-3-content .content-wrap .third-paragraph > a > strong {
@@ -92,6 +92,10 @@
 .title25, .hm-section-4 .content-wrap .wcc-wrap .wcc-title, .hm-section-5 #gts-testimonials .wrap .lSSlideWrapper ul.testimonials-list li blockquote {
   font-size: 25px;
   line-height: 37px; }
+
+.title26 {
+  font-size: 26px;
+  line-height: normal; }
 
 .title28 {
   font-size: 28px;
@@ -650,6 +654,13 @@ input[type='submit']:focus,
       ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li.active a:after {
         visibility: visible;
         opacity: 1; }
+  ._about-section-2 .group-tabs .tab-nav-wrap .biography {
+    margin-top: 15px;
+    width: 390px;
+    border: 6px solid #00ca00;
+    margin-bottom: 48px; }
+    ._about-section-2 .group-tabs .tab-nav-wrap .biography span {
+      padding-left: 109px; }
   ._about-section-2 .group-tabs .tab-content .our-coach-content {
     padding-top: 55px; }
     ._about-section-2 .group-tabs .tab-content .our-coach-content .img-title-coach-wrap .img-wrap {
