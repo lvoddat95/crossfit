@@ -1269,6 +1269,7 @@ img.alignright,
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+    width: 450px;
 }
 .social-ft ul li {
 	display: inline-block;
@@ -2244,14 +2245,6 @@ body.error404 .search-form .search-form-submit{
     	margin: 0;
     	text-align: center;
     }
-    .ft-btn .btn-crossfit{
-		min-width: auto;
-		padding-left: 20px;
-		padding-right: 20px;
-		font-size: 22px;
-		height: 66px;
-		line-height: 66px;
-    }
 	.ft-part .list-img p, .ft-part .list-img{
 		display: -webkit-flex;
 		display: -moz-flex;
@@ -2267,7 +2260,10 @@ body.error404 .search-form .search-form-submit{
 	    width: auto;
 	}
 
+
 }
+
+
 
 @media (max-width: 1440px){
 

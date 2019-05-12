@@ -363,8 +363,7 @@ textarea {
   border-radius: 0px;
   padding: 0 1.5em;
   width: 100%;
-  font-size: 16px;
-  font-size: 23px;
+  font-size: 25px;
   line-height: 50px;
   height: 50px;
   font-weight: normal;
@@ -481,7 +480,6 @@ input[type='submit']:focus,
 
 .hm-section-1 .signup-email-wrap .signup-email-form .col-right .input-name-phone > span input {
   border-radius: 0px;
-  height: 50px;
   border: none;
 }
 
@@ -531,7 +529,6 @@ input[type='submit']:focus,
 }
 
 .hm-section-2 .hm-section-2-content .col-content .content-wrap {
-  line-height: 37px;
   padding-top: 65px;
 }
 
@@ -615,7 +612,7 @@ input[type='submit']:focus,
   max-width: unset;
   min-width: max-content;
   right: 0px;
-  top: 58px;
+  top: 40px;
 }
 
 .hm-section-4 {
@@ -774,6 +771,7 @@ input[type='submit']:focus,
 .hm-section-6 .contact-us-form .input-wrap span {
   display: block;
   margin-bottom: 22px;
+  font-size: 1px;
 }
 
 .hm-section-6 .contact-us-form .input-wrap span input[type="text"],
@@ -792,22 +790,6 @@ input[type='submit']:focus,
   border: none;
   border-radius: 0px;
   border-bottom: 2px solid #dedede;
-}
-
-.hm-section-6 .contact-us-form .input-wrap span input[type="text"]::placeholder,
-.hm-section-6 .contact-us-form .input-wrap span input[type="tel"]::placeholder,
-.hm-section-6 .contact-us-form .input-wrap span input[type="email"]::placeholder,
-.hm-section-6 .contact-us-form .input-wrap span textarea::placeholder {
-  font-size: 23px;
-  line-height: 44px;
-}
-
-.hm-section-6 .contact-us-form .input-wrap span input[type="text"]::-webkit-input-placeholder,
-.hm-section-6 .contact-us-form .input-wrap span input[type="tel"]::-webkit-input-placeholder,
-.hm-section-6 .contact-us-form .input-wrap span input[type="email"]::-webkit-input-placeholder,
-.hm-section-6 .contact-us-form .input-wrap span textarea::-webkit-input-placeholder {
-  font-size: 23px;
-  line-height: 44px;
 }
 
 .hm-section-6 .contact-us-form .input-wrap span textarea {

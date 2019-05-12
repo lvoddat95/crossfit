@@ -1,205 +1,274 @@
 @media (max-width:1440px) {
-  .hm-section-3 .col-section3-img .img-wrap img {
-    position: relative;
-    margin-left: -150px;
-    margin-bottom: 23px;
-  }
+    .hm-section-3 .col-section3-img .img-wrap img {
+        position: relative;
+        margin-left: -150px;
+    }
 
-  .hm-section-3 .col-section3-content .hm-section-3-content .content-wrap p {
-    margin-bottom: 20px;
-  }
+    .hm-section-3 .col-section3-content .hm-section-3-content .content-wrap p {
+        margin-bottom: 20px;
+    }
 
-  .hm-section-4 .content-wrap .wcc-wrap .wcc-desc {
-    font-size: 17px;
-  }
+    .hm-section-4 .content-wrap .wcc-wrap .wcc-desc {
+        font-size: 17px;
+    }
 
-  .title45 {
-    font-size: calc(20px + (45 - 20) * ((100vw - 320px) / (1440 - 320)));
-    line-height: calc(30px + (52 - 30) * ((100vw - 320px) / (1440 - 320)));
-  }
+    
+    .title51 {
+        font-size: calc(26px + (51 - 26) * ((100vw - 320px) / (1440 - 320)));
+        line-height: calc(32px + (62 - 32) * ((100vw - 320px) / (1440 - 320)));
+    }
 
-  .title51 {
-    font-size: calc(18px + (51 - 18) * ((100vw - 320px) / (1440 - 320)));
-    line-height: calc(32px + (62 - 32) * ((100vw - 320px) / (1440 - 320)));
-  }
+    .title45 {
+        font-size: calc(22px + (45 - 22) * ((100vw - 320px) / (1440 - 320)));
+        line-height: calc(30px + (52 - 30) * ((100vw - 320px) / (1440 - 320)));
+    }
+    
+    .phone-num, .title-sc,
+    .add-info,
+    .title35{
+        font-size: calc(20px + (35 - 20) * ((100vw - 320px) / (1440 - 320)));
+        line-height: calc(32px + (53 - 32) * ((100vw - 320px) / (1440 - 320)));
+    }
 
-  .title25,
-  .hm-section-4 .content-wrap .wcc-wrap .wcc-title,
-  .hm-section-5 #gts-testimonials .wrap .lSSlideWrapper ul.testimonials-list li blockquote {
-    font-size: calc(18px + (25 - 18) * ((100vw - 320px) / (1440 - 320)));
-    line-height: calc(24px + (37 - 24) * ((100vw - 320px) / (1440 - 320)));
-  }
+    .title25,
+    .hm-section-1 .signup-email-wrap .signup-email-form .col-right .input-name-phone > span input,
+    .hm-section-1 .signup-email-wrap .signup-email-form .col-right .input-email input[type="email"],
+    .hm-section-4 .content-wrap .wcc-wrap .wcc-title,
+    .hm-section-5 #gts-testimonials .wrap .lSSlideWrapper ul.testimonials-list li blockquote
 
-  .title30,
-  .hm-section-1 .signup-email-wrap .signup-email-form .col-right p input[type="submit"] {
-    font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1440 - 320)));
-    line-height: calc(24px + (37 - 24) * ((100vw - 320px) / (1440 - 320)));
-  }
+    {
+        font-size: calc(18px + (25 - 18) * ((100vw - 320px) / (1440 - 320)));
+        line-height: calc(32px + (38 - 32) * ((100vw - 320px) / (1440 - 320)));
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: calc(18px + (25 - 18) * ((100vw - 320px) / (1440 - 320)));
+        line-height: calc(32px + (38 - 32) * ((100vw - 320px) / (1440 - 320)));
+    }
+
+    .title30,
+    .hm-section-1 .signup-email-wrap .signup-email-form .col-right p input[type="submit"] {
+        font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1440 - 320)));
+        line-height: calc(35px + (37 - 35) * ((100vw - 320px) / (1440 - 320)));
+    }
+    .btn-crossfit{
+        font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1440 - 320)));
+    }
 
 }
 
-@media (max-width: 1440px) {
-    ._about-section-1 .content-row1 .col2-content .content-wrap{
+@media (max-width:1440px) {
+    ._about-section-1 .content-row1 .col2-content .content-wrap {
         line-height: 36px;
         padding-top: 0;
     }
-    ._ev-section-event .sec1-row2-wrap .col1-content{
+
+    ._ev-section-event .sec1-row2-wrap .col1-content {
         margin-top: -12px;
     }
+
     ._ev-section-event .sec1-row2-wrap .col1-content .event-sec1-row2-desc .event-row-2-desc-content,
     ._ev-section-event .sec1-row3-wrap .event-row-3-desc .event-row-3-desc-content,
-    ._ev-section-event .sec1-row-last{
+    ._ev-section-event .sec1-row-last {
         font-size: 17px;
     }
-    ._ev-section-event .sec1-row4-wrap .event-row-4-title{
+
+    ._ev-section-event .sec1-row4-wrap .event-row-4-title {
         margin-bottom: 15px;
     }
 
 }
 
-@media (max-width: 1199px) {
-    .hm-section-6 .contact-us-wrap{
+@media (max-width:1199px) {
+    .hm-section-6 .contact-us-wrap {
         margin: 0 -15px;
     }
-    .hm-section-6 .contact-us-wrap .col-map, 
-    .hm-section-6 .contact-us-wrap .col-contact{
+
+    .hm-section-6 .contact-us-wrap .col-map,
+    .hm-section-6 .contact-us-wrap .col-contact {
         padding: 0 15px;
     }
 
+
 }
 
-@media (max-width: 1024px) {
+@media (max-width:1024px) {
     .hm-section-1 .signup-email-wrap .signup-email-form .col-right p input[type="submit"] {
         font-size: 20px;
     }
+
     .hm-section-1 .signup-email-wrap .signup-email-form .col-left:before {
         display: none;
     }
+
     .hm-section-1 .signup-email-wrap .signup-email-form .col-right .input-name-phone {
         margin: 0px -7.5px;
         margin-bottom: 15px;
     }
+
     .hm-section-1 .signup-email-wrap .signup-email-form .col-right .input-name-phone > span {
         padding: 0px 7.5px;
     }
+
     .hm-section-1 .signup-email-wrap .signup-email-form .col-right .input-name-phone > span input,
-    .hm-section-1 .signup-email-wrap .signup-email-form .col-right .input-email input[type="email"]{
+    .hm-section-1 .signup-email-wrap .signup-email-form .col-right .input-email input[type="email"] {
         padding: 0px 15px;
     }
+
     .section-title > h3:after {
         bottom: -26px;
     }
+
     .hm-section-2 {
         padding-bottom: 50px;
         padding-top: 40px;
     }
+
     .hm-section-3 {
         padding-bottom: 7px;
     }
+
     .hm-section-3 .col-section3-content {
         z-index: 1;
     }
+
     .hm-section-3 .col-section3-img {
         z-index: 0;
     }
+
     .hm-section-3 .col-section3-img .img-wrap {
         opacity: 0.8;
     }
+
     .hm-section-3 .col-section3-img .img-wrap img {
         top: 7px;
         margin-bottom: 0px;
     }
+
     .hm-section-4 {
         padding-top: 39px;
         padding-bottom: 50px;
     }
+
     .hm-section-4 .content-wrap .wcc-wrap .wcc-desc {
         margin-bottom: 40px;
     }
+
     .hm-section-5 {
         padding-top: 39px;
         padding-bottom: 50px;
     }
+
     .hm-section-5 .testimonials-title:after {
         bottom: -26px;
     }
+
     .hm-section-5 .testimonials-title {
         margin-bottom: 60px;
     }
+
     .hm-section-5 #gts-testimonials .wrap .lSSlideWrapper ul.testimonials-list li img {
         margin-bottom: 20px;
     }
+
     .hm-section-5 #gts-testimonials .wrap .lSSlideWrapper ul.testimonials-list li h5 {
         margin-bottom: 35px;
     }
+
     .hm-section-5 #gts-testimonials .wrap .lSSlideWrapper ul.testimonials-list li blockquote {
         margin-bottom: 43px;
     }
+
     .hm-section-4 .content-wrap .wcc-wrap:after {
         bottom: -20px;
     }
+
     ._about-section-1 ._ab-sec-1-title-wrap > h3:after {
         bottom: -26px;
     }
+
     ._about-section-1 {
         padding-top: 39px;
         padding-bottom: 50px;
     }
-    ._about-section-1 .content-row1 .col2-content .content-wrap{
+
+    ._about-section-1 .content-row1 .col2-content .content-wrap {
         margin-top: -13px;
         padding-top: 0px;
     }
+
     ._about-section-1 .content-row1 {
         margin-bottom: 19px;
     }
+
     ._about-section-1 .content-row2 .content-wrap {
         margin-bottom: 45px;
     }
-    ._ct-section-contact{
+
+    ._ct-section-contact {
         padding-top: 34px;
     }
-    ._ev-section-event{
+
+    ._ev-section-event {
         padding-top: 50px;
         padding-bottom: 50px;
     }
+
     ._ev-section-event .sec1-row1-wrap .event-img1 {
         margin-bottom: 28px;
     }
-    ._ev-section-event .sec1-row1-wrap .event-content1{
+
+    ._ev-section-event .sec1-row1-wrap .event-content1 {
         margin-bottom: 29px;
     }
+
     ._ev-section-event .sec1-row1-wrap {
         margin-bottom: 37px;
     }
+
     ._ev-section-event .sec1-row2-wrap {
         margin-bottom: 34px;
     }
+
     ._ev-section-event .sec1-row3-wrap {
         margin-bottom: 17px;
     }
+
     ._ev-section-event .sec1-row4-wrap {
         margin-bottom: 39px;
     }
-    ._ev-section-event .sec1-row-last{
+
+    ._ev-section-event .sec1-row-last {
         margin-bottom: 33px;
     }
-    ._ev-section-event  .sec1-row4-wrap .event-img-row-4 img{
+
+    ._ev-section-event  .sec1-row4-wrap .event-img-row-4 img {
         width: 100%;
     }
-    ._ev-section-event  .sec1-row2-wrap .col2-img .event-img2 img{
+
+    ._ev-section-event  .sec1-row2-wrap .col2-img .event-img2 img {
         width: 100%;
     }
-    ._ev-section-event  .sec1-row4-wrap .event-row-4-content{
+
+    ._ev-section-event  .sec1-row4-wrap .event-row-4-content {
         font-size: 16px;
     }
-    ul.testimonials-list li{
+
+    ul.testimonials-list li {
         padding: 0 15px;
     }
 
 }
 
-@media (max-width: 991px) {
-
+@media (max-width:991px) {
+     .hm-section-2 .hm-section-2-content .col-content .content-wrap .frst-paragraph{
+        margin-bottom: 15px;
+    }
+    .hm-section-2 .hm-section-2-content .col-content .content-wrap .second-paragraph {
+        margin-bottom: 30px;
+    }
     .hm-section-2 .hm-section-2-content .col-content .content-wrap {
         padding: 0px 15px;
     }
@@ -232,7 +301,8 @@
         min-width: unset;
     }
 
-    .hm-section-4 .col-wcc-1, .hm-section-4 .col-wcc-3 {
+    .hm-section-4 .col-wcc-1,
+    .hm-section-4 .col-wcc-3 {
         width: 50%;
     }
 
@@ -256,28 +326,33 @@
     .hm-section-2 .hm-sec-2-title-wrap {
         z-index: 1;
     }
+
     ._about-section-1 .content-row2 .content-wrap p {
         margin-bottom: 30px;
     }
-    ._ct-section-contact .col2-row2 .contact-social-wrap .img-wrap{
+
+    ._ct-section-contact .col2-row2 .contact-social-wrap .img-wrap {
         width: 80px;
     }
+
     ._ct-section-contact .col2-row2 .contact-social-wrap {
         margin-left: -25px;
     }
-    ._ct-section-contact .trial-free-week-contact-form input[type="submit"]{
+
+    ._ct-section-contact .trial-free-week-contact-form input[type="submit"] {
         min-width: auto;
         height: 50px;
         line-height: 50px;
         font-size: 18px;
     }
-    .hm-section-6 .google-maps{
+
+    .hm-section-6 .google-maps {
         margin-bottom: 50px;
     }
 
 }
 
-@media (max-width: 860px) {
+@media (max-width:860px) {
     .hm-section-3 .col-section3-img {
         position: absolute;
         top: 0;
@@ -301,93 +376,116 @@
         bottom: 0;
         position: absolute;
     }
+
 }
 
-@media (max-width: 768px) {
-    ._ct-section-contact .col2-row2 .contact-social-wrap .img-wrap{
+@media (max-width:768px) {
+    ._ct-section-contact .col2-row2 .contact-social-wrap .img-wrap {
         width: 50px;
     }
+
     ._ct-section-contact .col2-row2 .contact-social-wrap {
         margin-left: -15px;
     }
+
     ._ct-section-contact .trial-free-week-contact-form input[type="text"],
     ._ct-section-contact .trial-free-week-contact-form input[type="tel"],
-    ._ct-section-contact .trial-free-week-contact-form input[type="email"]{
+    ._ct-section-contact .trial-free-week-contact-form input[type="email"] {
         padding: 0px 15px;
     }
+
 }
 
-@media (max-width: 767px) {
-    .hm-section-4 .col-wcc-1, .hm-section-4 .col-wcc-3 {
+@media (max-width:767px) {
+    .hm-section-4 .col-wcc-1,
+    .hm-section-4 .col-wcc-3 {
         width: 50%;
         float: left;
     }
-    .btn-crossfit, .hm-section-6 .contact-us-form input[type="submit"] {
+
+    .btn-crossfit,
+    .hm-section-6 .contact-us-form input[type="submit"] {
         font-size: calc(16px + (30 - 16) * ((100vw - 320px) / (1500 - 320)));
         line-height: calc(40px + (77 - 40) * ((100vw - 320px) / (1500 - 320)));
         height: calc(40px + (77 - 40) * ((100vw - 320px) / (1500 - 320)));
         min-width: auto;
         padding: 0px 20px;
     }
-    ._about-section-1 .content-row1 .col1-img{
+
+    ._about-section-1 .content-row1 .col1-img {
         margin-bottom: 47px;
     }
-    ._about-section-1 .content-row1 .col1-img .img-wrap img{
+
+    ._about-section-1 .content-row1 .col1-img .img-wrap img {
         width: 100%;
     }
-    ._ev-section-event  .sec1-row2-wrap .last-row2{
+
+    ._ev-section-event  .sec1-row2-wrap .last-row2 {
         margin-top: 43px;
     }
-    ._ev-section-event .sec1-row4-wrap .event-img-row-4{
+
+    ._ev-section-event .sec1-row4-wrap .event-img-row-4 {
         margin-bottom: 45px;
     }
+
+
 }
 
-@media (max-width: 568px) {
+@media (max-width:568px) {
     .hm-section-3 .col-section3-content .hm-section-3-content {
         padding: 25px 15px 35px 15px;
     }
+
     .hm-section-3 .col-section3-img .img-wrap {
         opacity: 0.3;
     }
-    .hm-section-3 .col-section3-content .hm-section-3-content .section3-title strong:after{
+
+    .hm-section-3 .col-section3-content .hm-section-3-content .section3-title strong:after {
         right: -60px;
         width: 50px;
         height: 4px;
     }
-    ._about-section-1 ._ab-sec-1-title-wrap > h3{
+
+    ._about-section-1 ._ab-sec-1-title-wrap > h3 {
         font-size: 30px;
         margin-bottom: 60px;
     }
+
 }
 
-@media (max-width: 480px) {
-    .hm-section-1 .signup-email-wrap .signup-email-form .col-right .input-name-phone > span{
+@media (max-width:480px) {
+    .hm-section-1 .signup-email-wrap .signup-email-form .col-right .input-name-phone > span {
         width: 100%;
     }
-    .hm-section-1 .signup-email-wrap .signup-email-form .col-right .input-name-phone > span.your-name{
+
+    .hm-section-1 .signup-email-wrap .signup-email-form .col-right .input-name-phone > span.your-name {
         margin-bottom: 15px;
     }
+
 }
 
-@media (max-width: 425px){
-    .hm-section-4 .col-wcc-1, .hm-section-4 .col-wcc-3{
+@media (max-width:425px) {
+    .hm-section-4 .col-wcc-1,
+    .hm-section-4 .col-wcc-3 {
         width: 100%;
         float: none;
+        text-align: left;
     }
+
     .hm-section-4 .content-wrap .img-wrap img {
         margin: auto;
         opacity: 0.2;
         margin-top: -350px;
     }
-}
-
-@media (max-width: 375px) {
 
 }
 
-@media (max-width: 320px) {
+@media (max-width:375px) {
+}
+
+@media (max-width:320px) {
     .hm-section-1 .signup-email-wrap .signup-email-form .col-right p input[type="submit"] {
         font-size: 16px;
     }
+
 }
