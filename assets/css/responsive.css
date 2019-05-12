@@ -99,7 +99,9 @@
 	    max-height: 50px;
 	    width: auto;
 	}
-
+	.phone-num, .title-sc{
+		margin-bottom: 30px;
+	}
 
 
 
