@@ -526,6 +526,8 @@ input[type='submit']:focus,
   .group-tabs {
     .tab-nav-wrap {
       ._ab-sec-2-title-wrap {
+        padding-top: 50px;
+        padding-bottom: 66px;
       }
       ul.nav-tabs {
         border-bottom: none;
@@ -552,18 +554,20 @@ input[type='submit']:focus,
             }
             .img-wrap {
               display: block;
-              width: 125px;
+              width: 120px;
               @extend .round;
               overflow: hidden;
             }
             .coach-info-wrap {
               display: block;
-              width: calc(100% - 124px);
+              width: calc(100% - 125px);
+              padding-left: 18px;
+              padding-top: 27px;
               > span{
                 display: block;
               }
               .coach-name{
-
+                margin-bottom: 9px;
               }
               .coach-office{
 

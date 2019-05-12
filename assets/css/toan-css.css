@@ -609,6 +609,9 @@ input[type='submit']:focus,
     left: 33.33333333%;
     background: #202225;
     z-index: -1; }
+  ._about-section-2 .group-tabs .tab-nav-wrap ._ab-sec-2-title-wrap {
+    padding-top: 50px;
+    padding-bottom: 66px; }
   ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs {
     border-bottom: none; }
     ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li {
@@ -632,13 +635,17 @@ input[type='submit']:focus,
           opacity: 0; }
         ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a .img-wrap {
           display: block;
-          width: 125px;
+          width: 120px;
           overflow: hidden; }
         ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a .coach-info-wrap {
           display: block;
-          width: calc(100% - 124px); }
+          width: calc(100% - 125px);
+          padding-left: 18px;
+          padding-top: 27px; }
           ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a .coach-info-wrap > span {
             display: block; }
+          ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a .coach-info-wrap .coach-name {
+            margin-bottom: 9px; }
         ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a:hover {
           background: #212427; }
           ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a:hover:after {
