@@ -1,4 +1,4 @@
-@media (max-width:1440px) {
+@media (max-width:1459px) {
     .hm-section-3 .col-section3-img .img-wrap img {
         position: relative;
         margin-left: -150px;
@@ -14,20 +14,20 @@
 
     
     .title51 {
-        font-size: calc(26px + (51 - 26) * ((100vw - 320px) / (1440 - 320)));
-        line-height: calc(32px + (62 - 32) * ((100vw - 320px) / (1440 - 320)));
+        font-size: calc(26px + (51 - 26) * ((100vw - 320px) / (1459 - 320)));
+        line-height: calc(32px + (62 - 32) * ((100vw - 320px) / (1459 - 320)));
     }
 
     .title45 {
-        font-size: calc(22px + (45 - 22) * ((100vw - 320px) / (1440 - 320)));
-        line-height: calc(30px + (52 - 30) * ((100vw - 320px) / (1440 - 320)));
+        font-size: calc(22px + (45 - 22) * ((100vw - 320px) / (1459 - 320)));
+        line-height: calc(30px + (52 - 30) * ((100vw - 320px) / (1459 - 320)));
     }
     
     .phone-num, .title-sc,
     .add-info,
     .title35{
-        font-size: calc(20px + (35 - 20) * ((100vw - 320px) / (1440 - 320)));
-        line-height: calc(32px + (53 - 32) * ((100vw - 320px) / (1440 - 320)));
+        font-size: calc(20px + (35 - 20) * ((100vw - 320px) / (1459 - 320)));
+        line-height: calc(32px + (53 - 32) * ((100vw - 320px) / (1459 - 320)));
     }
 
     .title25,
@@ -37,27 +37,27 @@
     .hm-section-5 #gts-testimonials .wrap .lSSlideWrapper ul.testimonials-list li blockquote
 
     {
-        font-size: calc(18px + (25 - 18) * ((100vw - 320px) / (1440 - 320)));
-        line-height: calc(32px + (38 - 32) * ((100vw - 320px) / (1440 - 320)));
+        font-size: calc(18px + (25 - 18) * ((100vw - 320px) / (1459 - 320)));
+        line-height: calc(32px + (38 - 32) * ((100vw - 320px) / (1459 - 320)));
     }
 
     input,
     select,
     textarea {
-        font-size: calc(18px + (25 - 18) * ((100vw - 320px) / (1440 - 320)));
-        line-height: calc(32px + (38 - 32) * ((100vw - 320px) / (1440 - 320)));
+        font-size: calc(18px + (25 - 18) * ((100vw - 320px) / (1459 - 320)));
+        line-height: calc(32px + (38 - 32) * ((100vw - 320px) / (1459 - 320)));
     }
 
     .title30,
     .hm-section-1 .signup-email-wrap .signup-email-form .col-right p input[type="submit"] {
-        font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1440 - 320)));
-        line-height: calc(35px + (37 - 35) * ((100vw - 320px) / (1440 - 320)));
-    }
-    .btn-crossfit{
-        min-width: auto;
-        font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1440 - 320)));
+        font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1459 - 320)));
+        line-height: calc(35px + (37 - 35) * ((100vw - 320px) / (1459 - 320)));
     }
 
+    .btn-crossfit{
+        font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1459 - 320)));
+        line-height: calc(32px + (38 - 32) * ((100vw - 320px) / (1459 - 320)));
+    }
 
     ._about-section-1 .content-row1 .col2-content .content-wrap {
         line-height: 36px;
@@ -89,7 +89,10 @@
     .hm-section-6 .contact-us-wrap .col-contact {
         padding: 0 15px;
     }
-
+    .btn-crossfit{
+        min-width: auto;
+        height: auto;
+    }
 
 }
 
