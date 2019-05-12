@@ -828,7 +828,7 @@ input[type='submit']:focus,
 ._about-section-2 .container:before{
     top: 0px;
     bottom: 0px;
-    left: 0px;
+    left: 15px;
     right: calc(66.66666667% + 15px);
     background: #17191b;
     position: absolute;
@@ -857,10 +857,10 @@ input[type='submit']:focus,
     padding-bottom: 66px;
 }
 
-._about-section-2 .group-tabs .tab-nav-wrap .tab-nav-inner {
-    background: #17191b;
-    height: 100%;
-}
+/*._about-section-2 .group-tabs .tab-nav-wrap .tab-nav-inner {*/
+    /*background: #17191b;*/
+    /*height: 100%;*/
+/*}*/
 
 ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs {
     border-bottom: none;
