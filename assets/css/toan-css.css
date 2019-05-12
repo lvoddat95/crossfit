@@ -822,7 +822,14 @@ input[type='submit']:focus,
 ._about-section-2 {
     position: relative;
 }
-
+._about-section-2 .container:before{
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 66.66666667%;
+    position: absolute;
+    display: block;
+}
 ._about-section-2:before, ._about-section-2:after {
     top: 0px;
     bottom: 0px;
@@ -1142,5 +1149,7 @@ input[type='submit']:focus,
 ._ev-section-event .sec1-row-last .second-paragraph {
     margin-bottom: 30px;
 }
+
+
 
 /*# sourceMappingURL=toan-css.css.map */
