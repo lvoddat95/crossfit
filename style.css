@@ -2254,12 +2254,38 @@ body.error404 .search-form .search-form-submit{
 
 
 @media (max-width: 1459px){
+	.social-ft ul{
+		margin: 0 -5px;
+		width: auto;
+	}
+	.social-ft ul li {
+	    width: 20%;
+	    padding: 0 5px;
+	}
+	.social-ft ul li img{
+		max-height: 50px;
+	    margin: auto;
+	}
+	.footer-center{
+		margin: 0;
+	}
 	.ft-logo img {
 	    max-width: 280px;
     }
     .ft-btn{
     	margin: 0;
     	text-align: center;
+    }
+    .ft-btn .btn-crossfit{
+	    min-width: auto;
+	    height: auto;
+	    line-height: normal;
+	    padding: 15px;
+	    font-size: 22px;
+    }
+    .add-info{
+    	font-size: 22px;
+    	line-height: 34px;
     }
 	.ft-part .list-img p, .ft-part .list-img{
 		display: -webkit-flex;
