@@ -520,7 +520,10 @@
     ._ct-section-contact .trial-free-week-contact-form input[type="email"] {
         padding: 0px 15px;
     }
-
+    ._ct-section-contact .trial-free-week-contact-form input[type="submit"]{
+        height: 50px !important;
+        line-height: 50px !important;
+    }
 }
 
 @media (max-width:767px) {
@@ -635,6 +638,9 @@
     }
     .btn-about-breadcrumb{
         margin-top: 30px;
+    }
+    .hm-section-3 .col-section3-content .hm-section-3-content .section3-title strong:after{
+        display: none;
     }
 }
 
