@@ -74,7 +74,7 @@ function crf_entry_content_program_pricing() {
 				<div class="pp_sec-wrap">
 					<h3 class="sec-title text-left black"><?php if ($crf_title_light_3) echo esc_html( $crf_title_light_3 ); ?><strong><?php if ($crf_title_bold_3) echo esc_html( $crf_title_bold_3 ); ?></strong></h3>
 					<div class="row">
-						<div class="col-sm-7 col-xs-12">
+						<div class="col-md-7 col-sm-12 col-xs-12">
 							<div class="pp_sec3-content">
 								<?php if ($crf_content_html_3): ?>
 									<?php echo apply_filters('s7upf_output_content',$crf_content_html_3);?>

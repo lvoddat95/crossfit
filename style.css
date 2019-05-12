@@ -1353,7 +1353,7 @@ img.alignright,
 	margin-bottom: 38px;
 }
 [class*="templatesprograms-pricing"] [class*="crf-pp-section"] p:last-child{
-	margin-bottom: 0px;
+	margin-bottom: 0px !important;
 }
 .sec-title{
     position: relative;
@@ -1521,20 +1521,14 @@ img.alignright,
     text-align: center;
     white-space: nowrap;
 }
-.crf_pp_table td{
-
-}
-.crf_pp_table th{
-
-}
-.crf_pp_table thead tr{
-
+.crf_pp_table tbody{
+	border: none;
 }
 .crf_pp_table tbody tr td:first-child{
-    font-size: 25px;
     text-align: right;
     color: #fff;
     padding: 0 30px;
+    border: none;
 }
 .crf_pp_table tbody tr td:first-child{
 	background: #17191b;
