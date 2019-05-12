@@ -1003,6 +1003,7 @@ input[type='submit']:focus,
     height: 20px;
     top: 10px;
     right: -30px;
+    background-size: contain;
 }
 
 /* Contact page */
