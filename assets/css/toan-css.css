@@ -826,7 +826,8 @@ input[type='submit']:focus,
     top: 0px;
     bottom: 0px;
     left: 0px;
-    right: 66.66666667%;
+    right: calc(66.66666667% + 15px);
+    background: #17191b;
     position: absolute;
     display: block;
 }
