@@ -351,7 +351,10 @@
         font-size: 16px;
         line-height: 27px;
     }
-
+    ._ct-section-contact .free-trial-description{
+        font-size: 18px;
+        line-height: 31px;
+    }
 }
 
 @media (max-width:991px) {
@@ -467,6 +470,9 @@
     ._about-section-1 .content-row1 .col2-content .content-wrap{
         font-size: 18px;
         line-height: 27px;
+    }
+    .btn-crossfit{
+        padding: 0px 15px;
     }
     .button-about .btn-crossfit{
         padding: 0px 15px;
@@ -624,7 +630,7 @@
     ._about-section-2 .group-tabs .tab-nav-wrap ._ab-sec-2-title-wrap{
         margin: 0px -15px;
     }
-    .button-about .btn-crossfit{
+    .button-about .btn-crossfit,.btn-crossfit{
         padding: inherit;
     }
 }
