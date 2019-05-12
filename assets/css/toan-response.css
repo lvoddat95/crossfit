@@ -441,7 +441,36 @@
     .hm-section-6 .google-maps {
         margin-bottom: 50px;
     }
+    ._about-section-2 .container:before{
+        width: calc(41.66666667% + 15px);
+    }
+    ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a {
+        margin-right: -45px;
+    }
+    ._about-section-2 .group-tabs .tab-content {
+        padding-left: 50px;
+    }
+    ._about-section-2 .group-tabs .tab-content .our-coach-content .btn-readmore-coach{
+        font-size: 18px;
+        line-height: 31px;
+    }
+    ._about-section-2 .group-tabs .tab-content .our-coach-content .btn-readmore-coach:after{
+        width: 10px;
+        height: 10px;
+        top: 11px;
+        right: -20px;
+    }
+    ._about-section-2 .group-tabs .tab-content .our-coach-content .coach-content {
+        margin-bottom: 17px;
+    }
 
+    ._about-section-1 .content-row1 .col2-content .content-wrap{
+        font-size: 18px;
+        line-height: 27px;
+    }
+    .button-about .btn-crossfit{
+        padding: 0px 15px;
+    }
 }
 
 @media (max-width:860px) {
@@ -519,7 +548,33 @@
     ._ev-section-event .sec1-row4-wrap .event-img-row-4 {
         margin-bottom: 45px;
     }
-
+    ._about-section-2 .container:before{
+        background: transparent;
+    }
+    ._about-section-2:before{
+        width: 100%;
+        background: #202225;
+    }
+    ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li.active a{
+        background: #17191b;
+        margin-right: 0px;
+    }
+    ._about-section-2 .group-tabs .tab-nav-wrap .biography:before{
+        background: #202225;
+    }
+    ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a .coach-info-wrap .coach-name{
+        font-size: 22px;
+        line-height: 27px;
+    }
+    ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a .coach-info-wrap .coach-office{
+        font-size: 17px;
+        line-height: 22px;
+    }
+    ._about-section-2 .group-tabs .tab-nav-wrap .biography{
+        margin-bottom: 0px;
+        position: absolute;
+        bottom: -161px;
+    }
 
 }
 
@@ -542,6 +597,9 @@
         font-size: 30px;
         margin-bottom: 60px;
     }
+    ._about-section-2 .group-tabs .tab-nav-wrap .biography{
+        display: none;
+    }
 
 }
 
@@ -553,7 +611,22 @@
     .hm-section-1 .signup-email-wrap .signup-email-form .col-right .input-name-phone > span.your-name {
         margin-bottom: 15px;
     }
-
+    ._about-section-2 .group-tabs .tab-content{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a{
+        margin: 0px -15px;
+    }
+    ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li.active a{
+        margin: 0px -15px;
+    }
+    ._about-section-2 .group-tabs .tab-nav-wrap ._ab-sec-2-title-wrap{
+        margin: 0px -15px;
+    }
+    .button-about .btn-crossfit{
+        padding: inherit;
+    }
 }
 
 @media (max-width:425px) {
@@ -578,6 +651,13 @@
 @media (max-width:320px) {
     .hm-section-1 .signup-email-wrap .signup-email-form .col-right p input[type="submit"] {
         font-size: 16px;
+    }
+    ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a .coach-info-wrap .coach-name{
+        font-size: 16px;
+        line-height: 27px;
+    }
+    ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a .coach-info-wrap .coach-office{
+        font-size: 15px;
     }
 
 }
