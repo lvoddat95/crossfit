@@ -211,7 +211,7 @@ input[type='submit'],
 .no-margin {
   margin: 0px; }
 
-.after-df, .hm-section-1 .signup-email-wrap .signup-email-form .col-left:before, .section-title > h3:after, .hm-section-3 .col-section3-content .hm-section-3-content .section3-title strong:after, .hm-section-4 .content-wrap .wcc-wrap:after, .hm-section-5 .testimonials-title:after, .hm-section-6 .contact-us-form > h2 strong:after, ._about-section-2:before, ._about-section-2:after, ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a:after {
+.after-df, .hm-section-1 .signup-email-wrap .signup-email-form .col-left:before, .section-title > h3:after, .hm-section-3 .col-section3-content .hm-section-3-content .section3-title strong:after, .hm-section-4 .content-wrap .wcc-wrap:after, .hm-section-5 .testimonials-title:after, .hm-section-6 .contact-us-form > h2 strong:after, ._about-section-2:before, ._about-section-2:after, ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a:after, ._about-section-2 .group-tabs .tab-nav-wrap .biography:before, ._about-section-2 .group-tabs .tab-nav-wrap .biography:after {
   content: "";
   display: block;
   position: absolute; }
@@ -662,23 +662,40 @@ input[type='submit']:focus,
     width: 390px;
     border: 6px solid #00ca00;
     margin-bottom: 48px;
-    height: 75px; }
+    height: 75px;
+    position: relative; }
     ._about-section-2 .group-tabs .tab-nav-wrap .biography span {
       padding-left: 109px;
       line-height: 63px; }
-  ._about-section-2 .group-tabs .tab-content .our-coach-content {
-    padding-top: 55px; }
-    ._about-section-2 .group-tabs .tab-content .our-coach-content .img-title-coach-wrap .img-wrap {
-      width: 230px;
-      overflow: hidden;
-      margin-bottom: 14px; }
-    ._about-section-2 .group-tabs .tab-content .our-coach-content .img-title-coach-wrap .our-coach-content-title {
-      margin-bottom: 14px; }
-    ._about-section-2 .group-tabs .tab-content .our-coach-content .coach-content {
-      margin-bottom: 44px;
-      padding-right: 25px; }
-      ._about-section-2 .group-tabs .tab-content .our-coach-content .coach-content p {
-        color: white; }
+    ._about-section-2 .group-tabs .tab-nav-wrap .biography:before {
+      background: #17191b;
+      width: 56px;
+      height: 41px;
+      top: 11px;
+      right: -51px; }
+    ._about-section-2 .group-tabs .tab-nav-wrap .biography:after {
+      background: url("../images/arrow-right.png");
+      width: 56px;
+      height: 39px;
+      top: 12px;
+      right: -51px; }
+  ._about-section-2 .group-tabs .tab-content {
+    padding-left: 90px; }
+    ._about-section-2 .group-tabs .tab-content .our-coach-content {
+      padding-top: 55px; }
+      ._about-section-2 .group-tabs .tab-content .our-coach-content .img-title-coach-wrap .img-wrap {
+        width: 230px;
+        overflow: hidden;
+        margin-bottom: 14px; }
+      ._about-section-2 .group-tabs .tab-content .our-coach-content .img-title-coach-wrap .our-coach-content-title {
+        margin-bottom: 14px; }
+      ._about-section-2 .group-tabs .tab-content .our-coach-content .coach-content {
+        margin-bottom: 44px; }
+        ._about-section-2 .group-tabs .tab-content .our-coach-content .coach-content p {
+          color: white; }
+      ._about-section-2 .group-tabs .tab-content .our-coach-content .btn-readmore-coach {
+        font-style: italic;
+        display: inline-block; }
 
 /* Contact page */
 ._ct-section-contact {

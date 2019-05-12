@@ -597,13 +597,31 @@ input[type='submit']:focus,
         border: 6px solid $color;
         margin-bottom: 48px;
         height: 75px;
+        position: relative;
         span{
           padding-left: 109px;
           line-height: 63px;
         }
+        &:before{
+          @extend .after-df;
+          background: #17191b;
+          width: 56px;
+          height: 41px;
+          top: 11px;
+          right: -51px;
+        }
+        &:after{
+          @extend .after-df;
+          background: url('../images/arrow-right.png');
+          width: 56px;
+          height: 39px;
+          top: 12px;
+          right: -51px;
+        }
       }
     }
     .tab-content {
+      padding-left: 90px;
       .our-coach-content{
         padding-top: 55px;
         .img-title-coach-wrap{
@@ -618,13 +636,14 @@ input[type='submit']:focus,
         }
         .coach-content{
           margin-bottom: 44px;
-          padding-right: 25px;
           p{
             color: white;
           }
         }
         .btn-readmore-coach{
           @extend .color;
+          font-style: italic;
+          display: inline-block;
         }
       }
     }
