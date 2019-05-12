@@ -108,7 +108,7 @@
 		font-size: calc(18px + (25 - 18) * ((100vw - 320px) / (1459 - 320)));
 		line-height: calc(32px + (38 - 32) * ((100vw - 320px) / (1459 - 320)));
 	}
-
+	._ct-section-contact .free-trial-description,
 	.sec-title{
 		font-size: calc(26px + (51 - 26) * ((100vw - 320px) / (1459 - 320)));
         line-height: calc(32px + (62 - 32) * ((100vw - 320px) / (1459 - 320)));

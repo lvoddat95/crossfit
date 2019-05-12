@@ -1015,10 +1015,6 @@ input[type='submit']:focus,
     margin-bottom: 28px;
 }
 
-._ct-section-contact .free-trial-description {
-    line-height: 30px;
-}
-
 ._ct-section-contact .trial-free-week-contact-form input[type="text"], ._ct-section-contact .trial-free-week-contact-form input[type="tel"], ._ct-section-contact .trial-free-week-contact-form input[type="email"] {
     border: none;
     border-bottom: 2px solid #dedede;
