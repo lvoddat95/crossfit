@@ -16,6 +16,12 @@
         padding-top: 10px;
         padding-bottom: 12px;
     }
+    ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a{
+        margin-right: 0px;
+    }
+    ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a:after{
+        right: -5px;
+    }
     ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a .coach-info-wrap .coach-name{
         font-size: 24px;
         line-height: 41px;
