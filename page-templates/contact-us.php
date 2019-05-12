@@ -33,7 +33,7 @@ function crf_entry_content_contact_us()
                     } ?>
                     <?php if(!empty($free_trial_description)) {
                         ?>
-                        <div class="free-trial-description"><?php echo apply_filters('crossfit-output-content',$free_trial_description) ?></div>
+                        <div class="free-trial-description title25"><?php echo apply_filters('crossfit-output-content',$free_trial_description) ?></div>
                         <?php
                     } ?>
                     <?php if ($free_trial_contact_form) echo do_shortcode($free_trial_contact_form); ?>
@@ -41,7 +41,7 @@ function crf_entry_content_contact_us()
                 <div class="col-sm-6 col-lg-6">
                     <div class="col2-row1 contact-info">
                         <h3 class="title-phone title45 no-margin"><?php if ($contact_title1) echo esc_html($contact_title1); ?></h3>
-                        <div class="contact-des-phone"><?php if ($contact_des1) echo esc_html($contact_des1); ?>
+                        <div class="contact-des-phone title25"><?php if ($contact_des1) echo esc_html($contact_des1); ?>
                         </div>
                     </div>
                     <div class="col2-row2 contact-info">
@@ -64,7 +64,7 @@ function crf_entry_content_contact_us()
 
                     <div class="col2-row3">
                         <h3 class="title-address title45 no-margin"><?php if ($contact_title3) echo esc_html($contact_title3); ?></h3>
-                        <div class="desc-address">
+                        <div class="desc-address title25">
                             <?php if ($contact_des3) echo apply_filters('crossfit-output-content',$contact_des3); ?>
 
                         </div>
