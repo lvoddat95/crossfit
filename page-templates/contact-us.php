@@ -14,6 +14,14 @@
 // Forces full width content layout.
 add_filter('genesis_site_layout', '__genesis_return_full_width_content');
 
+// Add body class
+add_filter( 'body_class', 'crf_blog_body_class' );
+function crf_blog_body_class( $classes ) {
+    $classes[] = 'contactus-template';
+    return $classes;
+}
+
+
 add_action('genesis_entry_content', 'crf_entry_content_contact_us', 12);
 function crf_entry_content_contact_us()
 {

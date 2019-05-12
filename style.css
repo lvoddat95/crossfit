@@ -2179,9 +2179,16 @@ body.error404 .search-form .search-form-submit{
 }
 
 
-
-
-
+.contactus-template .hm-section-6 .contact-us-wrap{
+	display: -webkit-box; 
+	display: -ms-flexbox; 
+	display: flex;
+}
+.contactus-template .hm-section-6 .contact-us-wrap .col-map{
+	order: 1;
+	-webkit-order: 1;
+	-ms-order: 1;
+}
 
 
 
