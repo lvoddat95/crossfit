@@ -41,6 +41,7 @@
 	}
 	.icon-down {
 	    width: 40px;
+	    padding: 50px 0 0;
 	}
 	
 
@@ -103,6 +104,13 @@
 		margin-bottom: 30px;
 	}
 
+	.tab-pricings, .pp_sec-content, .pp_sec2-content-right, .pp_sec3-content, .pp_sec5-content{
+		font-size: calc(18px + (25 - 18) * ((100vw - 320px) / (1459 - 320)));
+		line-height: calc(32px + (38 - 32) * ((100vw - 320px) / (1459 - 320)));
+	}
+	[class*="templatesprograms-pricing"] [class*="crf-pp-section"] p{
+		
+	}
 
 
 
@@ -321,7 +329,16 @@
 
 }
 @media (max-width: 480px){
+	
 
+}
+@media (max-width: 425px){
+	.ft-btn .btn-crossfit{
+		font-size: 18px;
+	}
+	.breadcrumb-section{
+		padding-bottom: 0px;
+	}
 }
 @media (max-width: 320px){
 

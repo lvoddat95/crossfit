@@ -1336,7 +1336,9 @@ img.alignright,
 .sv-ggmaps {
 	height: 620px;
 }
-
+.hm-section-6 .contact-us-form .input-wrap span.wpcf7-form-control-wrap{
+	margin-bottom: 21.5px;
+}
 
 
 
@@ -1397,10 +1399,9 @@ img.alignright,
 
 .crf-pp-section-1 p{
 	font-weight: 600;
-	margin-bottom: 38px;
 }
-.crf-pp-section-1 p:last-child{
-	margin-bottom: 0px;
+.crf-pp-section-1 strong{
+	font-weight: 800;
 }
 .crf-pp-section-1 .sec-inner{
     position: relative;

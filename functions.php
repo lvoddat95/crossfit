@@ -80,7 +80,7 @@ function func_crossfit_enqueue_scripts_styles() {
 
 	wp_enqueue_style(
 		'crossfit-fonts',
-		'//fonts.googleapis.com/css?family=Montserrat:400,400i,500,600,700,900|Oswald:400,500,600,700',
+		'//fonts.googleapis.com/css?family=Montserrat:400,400i,500,600,700,800,900|Oswald:400,500,600,700',
 		array(),
 		CHILD_THEME_VERSION
 	);
