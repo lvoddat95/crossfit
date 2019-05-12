@@ -126,36 +126,50 @@ function crf_entry_content_program_pricing() {
 						<h3 class="title51 white no-margin"><?php if ($crf_title_light_5) echo esc_html( $crf_title_light_5 ); ?><strong><?php if ($crf_title_bold_5) echo esc_html( $crf_title_bold_5 ); ?></strong></h3>
 						<p class="title30 desc white"><?php if ($crf_subtitle_5) echo esc_html( $crf_subtitle_5 ); ?></p>
 					</div>
-					<div class="crf_pp_table table-responsive">
+					<div class="crf_pp_table">
 						<?php 
-							$table = get_field( 'your_table_field_name' );
-							if ( ! empty ( $crf_schedule_table ) ) {
-							    echo '<table border="0">';
-							        if ( ! empty( $crf_schedule_table['caption'] ) ) {
+							if ( ! empty ( $crf_schedule_table )) {
+
+							    echo '<table border="0" class="table-responsive table-customize">';
+							    	if ( ! empty( $crf_schedule_table['caption'] ) ) {
 							            echo '<caption>' . $crf_schedule_table['caption'] . '</caption>';
 							        }
-							        if ( ! empty( $crf_schedule_table['header'] ) ) {
+							        if ( $crf_schedule_table['header'] ) {
+
 							            echo '<thead>';
+
 							                echo '<tr>';
+
 							                    foreach ( $crf_schedule_table['header'] as $th ) {
+
 							                        echo '<th>';
-							                            echo $th['c'];
+							                            echo '<span>'.$td['c'].'</span>';
 							                        echo '</th>';
 							                    }
+
 							                echo '</tr>';
+
 							            echo '</thead>';
 							        }
+
 							        echo '<tbody>';
+
 							            foreach ( $crf_schedule_table['body'] as $tr ) {
+
 							                echo '<tr>';
-							                    foreach ( $tr as $td ) {
-							                        echo '<td>';
-							                            echo $td['c'];
+
+							                    foreach ( $tr as $key => $td ) {
+
+							                        echo '<td data-title="' . $crf_schedule_table['header'][ $key ]['c'] . '">';
+							                            echo '<span>'.$td['c'].'</span>';
 							                        echo '</td>';
 							                    }
+
 							                echo '</tr>';
 							            }
+
 							        echo '</tbody>';
+
 							    echo '</table>';
 							}
 						 ?>

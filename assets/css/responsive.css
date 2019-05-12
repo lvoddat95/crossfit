@@ -116,14 +116,16 @@
 
 	.crf_pp_table td, 
 	.crf_pp_table th{
-		font-size: calc(18px + (25 - 18) * ((100vw - 320px) / (1459 - 320)));
-        line-height: calc(32px + (38 - 32) * ((100vw - 320px) / (1459 - 320)));
+		font-size: 18px;
+		min-width: auto;
+		height: 40px;
 	}
 	.crf_pp_table thead tr th{
-		font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1459 - 320)));
-        line-height: calc(35px + (37 - 35) * ((100vw - 320px) / (1459 - 320)));
+		font-size: 20px;
 	}
-
+	.crf_pp_table tbody tr td:first-child{
+		width: 100px;
+	}
 	.gal-item a.mfp_lightbox{
 		display: block;
 	}
@@ -222,6 +224,17 @@
 	}
 	.icon-down {
 	    padding: 8vw 0 0;
+	}
+	.crf_pp_table thead tr th{
+		font-size: 18px;
+	}
+	.crf_pp_table td, 
+	.crf_pp_table th{
+		font-size: 16px;
+	    padding: 10px 5px;
+	}
+	.crf_pp_table tbody tr td:first-child{
+		padding: 0 10px;
 	}
 }
 @media (max-width: 991px){
@@ -344,6 +357,82 @@
 	}
 	.crf-pp-section-2 .wrap-button{
 		margin-top: 31px;
+	}
+	
+	.table-customize,
+	.table-customize thead,
+	.table-customize tbody,
+	.table-customize th,
+	.table-customize td,
+	.table-customize tr {
+		display: block;
+	}
+
+	.table-customize > thead > tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	.table-customize > tbody > tr {
+		border-bottom: 1px solid #ccc;
+	    border-bottom: 10px solid #17191b;
+	}
+
+	.table-customize > tbody > tr:first-child {
+		width: auto;
+	}
+
+	.table-customize > tbody > tr:last-child {
+		border-radius: 0 0 3px 3px;
+		border-bottom: none;
+	}
+
+	.crf_pp_table tbody tr td:first-child{
+		width: auto;
+		background: transparent;
+	}
+	.crf_pp_table table {
+	    background-repeat: repeat;
+	}
+
+	.table-customize > tbody > tr td {
+	    display: -webkit-box;
+	    display: -ms-flexbox;
+	    display: flex;
+		align-items: center;
+		-ms-align-items: center;
+		-webkit-align-items: center;
+		border: none;
+		border-bottom: 1px solid #ccc;
+		position: relative;
+		overflow: hidden;
+	    padding: 0 20px !important;
+	}
+
+	.table-customize > tbody > tr td:before {
+		content: attr(data-title);
+		float: left;
+		width: 50%;
+		text-align: left;
+		font-weight: 600;
+	}
+
+	.table-customize > tbody > tr td span{
+		float: left;
+		width: 50%;
+		text-align: right;
+		color: #17191b;
+		font-weight: 600;
+	}
+	
+	.table-customize.table-order > tbody > tr:nth-child(-n + 3) > td:first-child {
+		padding: 25px 0 25px 30% !important;
+		background-position: left 32% center;
+	}
+
+	.table-customize.table-order > tbody > tr:nth-child(-n + 3) > td:first-child span {
+		left: 32%;
 	}
 
 

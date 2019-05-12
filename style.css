@@ -1521,14 +1521,10 @@ img.alignright,
     text-align: center;
     white-space: nowrap;
 }
-.crf_pp_table tbody{
-	border: none;
-}
 .crf_pp_table tbody tr td:first-child{
     text-align: right;
     color: #fff;
     padding: 0 30px;
-    border: none;
 }
 .crf_pp_table tbody tr td:first-child{
 	background: #17191b;
@@ -1544,13 +1540,6 @@ img.alignright,
 	background: #17191b;
 } 
 
-.crf_pp_table tbody tr{
-
-}
-
-.crf_pp_table tbody tr td{
-
-}
 .tab-pricings,
 .pp_sec-content,
 .pp_sec2-content-right,
