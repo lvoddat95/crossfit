@@ -12,6 +12,25 @@
         font-size: 17px;
         line-height: 29px;
     }
+    ._about-section-2 .group-tabs .tab-nav-wrap ._ab-sec-2-title-wrap {
+        padding-top: 10px;
+        padding-bottom: 12px;
+    }
+    ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a .coach-info-wrap .coach-name{
+        font-size: 24px;
+        line-height: 41px;
+    }
+    ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a .coach-info-wrap .coach-office{
+        font-size: 18px;
+        line-height: 31px;
+    }
+    ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a .img-wrap{
+        width: 100px;
+        height: 100px;
+    }
+    ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li a .coach-info-wrap{
+        padding-top: 8px;
+    }
 
     
     .title51 {
