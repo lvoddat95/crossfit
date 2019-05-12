@@ -54,12 +54,11 @@
         line-height: calc(35px + (37 - 35) * ((100vw - 320px) / (1440 - 320)));
     }
     .btn-crossfit{
+        min-width: auto;
         font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1440 - 320)));
     }
 
-}
 
-@media (max-width:1440px) {
     ._about-section-1 .content-row1 .col2-content .content-wrap {
         line-height: 36px;
         padding-top: 0;
