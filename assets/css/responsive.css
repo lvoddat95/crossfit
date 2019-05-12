@@ -114,8 +114,24 @@
 	}
 
 	.pricing-box .price h3{
-		font-size: calc(30px + (77 - 30) * ((100vw - 320px) / (1459 - 320)));
-        line-height: calc(49px + (49 - 115) * ((100vw - 320px) / (1459 - 320)));
+	    font-size: 62px;
+	}
+	.pricing-box .price h3 span {
+	    font-size: 18px;
+	}
+	.pricing-box .price h3:not(.p1){
+	    font-size: 42px;
+	}
+	.pricing-box .price h3 span:not(.u1) {
+	    font-size: 12px;
+	}
+	.pricing-box .price h4{
+	    font-size: 20px;
+	}
+	[class*="templatesprograms-pricing"] [class*="crf-pp-section"] .pricing-box .info p{
+		font-size: 20px;
+		line-height: 32px;
+	    margin-bottom: 12px;
 	}
 
 	.crf_pp_table td, 

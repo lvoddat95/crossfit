@@ -285,9 +285,17 @@ input[type='submit'],
     text-align: center;
     font-size: 30px;
 }
-
-.btn-crossfit:hover, .hm-section-6 .contact-us-form input[type="submit"]:hover {
+.btn-crossfit:focus, 
+.btn-crossfit:hover, 
+.hm-section-6 .contact-us-form input[type="submit"]:hover {
     color: #fff;
+    text-decoration: none;
+    outline: none;
+    -webkit-box-shadow: 0px 2px 8px 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 2px 8px 0 rgba(0, 0, 0, 0.3);
+    -ms-box-shadow: 0px 2px 8px 0 rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 0px 2px 8px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 8px 0 rgba(0, 0, 0, 0.3);
 }
 
 body {

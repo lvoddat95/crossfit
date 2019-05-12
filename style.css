@@ -1701,7 +1701,7 @@ img.alignright,
     margin-bottom: 22px;
 }
 [class*="templatesprograms-pricing"] [class*="crf-pp-section"] .pricing-box .info p:last-child{
-	margin-bottom: 0px;
+	margin-bottom: 0px !important;
 }
 
 
@@ -2198,4 +2198,8 @@ body.error404 .search-form .search-form-submit{
 }
 .contactus-template .col-contact{
 	padding: 0 42px;
+}
+
+.contact-social-wrap .img-wrap{
+	width: 20%;
 }
