@@ -108,11 +108,37 @@
 		font-size: calc(18px + (25 - 18) * ((100vw - 320px) / (1459 - 320)));
 		line-height: calc(32px + (38 - 32) * ((100vw - 320px) / (1459 - 320)));
 	}
-	[class*="templatesprograms-pricing"] [class*="crf-pp-section"] p{
-		
+
+	.sec-title{
+		font-size: calc(26px + (51 - 26) * ((100vw - 320px) / (1459 - 320)));
+        line-height: calc(32px + (62 - 32) * ((100vw - 320px) / (1459 - 320)));
 	}
 
+	.crf_pp_table td, 
+	.crf_pp_table th{
+		font-size: calc(18px + (25 - 18) * ((100vw - 320px) / (1459 - 320)));
+        line-height: calc(32px + (38 - 32) * ((100vw - 320px) / (1459 - 320)));
+	}
+	.crf_pp_table thead tr th{
+		font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1459 - 320)));
+        line-height: calc(35px + (37 - 35) * ((100vw - 320px) / (1459 - 320)));
+	}
 
+	.gal-item a.mfp_lightbox{
+		display: block;
+	}
+	.gal-item0 .mfp_lightbox{
+		margin-bottom: 0;
+	}
+	.gal-item3 .mfp_lightbox{
+		margin-right: 0;
+	}
+	.gal-item1 .mfp_lightbox{
+	     margin-bottom: 0; 
+	}
+	.gal-item .mfp_lightbox{
+		margin-bottom: 30px;
+	}
 
 }
 
@@ -169,6 +195,15 @@
 	}
 	.footer-custom {
 	    padding: 50px 0;
+	}
+    .btn-crossfit{
+   		padding: 0 30px;
+    }
+    .crf-pp-section-2{
+    	margin-bottom: 10vw;
+    }
+	.crf-pp-section-3 {
+	    padding: 10vw 0;
 	}
 
 
@@ -298,14 +333,28 @@
 		margin: 50px 0; 
 	}
 
-
+	.crf-pp-section-1 .sec-inner {
+	    padding: 50px;
+	}
+	[class*="templatesprograms-pricing"] [class*="crf-pp-section"] p{
+	    margin-bottom: 15px;
+	}
+	.crf-pp-section-1 .wrap-button {
+	    margin-top: 31px;
+	}
+	.crf-pp-section-2 .wrap-button{
+		margin-top: 31px;
+	}
 
 
 
 }
 @media (max-width: 768px){
-
-
+	.btn-crossfit {
+	    padding: 12px 25px;
+	    height: auto !important;
+	    line-height: normal !important;
+	}
 }
 @media (max-width: 767px){
 	.breadcrumb-section h1{
@@ -323,7 +372,18 @@
 
 }
 @media (max-width: 667px){
-
+	.sec-title{
+		margin-bottom: 17px;
+	    padding-bottom: 17px;
+	}
+	.crf-pp-section-1 .sec-inner {
+	    margin-top: 30px;
+	    padding: 30px;
+	}
+	.crf-pp-section-2 .sec-title {
+	    margin-bottom: 20px;
+	}
+	    
 }
 @media (max-width: 568px){
 
@@ -334,7 +394,7 @@
 }
 @media (max-width: 425px){
 	.ft-btn .btn-crossfit{
-		font-size: 18px;
+		font-size: 16px;
 	}
 	.breadcrumb-section{
 		padding-bottom: 0px;
