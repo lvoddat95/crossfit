@@ -50,7 +50,7 @@ add_action('wpcf7_mail_sent', function ($cf7) {
             <div class="thanku_outer  text-right define_float">
                 <h3 class="thanku-title text-right">Thank You For Contacting Us!</h3>
                 <div class="thanku-content text-right">
-                    We’ ve Received Your Message And 
+                    We’ ve Received Your Message And
                     We’ll Get Back To You Within 24 Hours
                 </div>
                 <div class="thanku-foot">See You In CrossFit Pompano Beach!</div>
@@ -63,6 +63,4 @@ add_action('wpcf7_mail_sent', function ($cf7) {
     </div>
     </div>
     ';
-
 });
-
