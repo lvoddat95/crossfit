@@ -32,8 +32,8 @@ function crf_entry_content_contact_us()
     ?>
     <div class="_ct-section-contact">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="row row-contact">
+                <div class="col-sm-6 col-md-6 col-lg-6 col-contact col-contact-left">
                     <?php if(!empty($free_trial_title)) {
                         ?>
                         <h2 class="no-margin title45 free-trial-title font-600"><?php echo esc_html($free_trial_title) ?></h2>
@@ -46,7 +46,7 @@ function crf_entry_content_contact_us()
                     } ?>
                     <?php if ($free_trial_contact_form) echo do_shortcode($free_trial_contact_form); ?>
                 </div>
-                <div class="col-sm-6 col-lg-6">
+                <div class="col-sm-6 col-lg-6 col-contact col-contact-right">
                     <div class="col2-row1 contact-info">
                         <h3 class="title-phone title45 no-margin"><?php if ($contact_title1) echo esc_html($contact_title1); ?></h3>
                         <div class="contact-des-phone title25"><?php if ($contact_des1) echo esc_html($contact_des1); ?>

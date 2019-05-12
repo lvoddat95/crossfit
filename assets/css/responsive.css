@@ -208,6 +208,13 @@
 	    padding: 10vw 0;
 	}
 
+	.contactus-template .row-contact{
+		margin: 0 -15px;
+	}
+	.contactus-template .col-contact{
+		padding: 0 15px;
+	}
+
 
 
 

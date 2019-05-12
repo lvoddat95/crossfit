@@ -2183,6 +2183,8 @@ body.error404 .search-form .search-form-submit{
 	display: -webkit-box; 
 	display: -ms-flexbox; 
 	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
 }
 .contactus-template .hm-section-6 .contact-us-wrap .col-map{
 	order: 1;
@@ -2191,4 +2193,9 @@ body.error404 .search-form .search-form-submit{
 }
 
 
-
+.contactus-template .row-contact{
+	margin: 0 -42px;
+}
+.contactus-template .col-contact{
+	padding: 0 42px;
+}
