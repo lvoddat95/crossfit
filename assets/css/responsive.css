@@ -68,7 +68,7 @@
 		margin: 0;
 	}
 	.ft-logo img {
-	    max-width: 280px;
+	    max-width: 260px;
     }
     .ft-btn{
     	margin: 0;
@@ -82,8 +82,8 @@
 	    font-size: 22px;
     }
     .add-info{
-    	font-size: 22px;
-    	line-height: 34px;
+    	font-size: 24px;
+    	line-height: 37px;
     }
 	.ft-part .list-img p, .ft-part .list-img{
 		display: -webkit-flex;
@@ -124,6 +124,7 @@
 	.breadcrumb-section h1{
 		margin: 0;
 	}
+
 }
 @media (max-width: 1199px){
 	.site-header > .wrap .title-area {
@@ -158,7 +159,9 @@
 	.icon-down {
 	    padding: 50px 0 0;
 	}
-
+	.footer-custom {
+	    padding: 50px 0;
+	}
 
 
 
@@ -279,6 +282,13 @@
 		right: -80px;
 	}
 
+	.social-ft ul{
+		margin: auto;
+	    max-width: 450px;
+	}
+	.footer-center-wrap{
+		margin: 50px 0; 
+	}
 
 
 

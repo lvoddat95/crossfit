@@ -23,8 +23,6 @@
         line-height: calc(30px + (52 - 30) * ((100vw - 320px) / (1459 - 320)));
     }
     
-    .phone-num, .title-sc,
-    .add-info,
     .title35{
         font-size: calc(20px + (35 - 20) * ((100vw - 320px) / (1459 - 320)));
         line-height: calc(32px + (53 - 32) * ((100vw - 320px) / (1459 - 320)));
