@@ -663,6 +663,13 @@ input[type='submit']:focus,
       ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs li.active a:after {
         visibility: visible;
         opacity: 1; }
+  ._about-section-2 .group-tabs .tab-nav-wrap .biography {
+    margin-top: 15px;
+    width: 390px;
+    border: 6px solid #00ca00;
+    margin-bottom: 48px; }
+    ._about-section-2 .group-tabs .tab-nav-wrap .biography span {
+      padding-left: 109px; }
   ._about-section-2 .group-tabs .tab-content .our-coach-content {
     padding-top: 55px; }
     ._about-section-2 .group-tabs .tab-content .our-coach-content .img-title-coach-wrap .img-wrap {

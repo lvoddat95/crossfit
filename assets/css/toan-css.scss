@@ -595,6 +595,15 @@ input[type='submit']:focus,
           }
         }
       }
+      .biography{
+        margin-top: 15px;
+        width: 390px;
+        border: 6px solid $color;
+        margin-bottom: 48px;
+        span{
+          padding-left: 109px;
+        }
+      }
     }
     .tab-content {
       .our-coach-content{

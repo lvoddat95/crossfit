@@ -106,7 +106,9 @@ function crf_entry_content_about_us()
                                     <?php
                                 } ?>
                             </ul>
-                            <h5 class="biography"><?php if (!empty($coaches_biography_text)) echo esc_html($coaches_biography_text); ?></h5>
+                            <h5 class="biography title30 no-margin">
+                                <span class="color"><?php if (!empty($coaches_biography_text)) echo esc_html($coaches_biography_text); ?></span>
+                            </h5>
                         </div>
                         <!-- Tab panes -->
                         <div class="tab-content col-md-8 col-sm-8 col-xs-8">
