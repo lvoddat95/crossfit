@@ -25,7 +25,7 @@ function crf_template_gg_ctf_footer() {
                         <div id="<?php echo $id; ?>" class="sv-ggmaps "
                             data-location="|<?php echo esc_html($ggm_loc); ?>,,<?php if (!empty($gg_address)) echo esc_html($gg_address) ?>," 
                             data-market="<?php echo wp_get_attachment_image_src( $google_map['ggm_marker'])[0];?>" 
-                            data-zoom="19" 
+                            data-zoom="18" 
                             data-style="light" 
                             data-control="yes" 
                             data-scrollwheel="no" 

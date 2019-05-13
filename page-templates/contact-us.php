@@ -106,7 +106,7 @@ function crf_entry_content_contact_us()
                         <div id="<?php echo $id; ?>" class="sv-ggmaps "
                             data-location="|<?php echo esc_html($ct_ggm_loc); ?>,,<?php if (!empty($ct_ggm_address)) echo esc_html($ct_ggm_address) ?>," 
                             data-market="<?php echo wp_get_attachment_image_src( $ct_google_map['ct_ggm_marker'])[0];?>" 
-                            data-zoom="19" 
+                            data-zoom="18" 
                             data-style="light" 
                             data-control="yes" 
                             data-scrollwheel="no" 

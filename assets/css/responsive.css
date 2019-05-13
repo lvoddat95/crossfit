@@ -138,13 +138,14 @@
 	.crf_pp_table th{
 		font-size: 18px;
 		min-width: auto;
-		height: 40px;
+		height: 50px;
 	}
 	.crf_pp_table thead tr th{
 		font-size: 20px;
 	}
 	.crf_pp_table tbody tr td:first-child{
 		width: 100px;
+		padding: 0 20px;
 	}
 	.gal-item a.mfp_lightbox{
 		display: block;
@@ -183,6 +184,10 @@
 
 }
 @media (max-width: 1199px){
+	.pricing-box{
+		width: 50%;
+		margin-bottom: 30px;
+	}
 	.site-header > .wrap .title-area {
 	    max-width: 130px;
 	    margin: 0 20px;
@@ -480,6 +485,9 @@
 
 }
 @media (max-width: 667px){
+	.pricing-box{
+		width: 100%;
+	}
 	.sec-title{
 		margin-bottom: 17px;
 	    padding-bottom: 17px;
