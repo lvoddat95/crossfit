@@ -3,11 +3,9 @@
         position: relative;
         margin-left: -150px;
     }
-
     .hm-section-3 .col-section3-content .hm-section-3-content .content-wrap p {
         margin-bottom: 20px;
     }
-
     .hm-section-4 .content-wrap .wcc-wrap .wcc-desc {
         font-size: 17px;
         line-height: 29px;
@@ -62,68 +60,55 @@
         padding-left: 50px;
         line-height: 38px;
     }
-
-    
     .title51 {
         font-size: calc(26px + (51 - 26) * ((100vw - 320px) / (1459 - 320)));
         line-height: calc(32px + (62 - 32) * ((100vw - 320px) / (1459 - 320)));
     }
-
     .title45 {
         font-size: calc(22px + (45 - 22) * ((100vw - 320px) / (1459 - 320)));
         line-height: calc(30px + (52 - 30) * ((100vw - 320px) / (1459 - 320)));
     }
-    
     .title35{
         font-size: calc(20px + (35 - 20) * ((100vw - 320px) / (1459 - 320)));
         line-height: calc(32px + (53 - 32) * ((100vw - 320px) / (1459 - 320)));
     }
-
     .title25,
     .hm-section-1 .signup-email-wrap .signup-email-form .col-right .input-name-phone > span input,
     .hm-section-1 .signup-email-wrap .signup-email-form .col-right .input-email input[type="email"],
     .hm-section-4 .content-wrap .wcc-wrap .wcc-title,
     .hm-section-5 #gts-testimonials .wrap .lSSlideWrapper ul.testimonials-list li blockquote
-
     {
         font-size: calc(18px + (25 - 18) * ((100vw - 320px) / (1459 - 320)));
         line-height: calc(32px + (38 - 32) * ((100vw - 320px) / (1459 - 320)));
     }
-
     input,
     select,
     textarea {
         font-size: calc(18px + (25 - 18) * ((100vw - 320px) / (1459 - 320)));
         line-height: calc(32px + (38 - 32) * ((100vw - 320px) / (1459 - 320)));
     }
-
     .title30,
     .hm-section-1 .signup-email-wrap .signup-email-form .col-right p input[type="submit"] {
         font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1459 - 320)));
         line-height: calc(35px + (37 - 35) * ((100vw - 320px) / (1459 - 320)));
     }
-
     .btn-crossfit{
         font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1459 - 320)));
         line-height: calc(32px + (77 - 32) * ((100vw - 320px) / (1459 - 320)));
         height: calc(32px + (77 - 32) * ((100vw - 320px) / (1459 - 320)));
     }
-
     ._about-section-1 .content-row1 .col2-content .content-wrap {
         line-height: 36px;
         padding-top: 0;
     }
-
     ._ev-section-event .sec1-row2-wrap .col1-content {
         margin-top: -12px;
     }
-
     ._ev-section-event .sec1-row2-wrap .col1-content .event-sec1-row2-desc .event-row-2-desc-content,
     ._ev-section-event .sec1-row3-wrap .event-row-3-desc .event-row-3-desc-content,
     ._ev-section-event .sec1-row-last {
         font-size: 17px;
     }
-
     ._ev-section-event .sec1-row4-wrap .event-row-4-title {
         margin-bottom: 15px;
     }
@@ -131,7 +116,9 @@
         font-size: 40px;
         line-height: 68px;
     }
-
+    .widget_do_shortcode_widget .crf-widget-form > h3{
+        font-size: 22px;
+    }
 }
 
 @media (max-width:1199px) {
@@ -355,6 +342,16 @@
         font-size: 18px;
         line-height: 31px;
     }
+    .widget_do_shortcode_widget .crf-widget-form{
+        margin: 0px -30px;
+    }
+    .blog-template .content-sidebar-wrap{
+        margin: 50px 0px 20px 0px;
+    }
+    .hm-section-6{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
 }
 
 @media (max-width:991px) {
@@ -477,6 +474,32 @@
     .button-about .btn-crossfit{
         padding: 0px 15px;
     }
+    .content-sidebar .content{
+        float: left;
+        width: 56.666667%;
+        padding-right: 15px;
+    }
+    .content-sidebar aside{
+        float: left;
+        width: 43.333333%;
+    }
+    .widget_do_shortcode_widget .crf-widget-form{
+        margin: 0px;
+    }
+    .crf-widget-form .crf-ct-info{
+        font-size: 18px;
+        line-height: 31px;
+    }
+    .widget .entry-title a{
+        font-size: 20px;
+        line-height: 34px;
+    }
+    .crf-widget-form h3{
+        white-space: normal;
+    }
+    .content .list-2-item{
+        width: 100%;
+    }
 }
 
 @media (max-width:860px) {
@@ -584,7 +607,17 @@
         position: absolute;
         bottom: -161px;
     }
-
+    .content-sidebar .content, .content-sidebar aside{
+        float: none;
+        width: 100%;
+    }
+    .content-sidebar .content{
+        padding: 0px;
+    }
+    .widget_do_shortcode_widget .crf-widget-form {
+        padding: 35px 15px;
+        margin: 0px -30px;
+    }
 }
 
 @media (max-width:568px) {
