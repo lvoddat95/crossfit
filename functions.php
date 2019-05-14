@@ -283,7 +283,10 @@ function crf_after_content_sidebar_wrap() {
 add_action( 'genesis_before_loop', 'crf_genesis_before_content' );
 if( !function_exists('crf_genesis_before_content') ) {
 	function crf_genesis_before_content() {
-	    if (!is_page_template() || is_page_template('page-templates/blog.php') ) echo '<div class="loop-wrap">';
+		$attr = '';
+		$blog_massonry = get_field('blog_massonry','option');
+		if ($blog_massonry == true) $attr = 'blog-masonry';
+	    if (!is_page_template() || is_page_template('page-templates/blog.php') ) echo '<div class="loop-wrap '.$attr.'">';
 	}
 }
 
@@ -339,6 +342,24 @@ function crf_remove_genesis_page_template_default( $page_templates ) {
 	unset( $page_templates['page_blog.php'] );
 	return $page_templates;
 }
+
+
+// Sticky header
+
+$sticky_header = get_field('sticky_header','option');
+if ($sticky_header == true) {
+	add_filter( 'genesis_attr_site-header', 'crf_add_class_menu_sticky' );
+	function crf_add_class_menu_sticky( $attributes ) {
+	  $attributes['class'] = $attributes['class']. ' menu-sticky';
+	    return $attributes;
+	}
+}
+
+
+
+
+
+// Remove comments
 
 add_action('admin_init', function () {
     // Redirect any user trying to access comments page

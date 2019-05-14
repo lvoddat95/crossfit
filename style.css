@@ -681,9 +681,6 @@ img.alignright,
 .site-header.fixed-header .menu{
 	margin: 0;
 }
-.site-header.fixed-header .menu-item a{
-	font-size: 26px;
-}
 .site-inner {
 	margin-top: -300px !important;
 }

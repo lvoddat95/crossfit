@@ -76,7 +76,9 @@ function crf_template_before_footer() {
                                 <?php foreach ($social_list as $key => $value) : ?>
                                     <li>
                                         <?php if( $value['link'] ) echo '<a href="'.$value['link'].'">'?>
-                                            <img src="<?php echo wp_get_attachment_url($value["image"]); ?>"/>
+
+                                            <?php echo wp_get_attachment_image( $value["image"]["ID"], 'full' );?>
+                                 
                                         <?php if( $value['link'] ) echo '</a>'; ?>
                                     </li>
                                 <?php endforeach; ?>

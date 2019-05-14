@@ -20,12 +20,18 @@ function crf_blog_body_class( $classes ) {
 	return $classes;
 }
 
+
 remove_action( 'genesis_loop', 'genesis_do_loop' );
 
 add_action( 'genesis_loop', 'crf_custom_loop' );
 function crf_custom_loop() {
 	global $post,$wp_query;
-	// arguments, adjust as needed
+
+	$size = get_field('blog_size','option');
+	if(empty($size)) $size = array(420,240);
+
+	$excerpt = get_field('blog_excerpt','option');
+
 	$args = array(
 		'post_type'      => 'post',
 		'posts_per_page' => $wp_query->query_vars['posts_per_page'],
@@ -41,7 +47,7 @@ function crf_custom_loop() {
 				    	<?php if(has_post_thumbnail()):?>
 					        <div class="post-thumb banner-advs zoom-image">
 					            <a href="<?php echo esc_url(get_the_permalink())?>" class="adv-thumb-link">
-					                <?php echo get_the_post_thumbnail(get_the_ID(),array(370,245))?>
+					                <?php echo get_the_post_thumbnail(get_the_ID(),$size)?>
 					            </a>
 					        </div>
 					    <?php endif;?>
@@ -61,7 +67,13 @@ function crf_custom_loop() {
 					                <?php echo (is_sticky()) ? '<i class="dashicons dashicons-admin-post"></i>':''?>
 					            </a>
 					        </h3>
-					        <?php if(has_excerpt() || !empty($post->post_content)):?><p class="desc"><?php echo get_the_excerpt();?></p><?php endif;?>
+
+					        <?php if($excerpt) : ?>
+								<div class="desc">
+									<?php if($excerpt) echo '<p class="desc">'.crf_substr(get_the_excerpt(),0,(int)$excerpt).'</p>';?>
+								</div>
+							<?php endif; ?>
+
 					        <a href="<?php echo esc_url(get_the_permalink()); ?>" class="readmore"><?php esc_html_e("Read more","crossfit")?></a>
 					    </div>
 				    </div>

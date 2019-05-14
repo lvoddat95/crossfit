@@ -114,10 +114,16 @@ jQuery( window ).on( 'load', genesisSample.load );
 	});
 
 	$(window).load(function(){
-	  $('#gal').masonry({
-	    //columnWidth: 200,
-	    itemSelector: '.gal-item'
-	  })
+	  	if ($('#gal').length > 0 ) {
+		  	$('#gal').masonry({
+		    	itemSelector: '.gal-item'
+		  	})
+		}
+	  	if ($('.blog-masonry').length > 0 ) {
+			$('.blog-masonry').masonry({
+		    	itemSelector: '.list-col-item'
+		  	})
+		}
 
 	})
 

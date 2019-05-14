@@ -215,3 +215,24 @@ function get_image_height( $size ) {
 
 	return false;
 }
+
+if(!function_exists('crf_substr')){
+    function crf_substr($string='',$start=0,$end=1){
+        $output = '';
+        if(!empty($string)){
+            $string = strip_tags($string);
+            if($end < strlen($string)){
+                if($string[$end] != ' '){
+                    for ($i=$end; $i < strlen($string) ; $i++) { 
+                        if($string[$i] == ' ' || $string[$i] == '.' || $i == strlen($string)-1){
+                            $end = $i;
+                            break;
+                        }
+                    }
+                }
+            }
+            $output = substr($string,$start,$end);
+        }
+        return $output;
+    }
+}

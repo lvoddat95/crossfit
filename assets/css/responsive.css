@@ -54,16 +54,15 @@
 
 @media (max-width: 1459px){
 	.social-ft ul{
-		margin: 0 -5px;
+		margin: 0 -10px;
 		width: auto;
 	}
 	.social-ft ul li {
 	    width: 20%;
-	    padding: 0 5px;
+	    padding: 0 10px;
 	}
 	.social-ft ul li img{
-		max-height: 50px;
-	    margin: auto;
+		margin: auto;
 	}
 	.footer-center{
 		margin: 0;
@@ -266,6 +265,27 @@
 	}
 }
 @media (max-width: 991px){
+	.contact-us-wrap{
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical; 
+		-webkit-box-direction: reverse; 
+		-ms-flex-direction: column-reverse; 
+		flex-direction: column-reverse;
+	}
+	.section-contact-box .contact-us-wrap{
+	    -webkit-box-orient: vertical;
+	    -webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	    flex-direction: column;
+	}
+	.hm-section-4 .content-wrap .img-wrap img,
+	.hm-section-3 .col-section3-img .img-wrap img,
+	.hm-section-2 .hm-section-2-content .col-img .img-wrap img{
+		display: none;
+	}
+
 	.site-header > .wrap{
 		display: block;
 	}
@@ -484,6 +504,11 @@
 	}
 
 }
+@media (max-width: 600px){
+	.admin-bar .site-header.fixed-header{
+		top: 0;
+	}
+}
 @media (max-width: 667px){
 	.pricing-box{
 		width: 100%;
@@ -515,6 +540,16 @@
 	.breadcrumb-section{
 		padding-bottom: 0px;
 	}
+	
+	.hm-section-4 .content-wrap .wcc-wrap:after {
+	    width: 100%;
+	    bottom: -42px;
+	    background: #f3f3f3;
+	    height: 3px;
+	}
+
+
+
 }
 @media (max-width: 320px){
 
