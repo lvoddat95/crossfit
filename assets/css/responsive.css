@@ -541,11 +541,12 @@
 		padding-bottom: 0px;
 	}
 	
-	.hm-section-4 .content-wrap .wcc-wrap:after {
-	    width: 100%;
-	    bottom: -42px;
-	    background: #f3f3f3;
-	    height: 3px;
+	.hm-section-4 .content-wrap .wcc-wrap:last-child:after {
+	    display: block;
+	}
+
+	.hm-section-4 .content-wrap .col-wcc-3 .wcc-wrap:last-child:after {
+		display: none;
 	}
 
 

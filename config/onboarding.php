@@ -13,42 +13,42 @@ return array(
 		'plugins' => array(
 			array(
 				'name'       => __( 'Atomic Blocks', 'crossfit' ),
-				'slug'       => 'atomic-blocks/atomicblocks.php',
-				'public_url' => 'https://atomicblocks.com/',
+				'slug'       => 'advanced-custom-fields-pro/acf.php',
+				'public_url' => require dirname( __FILE__ ) . '/import/plugins/advanced-custom-fields-pro-5.8.0.zip',
 			),
 			array(
-				'name'       => __( 'Simple Social Icons', 'crossfit' ),
-				'slug'       => 'simple-social-icons/simple-social-icons.php',
-				'public_url' => 'https://wordpress.org/plugins/simple-social-icons/',
+				'name'       => __( 'Advanced Custom Fields: Table Field', 'crossfit' ),
+				'slug'       => 'advanced-custom-fields-table-field/acf-table.php',
+				'public_url' => 'https://wordpress.org/plugins/advanced-custom-fields-table-field/',
 			),
 			array(
-				'name'       => __( 'Genesis eNews Extended (Third Party)', 'crossfit' ),
-				'slug'       => 'genesis-enews-extended/plugin.php',
-				'public_url' => 'https://wordpress.org/plugins/genesis-enews-extended/',
+				'name'       => __( 'Contact Form 7', 'crossfit' ),
+				'slug'       => 'contact-form-7/wp-contact-form-7.php',
+				'public_url' => 'https://wordpress.org/plugins/contact-form-7/',
 			),
 			array(
-				'name'       => __( 'WPForms Lite (Third Party)', 'crossfit' ),
-				'slug'       => 'wpforms-lite/wpforms.php',
-				'public_url' => 'https://wordpress.org/plugins/wpforms-lite/',
+				'name'       => __( 'Genesis Testimonial Slider', 'crossfit' ),
+				'slug'       => 'wpstudio-testimonial-slider/genesis-testimonials.php',
+				'public_url' => 'https://wordpress.org/plugins/wpstudio-testimonial-slider/',
 			),
 		),
 	),
 	'content'          => array(
 		'homepage' => array(
-			'post_title'     => 'Homepage',
+			'post_title'     => 'CROSSFIT',
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/homepage.php',
 			'post_type'      => 'page',
 			'post_status'    => 'publish',
-			'page_template'  => 'page-templates/blocks.php',
+			'page_template'  => 'page-templates/home.php',
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 		),
-		'blocks'   => array(
-			'post_title'     => 'Block Content Examples',
-			'post_content'   => require dirname( __FILE__ ) . '/import/content/block-examples.php',
+		'programs'   => array(
+			'post_title'     => 'Programs',
+			'post_content'   => require dirname( __FILE__ ) . '/import/content/programs.php',
 			'post_type'      => 'page',
 			'post_status'    => 'publish',
-			'page_template'  => 'page-templates/blocks.php',
+			'page_template'  => 'page-templates/programs-pricing.php',
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 		),
@@ -57,8 +57,7 @@ return array(
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/about.php',
 			'post_type'      => 'page',
 			'post_status'    => 'publish',
-			'page_template'  => 'page-templates/blocks.php',
-			'featured_image' => CHILD_URL . '/config/import/images/about.jpg',
+			'page_template'  => 'page-templates/about-us.php',
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 		),
@@ -67,23 +66,36 @@ return array(
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/contact.php',
 			'post_type'      => 'page',
 			'post_status'    => 'publish',
+			'page_template'  => 'page-templates/contact-us.php',
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 		),
-		'landing'  => array(
-			'post_title'     => 'Landing Page',
-			'post_content'   => require dirname( __FILE__ ) . '/import/content/landing-page.php',
+		'blog'  => array(
+			'post_title'     => 'WOD',
+			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog.php',
 			'post_type'      => 'page',
 			'post_status'    => 'publish',
-			'page_template'  => 'page-templates/landing.php',
+			'page_template'  => 'page-templates/blog.php',
+			'comment_status' => 'closed',
+			'ping_status'    => 'closed',
+		),
+		'event'  => array(
+			'post_title'     => 'Event',
+			'post_content'   => '',
+			'post_type'      => 'page',
+			'post_status'    => 'publish',
+			'page_template'  => 'page-templates/event-name.php',
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 		),
 	),
 	'navigation_menus' => array(
-		'primary' => array(
+		'header-left' => array(
 			'homepage' => array(
-				'title' => 'Home',
+				'title' => 'CROSSFIT',
+			),
+			'programs'   => array(
+				'title' => 'Programs/Pricing',
 			),
 			'about'    => array(
 				'title' => 'About Us',
@@ -91,11 +103,20 @@ return array(
 			'contact'  => array(
 				'title' => 'Contact Us',
 			),
-			'blocks'   => array(
-				'title' => 'Block Examples',
-			),
+			
 			'landing'  => array(
 				'title' => 'Landing Page',
+			),
+		),
+		'header-left' => array(
+			'about'    => array(
+				'title' => 'About Us',
+			),
+			'blog'  => array(
+				'title' => 'WOD',
+			),
+			'contact'  => array(
+				'title' => 'Contact',
 			),
 		),
 	),
