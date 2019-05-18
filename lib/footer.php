@@ -9,7 +9,6 @@ function crf_template_gg_ctf_footer() {
     $before_footer = get_field('before_footer','option');
     if ($before_footer) extract($before_footer);
     ?>
-
     <div class="hm-section-6">
         <div class="container">
             <div class="row contact-us-wrap">
@@ -71,18 +70,49 @@ function crf_template_before_footer() {
                     <div class="footer-left">
                         <div class="social-ft">
                             <h3 class="title-sc"><?php if ($ft_left_title) echo esc_html($ft_left_title); ?></h3>
-                            <?php if( $social_list ) : ?>
-                                <ul class="list-inline-block">
-                                <?php foreach ($social_list as $key => $value) : ?>
-                                    <li>
-                                        <?php if( $value['link'] ) echo '<a href="'.$value['link'].'">'?>
+                            <?php if( $social_list ) : $url = get_stylesheet_directory_uri() . '/assets/images/social.png'; ?>
+                                    
+                               <div class="footer-sc-list">
+                                   <?php if( $social_list['ft_fb_url'] ) : ?>
+                                       <a href="<?php echo $social_list['ft_fb_url']?>">
+                                            <div class="footer-sc footer-sc-fb" style="background-image: url(<?php echo $url; ?>);">
+                                                <span class=hidden>Crossfit Facebook</span>
+                                            </div>
+                                        </a>
+                                    <?php endif; ?>
 
-                                            <?php echo wp_get_attachment_image( $value["image"]["ID"], 'full' );?>
-                                 
-                                        <?php if( $value['link'] ) echo '</a>'; ?>
-                                    </li>
-                                <?php endforeach; ?>
-                                </ul>
+                                   <?php if( $social_list['ft_yt_url'] ) : ?>
+                                        <a href="<?php echo $social_list['ft_yt_url']?>">
+                                            <div class="footer-sc footer-sc-yt" style="background-image: url(<?php echo $url; ?>);">
+                                                <span class=hidden>Crossfit Youtube</span>
+                                            </div>
+                                        </a>
+                                    <?php endif; ?>
+
+                                    <?php if( $social_list['ft_gg_url'] ) : ?>
+                                        <a href="<?php echo $social_list['ft_gg_url']?>">
+                                            <div class="footer-sc footer-sc-gg" style="background-image: url(<?php echo $url; ?>);">
+                                                <span class=hidden>Crossfit Google</span>
+                                            </div>
+                                        </a>
+                                    <?php endif; ?>
+                                    <?php if( $social_list['ft_pt_url'] ) : ?>
+                                        <a href="<?php echo $social_list['ft_pt_url']?>">
+                                            <div class="footer-sc footer-sc-pt" style="background-image: url(<?php echo $url; ?>);">
+                                                <span class=hidden>Crossfit Pinterest</span>
+                                            </div>
+                                        </a>
+                                    <?php endif; ?>
+
+                                    <?php if( $social_list['ft_tw_url'] ) : ?>
+                                        <a href="<?php echo $social_list['ft_tw_url']?>">
+                                            <div class="footer-sc footer-sc-tw" style="background-image: url(<?php echo $url; ?>);">
+                                                <span class=hidden>Crossfit Twitter</span>
+                                            </div>
+                                        </a>
+                                    <?php endif; ?>
+                               </div>
+
                             <?php endif; ?>
 
                         </div>
@@ -91,13 +121,16 @@ function crf_template_before_footer() {
                             <?php $nbp = preg_replace("/[^0-9]/", "", $phone_number); ?>
                             <a class="phone-num" href="tel:<?php echo esc_url($nbp); ?>"><?php if ($phone_number) echo esc_html($phone_number); ?></a>
                         </div>
+                        <div class="ft-content left text-center">
+                            <?php if(!empty($ft_content_edit_right)) echo apply_filters('crf_output_content',$ft_content_edit_right); ?>
+                        </div> 
                     </div>
                 </div>
                 <div class="col-md-4 footer-center-wrap">
                     <div class="footer-center">
                         <div class="ft-logo">
                             <a href="<?php echo esc_url(home_url('/')); ?>">
-                                <?php if ($ft_logo) echo '<img class="logo-footer" src="' . wp_get_attachment_url( $ft_logo ) . '"/>'; ?>
+                                <?php if ($ft_logo) echo '<img alt="Pompano Beach Crossfit" class="logo-footer" src="' . wp_get_attachment_url( $ft_logo ) . '"/>'; ?>
                             </a>
                         </div>
                         <div class="ft-btn">
@@ -123,12 +156,17 @@ function crf_template_before_footer() {
                                     <ul class="list-inline">
                                         <?php foreach( $ft_pn['ft_pn_list']  as $image ): ?>
                                             <li>
-                                                <?php echo wp_get_attachment_image( $image['ID'], 'full' ); ?>
+                                            <?php if ($image['partner_url']): ?><a href="<?php echo $image['partner_url']?>"><?php endif ?>
+                                            <?php echo wp_get_attachment_image( $image['partner_logo']['ID'], 'full' ); ?>
+                                            <?php if ($image['partner_url']): ?></a><?php endif ?>
                                             </li>
                                         <?php endforeach; ?>
                                     </ul>
                                 <?php endif; ?>
                             </div>
+                        </div>
+                        <div class="ft-content right text-center">
+                            <?php if(!empty($ft_content_edit_right)) echo apply_filters('crf_output_content',$ft_content_edit_right); ?>
                         </div>
                     </div>
                 </div>

@@ -121,7 +121,7 @@ function func_crossfit_page_excerpt() {
 
 		if ($brc_subtitle) printf( '<span class="subtitle">%s</span>', $brc_subtitle);
 		if ($brc_subtitle) printf( '<p itemprop="description">%s</p>', $brc_desc);
-	 	if ($icon_down) echo '<a href="javascript:;"><img class="icon-down" src="' . wp_get_attachment_url( $icon_down ) . '"/></a>';
+	 	if ($icon_down) echo '<a href="javascript:;" class="icon-down"><img class="icon" src="' . wp_get_attachment_url( $icon_down ) . '" alt="scroll down"/></a>';
 	}
 }
 
@@ -155,11 +155,19 @@ function crf_breadcrumb_featured_image() {
 }
 
 
+
+
+
 /* Display the breadcrumb section.*/
 add_action( 'genesis_before_content_sidebar_wrap', 'func_crossfit_breadcrumb_section' );
 function func_crossfit_breadcrumb_section() {
-
-	echo '<section class="breadcrumb-section" style="background-image: url('.crf_breadcrumb_featured_image().');">
+	$bg_mobile = get_field('bg_mobile');
+	$attr= '';
+	if ($bg_mobile) $attr = 'data-cover="'.$bg_mobile.'"';
+	echo '<section class="breadcrumb-section" 
+			'.$attr.'
+			data-brc="'.crf_breadcrumb_featured_image().'"
+			style="background-image: url('.crf_breadcrumb_featured_image().');">
 			<div class="container">
 				<div class="brc-inner">';
 

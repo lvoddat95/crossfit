@@ -96,6 +96,11 @@ function func_crossfit_enqueue_scripts_styles() {
     wp_enqueue_style('crossfit-theme',CHILD_THEME_URI.'/assets/css/theme.css');
     wp_enqueue_style('crossfit-gallery',CHILD_THEME_URI.'/assets/css/gallery.css');
 
+    wp_enqueue_style('toan-css', CHILD_THEME_URI . '/assets/css/toan-css.css');
+    wp_enqueue_style('toan-response-css', CHILD_THEME_URI . '/assets/css/toan-response.css');
+    wp_enqueue_style('responsive-css', CHILD_THEME_URI . '/assets/css/responsive.css');
+
+
 
     // Inline Style
     if( class_exists('ACF') )  {
@@ -280,17 +285,17 @@ function crf_after_content_sidebar_wrap() {
     if (!is_page_template() || is_page_template('page-templates/blog.php') ) echo '</div>';
 }
 
-add_action( 'genesis_before_loop', 'crf_genesis_before_content' );
+add_action( 'loop_start', 'crf_genesis_before_content' );
 if( !function_exists('crf_genesis_before_content') ) {
 	function crf_genesis_before_content() {
 		$attr = '';
 		$blog_massonry = get_field('blog_massonry','option');
-		if ($blog_massonry == true) $attr = 'blog-masonry';
+		if ($blog_massonry == true && !is_single()) $attr = 'blog-masonry';
 	    if (!is_page_template() || is_page_template('page-templates/blog.php') ) echo '<div class="loop-wrap '.$attr.'">';
 	}
 }
 
-add_action( 'genesis_after_loop', 'crf_genesis_after_content' );
+add_action( 'loop_end', 'crf_genesis_after_content' );
 if( !function_exists('crf_genesis_after_content') ) {
 	function crf_genesis_after_content() {
 	   if (!is_page_template() || is_page_template('page-templates/blog.php') ) echo '</div>';
@@ -345,7 +350,6 @@ function crf_remove_genesis_page_template_default( $page_templates ) {
 
 
 // Sticky header
-
 $sticky_header = get_field('sticky_header','option');
 if ($sticky_header == true) {
 	add_filter( 'genesis_attr_site-header', 'crf_add_class_menu_sticky' );
@@ -354,9 +358,6 @@ if ($sticky_header == true) {
 	    return $attributes;
 	}
 }
-
-
-
 
 
 // Remove comments
@@ -404,6 +405,4 @@ add_action('init', function () {
 
 /* Start Function ToanNgo92 */
 
-
-require_once CHILD_THEME_DIR . '/function-toan.php';
 

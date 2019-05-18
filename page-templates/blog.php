@@ -19,7 +19,7 @@ function crf_blog_body_class( $classes ) {
 	$classes[] = 'blog-template';
 	return $classes;
 }
-
+remove_action( 'genesis_before_content_sidebar_wrap', 'func_crossfit_breadcrumb_section' );
 
 remove_action( 'genesis_loop', 'genesis_do_loop' );
 
@@ -42,7 +42,7 @@ function crf_custom_loop() {
 	$wp_query = new WP_Query( $args );
 	if ( have_posts() ) : 
 		while ( have_posts() ) : the_post(); ?>
-				<div class="list-col-item list-2-item">
+				<div class="list-col-item list-2-item list-post">
 				    <div class="item-post">
 				    	<?php if(has_post_thumbnail()):?>
 					        <div class="post-thumb banner-advs zoom-image">

@@ -51,7 +51,7 @@ function crf_entry_content_home() {
                 <div class="hm-section-2-content row">
                     <div class="col-img col-md-6 col-lg-6">
                         <div class="img-wrap">
-                            <?php if ($s_welcome['hm_section2_image']) echo '<img src="' . wp_get_attachment_url($s_welcome['hm_section2_image']) . '"/>'; ?>
+                            <?php if ($s_welcome['hm_section2_image']) echo '<img alt="Pompano Beach Crossfit" src="' . wp_get_attachment_url($s_welcome['hm_section2_image']) . '"/>'; ?>
                         </div>
                     </div>
                     <div class="col-content col-md-6 col-lg-6">
@@ -75,7 +75,7 @@ function crf_entry_content_home() {
                     <div class="hm-section-3-content">
                         <h2 class="section3-title title51 white font-montse no-margin text-uppercase">
                             <span class="font-300"><?php if (!empty($hm_sec_3_title1)) echo esc_html($hm_sec_3_title1) ?></span>
-                            <strong><?php if (!empty($hm_sec_3_title2)) echo esc_html($hm_sec_3_title2) ?></span></strong>
+                            <strong><?php if (!empty($hm_sec_3_title2)) echo esc_html($hm_sec_3_title2) ?></strong>
                         </h2>
                         <div class="content-wrap title25 white">
                             <?php if (!empty($hm_sec_3_content)) echo apply_filters('crossfit_output_content', $hm_sec_3_content) ?>
@@ -88,7 +88,7 @@ function crf_entry_content_home() {
 
                     <div class="img-wrap">
                         <?php if (!empty($hm_sec_3_image) && is_array($hm_sec_3_image)) {
-                            echo '<img src="' . wp_get_attachment_url($hm_sec_3_image["ID"]) . '"/>';
+                            echo '<img alt="Pompano Beach Crossfit" src="' . wp_get_attachment_url($hm_sec_3_image["ID"]) . '"/>';
                         } ?>
                     </div>
                 </div>
@@ -134,7 +134,7 @@ function crf_entry_content_home() {
                         <div class="col-md-4 col-sm-4 col-sx-4 col-wcc-2">
                             <div class="img-wrap">
                                 <?php if (!empty($hm_sec_4_image) && is_array($hm_sec_4_image)) {
-                                    echo '<img src="' . wp_get_attachment_url($hm_sec_4_image["ID"]) . '"/>';
+                                    echo '<img alt="Pompano Beach Crossfit" src="' . wp_get_attachment_url($hm_sec_4_image["ID"]) . '"/>';
                                 } ?>
                             </div>
                         </div>
