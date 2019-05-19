@@ -285,17 +285,17 @@ input[type='submit'],
     text-align: center;
     font-size: 30px;
 }
-.btn-crossfit:focus, 
-.btn-crossfit:hover, 
+.btn-crossfit:focus,
+.btn-crossfit:hover,
 .hm-section-6 .contact-us-form input[type="submit"]:hover {
     color: #fff;
     text-decoration: none;
     outline: none;
-    -webkit-box-shadow: 0px 2px 10px 0 #00ca00;
-    -moz-box-shadow: 0px 2px 10px 0 #00ca00;
-    -ms-box-shadow: 0px 2px 10px 0 #00ca00;
-    -o-box-shadow: 0px 2px 10px 0 #00ca00;
-    box-shadow: 0px 2px 10px 0 #00ca00;
+    -webkit-box-shadow: 0px 3px 12px 0 #00ca00;
+    -moz-box-shadow: 0px 3px 12px 0 #00ca00;
+    -ms-box-shadow: 0px 3px 12px 0 #00ca00;
+    -o-box-shadow: 0px 3px 12px 0 #00ca00;
+    box-shadow: 0px 3px 12px 0 #00ca00;
 }
 
 body {
@@ -490,6 +490,13 @@ input[type='submit']:focus,
     color: #fff;
     border: 7px solid #00ca00;
 }
+.hm-section-1 .signup-email-wrap .signup-email-form .col-right p input[type="submit"]:hover{
+    -webkit-box-shadow: 0px 2px 10px 0 #00ca00;
+    -moz-box-shadow: 0px 3px 12px 0 #00ca00;
+    -ms-box-shadow: 0px 2px 10px 0 #00ca00;
+    -o-box-shadow: 0px 2px 10px 0 #00ca00;
+    box-shadow: 0px 3px 12px 0 #00ca00;
+}
 
 .hm-section-1 .signup-email-wrap .signup-email-form .col-right p .ajax-loader {
     position: absolute;
@@ -597,6 +604,7 @@ input[type='submit']:focus,
     min-width: max-content;
     right: 0px;
     top: 80px;
+    margin-top: 15px;
 }
 
 .hm-section-4 {
@@ -867,8 +875,8 @@ input[type='submit']:focus,
 }
 
 /*._about-section-2 .group-tabs .tab-nav-wrap .tab-nav-inner {*/
-    /*background: #17191b;*/
-    /*height: 100%;*/
+/*background: #17191b;*/
+/*height: 100%;*/
 /*}*/
 
 ._about-section-2 .group-tabs .tab-nav-wrap ul.nav-tabs {
@@ -1008,6 +1016,7 @@ input[type='submit']:focus,
 
 ._about-section-2 .group-tabs .tab-content .our-coach-content .btn-readmore-coach:after {
     background: url("../images/readmore-bg.png");
+    display: none;
     width: 19px;
     height: 20px;
     top: 10px;
