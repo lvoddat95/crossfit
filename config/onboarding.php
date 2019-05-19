@@ -12,11 +12,6 @@ return array(
 	'dependencies'     => array(
 		'plugins' => array(
 			array(
-				'name'       => __( 'Atomic Blocks', 'crossfit' ),
-				'slug'       => 'advanced-custom-fields-pro/acf.php',
-				'public_url' => require dirname( __FILE__ ) . '/import/plugins/advanced-custom-fields-pro-5.8.0.zip',
-			),
-			array(
 				'name'       => __( 'Advanced Custom Fields: Table Field', 'crossfit' ),
 				'slug'       => 'advanced-custom-fields-table-field/acf-table.php',
 				'public_url' => 'https://wordpress.org/plugins/advanced-custom-fields-table-field/',

@@ -122,7 +122,7 @@ function crf_template_before_footer() {
                             <a class="phone-num" href="tel:<?php echo esc_url($nbp); ?>"><?php if ($phone_number) echo esc_html($phone_number); ?></a>
                         </div>
                         <div class="ft-content left text-center">
-                            <?php if(!empty($ft_content_edit_right)) echo apply_filters('crf_output_content',$ft_content_edit_right); ?>
+                            <?php if(!empty($ft_content_edit_left)) echo apply_filters('ft_content_edit_left',$ft_content_edit_left); ?>
                         </div> 
                     </div>
                 </div>
@@ -166,7 +166,7 @@ function crf_template_before_footer() {
                             </div>
                         </div>
                         <div class="ft-content right text-center">
-                            <?php if(!empty($ft_content_edit_right)) echo apply_filters('crf_output_content',$ft_content_edit_right); ?>
+                            <?php if(!empty($ft_content_edit_right)) echo apply_filters('ft_content_edit_right',$ft_content_edit_right); ?>
                         </div>
                     </div>
                 </div>
